@@ -17,6 +17,10 @@
       #181f39,
       #19203b
     );
+  --font-primary: "Bungee Inline", cursive;
+  --font-secondary: "Exo", sans-serif;
+  --font-navigation: "Bungee", cursive;
+  --font-default: "Exo 2", sans-serif;
 }
 
 html {
