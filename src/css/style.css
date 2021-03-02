@@ -5,17 +5,18 @@
   --color-secondary: #8ec9d2;
   --color-font: #b7b8bf;
   --color-bg: #141a2f;
-  --background: linear-gradient(
-    45deg,
-    #141a2f,
-    #151b31,
-    #151c32,
-    #161d34,
-    #171d36,
-    #181e38,
-    #181f39,
-    #19203b
-  );
+  --background: url("../images/curcuit-board.svg"),
+    linear-gradient(
+      45deg,
+      #141a2f,
+      #151b31,
+      #151c32,
+      #161d34,
+      #171d36,
+      #181e38,
+      #181f39,
+      #19203b
+    );
 }
 
 html {
@@ -32,14 +33,10 @@ html {
 }
 
 body {
-  background-image: url("../images/curcuit-board.svg"), linear-gradient(45deg, #141a2f, #151b31, #151c32, #161d34, #171d36, #181e38, #181f39, #19203b);
+  background-image: var(--background);
   background-size: 100vw;
   color: var(--color-font);
   font-size: 2.4rem;
-}
-
-#New_Pattern {
-  fill: #04060a;
 }
 
 /* 
