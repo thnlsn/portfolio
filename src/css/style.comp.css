@@ -1,7 +1,41 @@
-@use 'variables';
-@use 'base';
-@use 'layout';
-@use 'components';
+:root {
+  --color-black: #000;
+  --color-white: #f1f1e6;
+  --color-primary: #2e334a;
+  --color-secondary: #8ec9d2;
+  --color-font: #b7b8bf;
+  --color-bg: #141a2f;
+  --background: linear-gradient(
+    45deg,
+    #141a2f,
+    #151b31,
+    #151c32,
+    #161d34,
+    #171d36,
+    #181e38,
+    #181f39,
+    #19203b
+  );
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--background);
+  color: var(--color-font);
+  font-size: 2.4rem;
+}
 
 /* 
 
@@ -22,3 +56,5 @@
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
 
 */
+
+/*# sourceMappingURL=style.comp.css.map */
