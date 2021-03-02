@@ -1,1 +1,60 @@
+:root {
+  --color-black: #000;
+  --color-white: #f1f1e6;
+  --color-primary: #2e334a;
+  --color-secondary: #8ec9d2;
+  --color-font: #b7b8bf;
+  --color-bg: #141a2f;
+  --background: linear-gradient(
+    45deg,
+    #141a2f,
+    #151b31,
+    #151c32,
+    #161d34,
+    #171d36,
+    #181e38,
+    #181f39,
+    #19203b
+  );
+}
 
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--background);
+  color: var(--color-font);
+  font-size: 2.4rem;
+}
+
+/* 
+
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "gh-pages": "^3.1.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1"
+  },
+
+    "dev": "npm-run-all -p -r start watch:sass",
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
+    "prefix:css": "postcss ./src/css/style.comp.css --use autoprefixer -o ./src/css/style.prefix.css",
+    "compress:css": "node-sass ./src/css/style.prefix.css ./src/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+
+*/
+
+/*# sourceMappingURL=style.css.map */

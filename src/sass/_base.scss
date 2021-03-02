@@ -13,4 +13,7 @@ html {
 
 body {
   // Set the default font styles, colors, etc.
+  background: var(--background);
+  color: var(--color-font);
+  font-size: 2.4rem;
 }
