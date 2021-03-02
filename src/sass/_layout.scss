@@ -1,0 +1,10 @@
+.App {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  height: 100%;
+}
+
+.content {
+  background-color: var(--color-primary);
+  padding: 6rem 10rem;
+}

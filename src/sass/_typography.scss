@@ -1,2 +1,26 @@
 // Exo ------------ 100, 200, 300, 400, 500, 600, 700, 800, 900, 100, 200, 300, 400, 500, 600, 700, 800, 900
 // Exo 2 ---------- 100, 200, 300, 400, 500, 600, 700, 800, 900, 100, 200, 300, 400, 500, 600, 700, 800, 900
+
+.heading-primary {
+  font-family: var(--font-primary);
+  font-size: 7.2rem;
+  color: var(--color-secondary);
+}
+
+.heading-subtitle {
+  font-family: var(--font-default);
+  font-size: 3.6rem;
+}
+
+.heading-secondary {
+  font-family: var(--font-secondary);
+}
+
+.heading-navigation {
+  font-family: var(--font-navigation);
+}
+
+.heading-image {
+  border: 2px solid var(--color-secondary);
+  border-radius: 50%;
+}

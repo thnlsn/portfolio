@@ -43,6 +43,41 @@ body {
   font-size: 2.4rem;
 }
 
+.heading-primary {
+  font-family: var(--font-primary);
+  font-size: 7.2rem;
+  color: var(--color-secondary);
+}
+
+.heading-subtitle {
+  font-family: var(--font-default);
+  font-size: 3.6rem;
+}
+
+.heading-secondary {
+  font-family: var(--font-secondary);
+}
+
+.heading-navigation {
+  font-family: var(--font-navigation);
+}
+
+.heading-image {
+  border: 2px solid var(--color-secondary);
+  border-radius: 50%;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  height: 100%;
+}
+
+.content {
+  background-color: var(--color-primary);
+  padding: 6rem 10rem;
+}
+
 /* 
 
   "devDependencies": {
