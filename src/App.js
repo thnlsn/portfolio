@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import './css/style.css';
 
+// Assets
 import profile from './images/profile.jpg';
 
+// Skills Icons
 import ReactIcon from './components/svg/ReactIcon';
 import HTMLIcon from './components/svg/HTMLIcon';
 import CSSIcon from './components/svg/CSSIcon';
@@ -23,6 +25,7 @@ import HandlebarsIcon from './components/svg/HandlebarsIcon';
 import APIIcon from './components/svg/APIIcon';
 import ResponsiveIcon from './components/svg/ResponsiveIcon';
 
+// Components
 import Header from './components/Header';
 
 function App() {
