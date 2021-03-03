@@ -210,6 +210,10 @@ body {
   font-size: 2rem;
   padding: 0.5rem 1rem;
   margin: 0.5rem;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 /* 

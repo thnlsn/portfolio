@@ -73,6 +73,7 @@ function App() {
             <div className='section__skill'>CSS</div>
             <div className='section__skill'>JavaScript</div>
             <div className='section__skill'>React</div>
+            <div className='section__skill'>Svelte</div>
             <div className='section__skill'>Sass</div>
             <div className='section__skill'>Git</div>
             <div className='section__skill'>GitHub</div>
@@ -81,6 +82,9 @@ function App() {
             <div className='section__skill'>Express</div>
             <div className='section__skill'>MongoDB</div>
             <div className='section__skill'>MySQL</div>
+            <div className='section__skill'>jQuery</div>
+            <div className='section__skill'>Bootstrap</div>
+            <div className='section__skill'>Handlebars</div>
             <div className='section__skill'>APIs</div>
             <div className='section__skill'>Responsive Web Design</div>
           </div>
