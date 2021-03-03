@@ -7,20 +7,20 @@ import ReactIcon from './components/svg/ReactIcon';
 import HTMLIcon from './components/svg/HTMLIcon';
 import CSSIcon from './components/svg/CSSIcon';
 import JavaScriptIcon from './components/svg/JavaScriptIcon';
-// import SvelteIcon from './components/svg/SvelteIcon';
+import SvelteIcon from './components/svg/SvelteIcon';
 import SassIcon from './components/svg/SassIcon';
 import GitIcon from './components/svg/GitIcon';
 import GitHubIcon from './components/svg/GitHubIcon';
 import NPMIcon from './components/svg/NPMIcon';
 import NodeIcon from './components/svg/NodeIcon';
-// import ExpressIcon from './components/svg/ExpressIcon';
-// import MongoDBIcon from './components/svg/MongoDBIcon';
-// import MySQLIcon from './components/svg/MySQLIcon';
+import ExpressIcon from './components/svg/ExpressIcon';
+import MongoDBIcon from './components/svg/MongoDBIcon';
+import MySQLIcon from './components/svg/MySQLIcon';
 import AtlassianIcon from './components/svg/AtlassianIcon';
-// import JqueryIcon from './components/svg/JqueryIcon';
+import JqueryIcon from './components/svg/JqueryIcon';
 import BootstrapIcon from './components/svg/BootstrapIcon';
-// import HandlebarsIcon from './components/svg/HandlebarsIcon';
-// import APIIcon from './components/svg/APIIcon';
+import HandlebarsIcon from './components/svg/HandlebarsIcon';
+import APIIcon from './components/svg/APIIcon';
 import ResponsiveIcon from './components/svg/ResponsiveIcon';
 
 import Header from './components/Header';
@@ -106,7 +106,7 @@ function App() {
               React
             </div>
             <div className='section__skill'>
-              <HTMLIcon />
+              <SvelteIcon />
               Svelte
             </div>
             <div className='section__skill'>
@@ -130,15 +130,15 @@ function App() {
               Node
             </div>
             <div className='section__skill'>
-              <HTMLIcon />
+              <ExpressIcon />
               Express
             </div>
             <div className='section__skill'>
-              <HTMLIcon />
+              <MongoDBIcon />
               MongoDB
             </div>
             <div className='section__skill'>
-              <HTMLIcon />
+              <MySQLIcon />
               MySQL
             </div>
             <div className='section__skill'>
@@ -146,7 +146,7 @@ function App() {
               Atlassian
             </div>
             <div className='section__skill'>
-              <HTMLIcon />
+              <JqueryIcon />
               jQuery
             </div>
             <div className='section__skill'>
@@ -154,11 +154,11 @@ function App() {
               Bootstrap
             </div>
             <div className='section__skill'>
-              <HTMLIcon />
+              <HandlebarsIcon />
               Handlebars
             </div>
             <div className='section__skill'>
-              <HTMLIcon />
+              <APIIcon />
               APIs
             </div>
             <div className='section__skill'>
