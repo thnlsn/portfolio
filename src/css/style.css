@@ -40,6 +40,7 @@ html {
 body {
   background-image: var(--background);
   background-size: 100vw;
+  font-family: "Exo 2", sans-serif;
   color: var(--color-font);
   font-size: 2.4rem;
 }
@@ -58,6 +59,8 @@ body {
 }
 
 .heading-secondary {
+  font-size: 3.6rem;
+  font-weight: 800;
   font-family: var(--font-secondary);
 }
 
@@ -75,9 +78,14 @@ body {
 
 .content {
   background-color: rgba(46, 51, 74, 0.97);
-  padding: 6rem 10rem;
+  padding: 9rem 12.5rem 9rem 12rem;
   border-left: 1px solid #638b91;
   border-right: 1px solid #638b91;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  grid-auto-rows: min-content;
+  row-gap: 9rem;
 }
 @supports (backdrop-filter: blur(2px)) {
   .content {
@@ -93,6 +101,26 @@ body {
   row-gap: 2rem;
 }
 
+.section {
+  display: grid;
+  grid-auto-rows: min-content;
+  row-gap: 2rem;
+  position: relative;
+  z-index: 10;
+}
+.section--emphasis {
+  color: #f1f1e6;
+}
+.section--subject:before {
+  content: attr(data-subject);
+  color: rgba(142, 201, 210, 0.05);
+  font-size: 3.2em;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0%, -45%);
+}
 .header__image-container {
   align-self: center;
   grid-row: 1/-1;

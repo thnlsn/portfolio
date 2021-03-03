@@ -2,19 +2,25 @@
 
 .App {
   display: grid;
-  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-columns: 0.5fr 2fr 0.5fr; // Nav | Content | ...
   height: 100vh;
 
-  border-left: 1px solid variables.$background-accent;
-  border-right: 1px solid variables.$background-accent;
+  border-left: variables.$content-border;
+  border-right: variables.$content-border;
 }
 
 .content {
   background-color: rgba(variables.$color-primary, 0.97);
-  padding: 6rem 10rem;
+  padding: 9rem 12.5rem 9rem 12rem;
 
-  border-left: 1px solid variables.$background-accent;
-  border-right: 1px solid variables.$background-accent;
+  border-left: variables.$content-border;
+  border-right: variables.$content-border;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  grid-auto-rows: min-content;
+  row-gap: 9rem;
 
   @supports (backdrop-filter: blur(2px)) {
     background-color: rgba(variables.$color-primary, 0.9);
@@ -27,4 +33,34 @@
   grid-template-columns: max-content 1fr;
   grid-template-rows: 1fr min-content 1fr;
   row-gap: 2rem;
+}
+
+.section {
+  display: grid;
+  grid-auto-rows: min-content;
+  row-gap: 2rem;
+
+  position: relative;
+  z-index: 10;
+
+  &--emphasis {
+    color: variables.$color-white;
+  }
+  &--subject {
+    &:before {
+      content: attr(data-subject);
+
+      color: rgba($color: variables.$color-secondary, $alpha: 0.05);
+      font-size: 3.2em;
+      z-index: -1;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(0%, -45%);
+    }
+  }
+
+  &__description {
+  }
 }
