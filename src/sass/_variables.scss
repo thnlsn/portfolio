@@ -7,6 +7,8 @@
   --color-font: #b7b8bf;
   --color-bg: #141a2f;
 
+  --content-alpha: 0.8;
+
   --background: url('../images/curcuit-board.svg'),
     linear-gradient(
       45deg,
@@ -26,3 +28,32 @@
   --font-navigation: 'Bungee', cursive; // Navigation headings
   --font-default: 'Exo 2', sans-serif; // Default text font
 }
+
+// Colors
+$color-black: #000;
+$color-white: #f1f1e6;
+$color-primary: #2e334a;
+$color-secondary: #8ec9d2;
+$color-font: #b7b8bf;
+$color-bg: #141a2f;
+
+$content-alpha: 0.8;
+
+$background: url('../images/curcuit-board.svg'),
+  linear-gradient(
+    45deg,
+    #141a2f,
+    #151b31,
+    #151c32,
+    #161d34,
+    #171d36,
+    #181e38,
+    #181f39,
+    #19203b
+  );
+
+// Fonts
+$font-primary: 'Bungee Inline', cursive; // Main heading
+$font-secondary: 'Exo', sans-serif; // Section headings
+$font-navigation: 'Bungee', cursive; // Navigation headings
+$font-default: 'Exo 2', sans-serif; // Default text font

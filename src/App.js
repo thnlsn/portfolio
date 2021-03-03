@@ -9,12 +9,11 @@ function App() {
       <div className='navigation'></div>
       <div className='content'>
         <header className='header'>
-          <img
-            className='heading-image'
-            src={profile}
-            alt='Thomas Nelson'
-          ></img>
+          <div className='header__image-container'>
+            <img className='header__image' src={profile} alt='Thomas Nelson' />
+          </div>
           <div className='heading-primary'>Thomas Nelson</div>
+          <div className='divider'></div>
           <div className='heading-subtitle'>web developer & problem-solver</div>
         </header>
       </div>
