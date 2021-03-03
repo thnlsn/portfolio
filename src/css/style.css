@@ -69,15 +69,15 @@ body {
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
   height: 100vh;
-  border-left: 1px solid var(--color-secondary);
-  border-right: 1px solid var(--color-secondary);
+  border-left: 1px solid #638b91;
+  border-right: 1px solid #638b91;
 }
 
 .content {
   background-color: rgba(46, 51, 74, 0.97);
   padding: 6rem 10rem;
-  border-left: 1px solid var(--color-secondary);
-  border-right: 1px solid var(--color-secondary);
+  border-left: 1px solid #638b91;
+  border-right: 1px solid #638b91;
 }
 @supports (backdrop-filter: blur(2px)) {
   .content {
@@ -100,39 +100,51 @@ body {
   align-items: center;
   position: relative;
 }
-.header__image-container:hover ~ .divider {
-  width: 100%;
-}
-.header__image-container:hover ~ .heading-primary, .header__image-container:hover ~ .heading-subtitle {
-  opacity: 1;
-  transform: translateY(0);
-}
 .header__image {
-  border: 2px solid var(--color-secondary);
+  border: 2px solid #8ec9d2;
   border-radius: 50%;
   height: 25rem;
   width: 25rem;
+}
+@supports (filter: grayscale(1)) {
+  .header__image {
+    transition: filter 2s;
+    filter: grayscale(0);
+  }
+  .header__image--init {
+    filter: grayscale(1);
+  }
+}
+.header .heading-primary {
+  align-self: end;
+  margin-bottom: 0.25rem;
+}
+.header .heading-primary--init {
+  opacity: 0 !important;
+  transform: translateY(20%) !important;
+}
+.header .heading-subtitle {
+  align-self: start;
+}
+.header .heading-subtitle--init {
+  opacity: 0 !important;
+  transform: translateY(-40%) !important;
 }
 .header .heading-primary,
 .header .heading-subtitle {
   text-align: center;
   transition: opacity 0.5s 0.75s, transform 0.7s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
-  opacity: 0;
-}
-.header .heading-primary {
-  align-self: end;
-  margin-bottom: 0.25rem;
-  transform: translateY(20%);
-}
-.header .heading-subtitle {
-  align-self: start;
-  transform: translateY(-40%);
+  opacity: 1;
+  transform: translateY(0);
 }
 .header .divider {
   height: 2px;
-  background-color: var(--color-secondary);
+  background-color: #8ec9d2;
   position: relative;
   transition: width 1s;
+  width: 100%;
+}
+.header .divider--init {
   width: 0;
 }
 .header .divider:after {
@@ -140,7 +152,8 @@ body {
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background-color: var(--color-secondary);
+  background-color: #2e334a;
+  border: 2px solid #8ec9d2;
   position: absolute;
   right: 0;
   top: 50%;

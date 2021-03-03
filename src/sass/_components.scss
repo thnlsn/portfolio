@@ -1,3 +1,5 @@
+@use 'variables';
+
 // Header
 .header {
   &__image-container {
@@ -8,58 +10,69 @@
     align-items: center;
 
     position: relative;
-
-    &:hover ~ .divider {
-      width: 100%;
-    }
-    &:hover ~ .heading-primary,
-    &:hover ~ .heading-subtitle {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
   &__image {
-    border: 2px solid var(--color-secondary);
+    border: 2px solid variables.$color-secondary;
     border-radius: 50%;
 
     height: 25rem;
     width: 25rem;
+
+    @supports (filter: grayscale(1)) {
+      transition: filter 2s;
+      filter: grayscale(0);
+      &--init {
+        filter: grayscale(1);
+      }
+    }
+  }
+
+  .heading-primary {
+    align-self: end;
+    margin-bottom: 0.25rem;
+    &--init {
+      opacity: 0 !important;
+      transform: translateY(20%) !important;
+    }
+  }
+  .heading-subtitle {
+    align-self: start;
+    &--init {
+      opacity: 0 !important;
+      transform: translateY(-40%) !important;
+    }
   }
 
   .heading-primary,
   .heading-subtitle {
     text-align: center;
 
+    // TRANSITIONING PROPERTIES
     transition: opacity 0.5s 0.75s,
       transform 0.7s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
-    opacity: 0;
-  }
-
-  .heading-primary {
-    align-self: end;
-    margin-bottom: 0.25rem;
-    transform: translateY(20%);
-  }
-  .heading-subtitle {
-    align-self: start;
-    transform: translateY(-40%);
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .divider {
     height: 2px;
-    background-color: var(--color-secondary);
+    background-color: variables.$color-secondary;
     position: relative;
 
-    //
+    // TRANSITIONING PROPERTIES
     transition: width 1s /* cubic-bezier(0.76, 0.22, 0.46, 1.16) */;
-    width: 0;
+    width: 100%;
+    &--init {
+      width: 0;
+    }
 
     &:after {
       content: '';
       height: 12px;
       width: 12px;
       border-radius: 50%;
-      background-color: var(--color-secondary);
+      background-color: variables.$color-primary;
+      border: 2px solid variables.$color-secondary;
 
       position: absolute;
       right: 0;
