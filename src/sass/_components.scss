@@ -81,3 +81,31 @@
     }
   }
 }
+
+.section {
+  position: relative;
+
+  &--link {
+    color: variables.$color-white;
+    font-weight: 600;
+  }
+  &--subject {
+    color: variables.$color-white;
+
+    &:before {
+      content: attr(data-subject);
+
+      color: rgba($color: variables.$color-secondary, $alpha: 0.05);
+      font-size: 3.4em;
+      z-index: -1;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(0%, -45%);
+    }
+  }
+
+  &__description {
+  }
+}
