@@ -3,6 +3,26 @@ import './css/style.css';
 
 import profile from './images/profile.jpg';
 
+import ReactIcon from './components/svg/ReactIcon';
+import HTMLIcon from './components/svg/HTMLIcon';
+import CSSIcon from './components/svg/CSSIcon';
+import JavaScriptIcon from './components/svg/JavaScriptIcon';
+// import SvelteIcon from './components/svg/SvelteIcon';
+import SassIcon from './components/svg/SassIcon';
+import GitIcon from './components/svg/GitIcon';
+import GitHubIcon from './components/svg/GitHubIcon';
+import NPMIcon from './components/svg/NPMIcon';
+import NodeIcon from './components/svg/NodeIcon';
+// import ExpressIcon from './components/svg/ExpressIcon';
+// import MongoDBIcon from './components/svg/MongoDBIcon';
+// import MySQLIcon from './components/svg/MySQLIcon';
+import AtlassianIcon from './components/svg/AtlassianIcon';
+// import JqueryIcon from './components/svg/JqueryIcon';
+import BootstrapIcon from './components/svg/BootstrapIcon';
+// import HandlebarsIcon from './components/svg/HandlebarsIcon';
+// import APIIcon from './components/svg/APIIcon';
+import ResponsiveIcon from './components/svg/ResponsiveIcon';
+
 import Header from './components/Header';
 
 function App() {
@@ -69,24 +89,82 @@ function App() {
             always adding to the list.
           </p>
           <div className='section__skills'>
-            <div className='section__skill'>HTML</div>
-            <div className='section__skill'>CSS</div>
-            <div className='section__skill'>JavaScript</div>
-            <div className='section__skill'>React</div>
-            <div className='section__skill'>Svelte</div>
-            <div className='section__skill'>Sass</div>
-            <div className='section__skill'>Git</div>
-            <div className='section__skill'>GitHub</div>
-            <div className='section__skill'>NPM</div>
-            <div className='section__skill'>Node</div>
-            <div className='section__skill'>Express</div>
-            <div className='section__skill'>MongoDB</div>
-            <div className='section__skill'>MySQL</div>
-            <div className='section__skill'>jQuery</div>
-            <div className='section__skill'>Bootstrap</div>
-            <div className='section__skill'>Handlebars</div>
-            <div className='section__skill'>APIs</div>
-            <div className='section__skill'>Responsive Web Design</div>
+            <div className='section__skill'>
+              <HTMLIcon />
+              HTML
+            </div>
+            <div className='section__skill'>
+              <CSSIcon />
+              CSS
+            </div>
+            <div className='section__skill'>
+              <JavaScriptIcon />
+              JavaScript
+            </div>
+            <div className='section__skill'>
+              <ReactIcon />
+              React
+            </div>
+            <div className='section__skill'>
+              <HTMLIcon />
+              Svelte
+            </div>
+            <div className='section__skill'>
+              <SassIcon />
+              Sass
+            </div>
+            <div className='section__skill'>
+              <GitIcon />
+              Git
+            </div>
+            <div className='section__skill'>
+              <GitHubIcon />
+              GitHub
+            </div>
+            <div className='section__skill'>
+              <NPMIcon />
+              NPM
+            </div>
+            <div className='section__skill'>
+              <NodeIcon />
+              Node
+            </div>
+            <div className='section__skill'>
+              <HTMLIcon />
+              Express
+            </div>
+            <div className='section__skill'>
+              <HTMLIcon />
+              MongoDB
+            </div>
+            <div className='section__skill'>
+              <HTMLIcon />
+              MySQL
+            </div>
+            <div className='section__skill'>
+              <AtlassianIcon />
+              Atlassian
+            </div>
+            <div className='section__skill'>
+              <HTMLIcon />
+              jQuery
+            </div>
+            <div className='section__skill'>
+              <BootstrapIcon />
+              Bootstrap
+            </div>
+            <div className='section__skill'>
+              <HTMLIcon />
+              Handlebars
+            </div>
+            <div className='section__skill'>
+              <HTMLIcon />
+              APIs
+            </div>
+            <div className='section__skill'>
+              <ResponsiveIcon />
+              Responsive Web Design
+            </div>
           </div>
         </section>
       </div>

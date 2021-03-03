@@ -1,8 +1,9 @@
 import React from 'react';
 
-function React() {
+function ReactIcon() {
   return (
     <svg
+      className='skill__icon'
       xmlns='http://www.w3.org/2000/svg'
       x='0'
       y='0'
@@ -16,4 +17,4 @@ function React() {
   );
 }
 
-export default React;
+export default ReactIcon;
