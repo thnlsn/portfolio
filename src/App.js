@@ -32,7 +32,7 @@ function App() {
         <Header img={profile} />
         <section className='section section--who'>
           <div className='heading-secondary'>
-            <span className='section--subject' data-subject={'#who'}>
+            <span className='section__subject ' data-subject={'#who'}>
               #who
             </span>{' '}
             I am
@@ -57,10 +57,10 @@ function App() {
 
         <section className='section section--portfolio'>
           <div className='heading-secondary'>
-            <span className='section--subject' data-subject={'#portfolio'}>
-              #portfolio
+            <span className='section__subject ' data-subject={'#what'}>
+              #what
             </span>{' '}
-            of work
+            I can do
           </div>
           <p className='section__description'>
             Learning is a lifestyle for me so I strive to learn something new
@@ -68,6 +68,22 @@ function App() {
             moment I am proficient in the following technologies, but I am
             always adding to the list.
           </p>
+          <div className='section__skills'>
+            <div className='section__skill'>HTML</div>
+            <div className='section__skill'>CSS</div>
+            <div className='section__skill'>JavaScript</div>
+            <div className='section__skill'>React</div>
+            <div className='section__skill'>Sass</div>
+            <div className='section__skill'>Git</div>
+            <div className='section__skill'>GitHub</div>
+            <div className='section__skill'>NPM</div>
+            <div className='section__skill'>Node</div>
+            <div className='section__skill'>Express</div>
+            <div className='section__skill'>MongoDB</div>
+            <div className='section__skill'>MySQL</div>
+            <div className='section__skill'>APIs</div>
+            <div className='section__skill'>Responsive Web Design</div>
+          </div>
         </section>
       </div>
     </div>

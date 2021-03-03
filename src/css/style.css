@@ -22,6 +22,8 @@
   --font-secondary: "Exo", sans-serif;
   --font-navigation: "Bungee", cursive;
   --font-default: "Exo 2", sans-serif;
+  --padding-left: 12.5rem;
+  --padding-right: 12rem;
 }
 
 html {
@@ -120,15 +122,6 @@ body {
   height: 25rem;
   width: 25rem;
 }
-@supports (filter: grayscale(1)) {
-  .header__image {
-    transition: filter 2s;
-    filter: grayscale(0);
-  }
-  .header__image--init {
-    filter: grayscale(1);
-  }
-}
 .header .heading-primary {
   align-self: end;
   margin-bottom: 0.25rem;
@@ -181,10 +174,10 @@ body {
   color: #f1f1e6;
   font-weight: 600;
 }
-.section--subject {
+.section__subject {
   color: #f1f1e6;
 }
-.section--subject:before {
+.section__subject:before {
   content: attr(data-subject);
   color: rgba(142, 201, 210, 0.05);
   font-size: 3.4em;
@@ -194,6 +187,31 @@ body {
   left: 0;
   transform: translate(0%, -45%);
 }
+.section__subject:after {
+  content: "";
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #8ec9d2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, -100%);
+}
+.section__skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section__skill {
+  background-color: #8ec9d2;
+  color: #2e334a;
+  font-family: "Bungee", cursive;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+}
+
 /* 
 
   "devDependencies": {
