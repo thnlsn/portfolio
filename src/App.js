@@ -62,8 +62,9 @@ function App() {
           </div>
           <p className='section__description'>
             A web developer on and off the clock and a student beyond the
-            classroom. I love spending my time coding and building websites that
-            are robust, functional, and beautiful. Check out my{' '}
+            classroom. I am a natural problem solver and love spending my time
+            coding and building responsive, functional, and beautiful websites.
+            Check out my{' '}
             <a href={'#portfolio'} className='section--link'>
               work
             </a>{' '}
@@ -86,10 +87,9 @@ function App() {
             I can do
           </div>
           <p className='section__description'>
-            Learning is a lifestyle for me so I strive to learn something new
-            every single day, and I never shy away from a challenge. At this
-            moment I am proficient in the following technologies, but I am
-            always adding to the list.
+            Learning is a life style for me, and as such I am always eager for
+            new challenges to tackle. At this moment I am proficient in the
+            following technologies, but I am always looking to expand.
           </p>
           <div className='section__skills'>
             <div className='section__skill'>
@@ -169,6 +169,10 @@ function App() {
               Responsive Web Design
             </div>
           </div>
+          <p className='section__description'>
+            Don't worry if something is missing &ndash; I pick things up pretty
+            quick.
+          </p>
         </section>
       </div>
     </div>

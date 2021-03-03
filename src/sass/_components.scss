@@ -17,6 +17,8 @@
 
     height: 25rem;
     width: 25rem;
+
+    z-index: 1; // So it is above the dot
   }
 
   .heading-primary {
@@ -50,6 +52,8 @@
     height: 2px;
     background-color: variables.$color-secondary;
     position: relative;
+
+    z-index: 0;
 
     // TRANSITIONING PROPERTIES
     transition: width 1s /* cubic-bezier(0.76, 0.22, 0.46, 1.16) */;
@@ -119,10 +123,12 @@
   &__skills {
     display: flex;
     flex-wrap: wrap;
+
+    margin: -0.5rem 0 -1rem 0;
   }
   &__skill {
     display: grid;
-    grid-template-columns: 1fr max-content;
+    grid-template-columns: min-content max-content;
     align-items: center;
     column-gap: 1rem;
 
