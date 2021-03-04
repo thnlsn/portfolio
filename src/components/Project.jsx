@@ -6,7 +6,7 @@ const Project = ({ title, img, skills, paragraphs, links }) => {
   return (
     <div className='project'>
       <div className='project__heading'>{title}</div>
-      <a className='project__link' href={links[1]}>
+      <a className='project__link' target='_blank' href={links[1]}>
         <img className='project__img' src={img} alt={title} />
       </a>
       <div className='project__skills'>
