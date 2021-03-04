@@ -278,8 +278,7 @@ body::-webkit-scrollbar {
 }
 
 .project {
-  color: #000;
-  background-color: #f1f1e6;
+  background-color: #141a2f;
   min-height: 40rem;
   overflow: hidden;
   border-top-right-radius: 8px;
@@ -292,8 +291,9 @@ body::-webkit-scrollbar {
   opacity: 1;
 }
 .project__heading {
+  color: #000;
   background-color: #b7b8bf;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 2rem 0.8rem;
   position: relative;
 }
 .project__heading:before, .project__heading:after {

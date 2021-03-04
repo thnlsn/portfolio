@@ -185,8 +185,8 @@
 
 .project {
   // Testing
-  color: variables.$color-black;
-  background-color: variables.$color-white;
+
+  background-color: variables.$color-bg;
   min-height: 40rem;
 
   // padding: 1.5rem 2rem;
@@ -204,8 +204,9 @@
   }
 
   &__heading {
+    color: variables.$color-black;
     background-color: variables.$color-font;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 2rem 0.8rem;
 
     position: relative;
 
