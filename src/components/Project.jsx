@@ -4,7 +4,10 @@ const Project = ({ title, img, skills, paragraphs, links }) => {
   return (
     <div className='project'>
       <div className='project__heading'>{title}</div>
-      <img className='project__img' src={img} alt={title} />
+      <a href={links[1]}>
+        <img className='project__img' src={img} alt={title} />
+      </a>
+
       <div className='project__skills'>
         {skills.map((skill) => (
           <div className='project__skill'>{skill}</div>

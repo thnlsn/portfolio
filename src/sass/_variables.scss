@@ -58,6 +58,8 @@ $background: url('../images/curcuit-board.svg'),
 $background-accent: #638b91;
 
 $background-skill: url('../images/curcuit-board.svg'), $color-secondary;
+$background-description: url('../images/curcuit-board-two.svg'),
+  lighten($color-bg, 7);
 
 // Fonts
 $font-primary: 'Bungee Inline', cursive; // Main heading

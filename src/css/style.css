@@ -52,6 +52,7 @@ body::-webkit-scrollbar {
   font-family: var(--font-primary);
   font-size: 7.2rem;
   color: var(--color-secondary);
+  text-shadow: rgba(142, 201, 210, 0.99) 0px 0px 4px;
   line-height: 1;
 }
 
@@ -84,6 +85,11 @@ body::-webkit-scrollbar {
   line-height: 1;
 }
 
+.project__descriptions {
+  font-family: var(--font-secondary);
+  font-size: 2.2rem;
+}
+
 .App {
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr;
@@ -106,7 +112,7 @@ body::-webkit-scrollbar {
 .content {
   overflow-y: scroll;
   background-color: rgba(46, 51, 74, 0.96);
-  padding: 9rem 12.5rem 9rem 12rem;
+  padding: 9rem 11.5rem 9rem 11rem;
   border-left: 1px solid #638b91;
   border-right: 1px solid #638b91;
   display: grid;
@@ -156,7 +162,7 @@ body::-webkit-scrollbar {
   width: 125%;
   height: 125%;
   background-color: rgba(142, 201, 210, 0.05);
-  border: 2px dotted #8ec9d2;
+  border: 2px dotted rgba(142, 201, 210, 0.05);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -282,25 +288,37 @@ body::-webkit-scrollbar {
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   border-radius: 10px;
+  margin-top: 2rem;
 }
 
 .project {
   color: #1a1d2b;
   background-color: #b7b8bf;
-  padding-bottom: 0.8rem;
+  padding: 0.4rem;
   overflow: hidden;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 32px;
   border-top-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  border: 6px solid #b7b8bf;
+  border: 4px solid #aaabb3;
+  transition: box-shadow 0.35s;
+  box-shadow: rgba(142, 201, 210, 0.99) 0px 0px 1px;
   display: grid;
   gap: 1rem;
   grid-auto-rows: min-content;
 }
+.project:hover {
+  box-shadow: #8ec9d2 0px 0px 16px;
+}
 .project:hover .project__heading:before,
 .project:hover .project__heading:after {
-  opacity: 1;
+  opacity: 0.9;
+}
+@supports (filter: grayscale(0)) {
+  .project:hover .project__heading:before,
+.project:hover .project__heading:after {
+    filter: grayscale(0);
+  }
 }
 .project__heading {
   background-color: #b7b8bf;
@@ -315,17 +333,22 @@ body::-webkit-scrollbar {
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  opacity: 0.1;
-  transition: opacity 0.5s;
+  opacity: 0.5;
+  transition: opacity 0.5s, filter 0.5s;
+}
+@supports (filter: grayscale(0)) {
+  .project__heading:before, .project__heading:after {
+    filter: grayscale(1);
+  }
 }
 .project__heading:before {
   content: "";
   background-color: rgba(40, 205, 65, 0.75);
-  transform: translate(-100%, 100%);
+  transform: translate(-150%, 100%);
 }
 .project__heading:after {
   background-color: rgba(255, 45, 85, 0.75);
-  transform: translate(-265%, 100%);
+  transform: translate(-315%, 100%);
 }
 .project__img {
   width: 100%;
@@ -355,10 +378,11 @@ body::-webkit-scrollbar {
   margin: 0 0.75rem;
   display: grid;
   gap: 0.8rem;
-  background-color: #1c2441;
+  background: url("../images/curcuit-board-two.svg"), #1f2848;
+  background-size: 50rem;
   padding: 1rem 1.5rem;
   border-radius: 5px;
-  color: #d7ecef;
+  color: #e0e0e3;
   font-weight: 300;
   border: 5px solid #aaabb3;
   border-radius: 20px;

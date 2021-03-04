@@ -1,10 +1,13 @@
 // Exo ------------ 100, 200, 300, 400, 500, 600, 700, 800, 900, 100, 200, 300, 400, 500, 600, 700, 800, 900
 // Exo 2 ---------- 100, 200, 300, 400, 500, 600, 700, 800, 900, 100, 200, 300, 400, 500, 600, 700, 800, 900
 
+@use 'variables';
+
 .heading-primary {
   font-family: var(--font-primary);
   font-size: 7.2rem;
   color: var(--color-secondary);
+  text-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 4px;
 
   line-height: 1;
 }
@@ -38,4 +41,9 @@
 
   font-size: 1.5rem;
   line-height: 1;
+}
+
+.project__descriptions {
+  font-family: var(--font-secondary);
+  font-size: 2.2rem;
 }
