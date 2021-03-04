@@ -1,10 +1,12 @@
 import React from 'react';
+import GitHubIcon from './svg/GitHubIcon';
+import LinkIcon from './svg/LinkIcon';
 
 const Project = ({ title, img, skills, paragraphs, links }) => {
   return (
     <div className='project'>
       <div className='project__heading'>{title}</div>
-      <a href={links[1]}>
+      <a className='project__link' href={links[1]}>
         <img className='project__img' src={img} alt={title} />
       </a>
 

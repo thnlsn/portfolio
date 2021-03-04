@@ -7,6 +7,7 @@ import profile from './images/profile.jpg';
 import project1 from './images/mind-garden.png';
 import project2 from './images/electoral-map.png';
 import project3 from './images/world-clock.png';
+import project6 from './images/portfolio.png';
 
 // Skills Icons
 import ReactIcon from './components/svg/ReactIcon';
@@ -23,6 +24,7 @@ import ExpressIcon from './components/svg/ExpressIcon';
 import MongoDBIcon from './components/svg/MongoDBIcon';
 import MySQLIcon from './components/svg/MySQLIcon';
 import AtlassianIcon from './components/svg/AtlassianIcon';
+import FigmaIcon from './components/svg/FigmaIcon';
 import JqueryIcon from './components/svg/JqueryIcon';
 import BootstrapIcon from './components/svg/BootstrapIcon';
 import HandlebarsIcon from './components/svg/HandlebarsIcon';
@@ -31,7 +33,31 @@ import ResponsiveIcon from './components/svg/ResponsiveIcon';
 
 // Components
 import Header from './components/Header';
+import Skills from './components/Skills.jsx';
 import Project from './components/Project.jsx';
+
+const skills = [
+  { img: <HTMLIcon />, skill: 'HTML' },
+  { img: <CSSIcon />, skill: 'CSS' },
+  { img: <JavaScriptIcon />, skill: 'HTML' },
+  { img: <ReactIcon />, skill: 'React' },
+  { img: <SassIcon />, skill: 'Sass' },
+  { img: <SvelteIcon />, skill: 'Svelte' },
+  { img: <GitIcon />, skill: 'Git' },
+  { img: <GitHubIcon />, skill: 'HTML' },
+  { img: <NodeIcon />, skill: 'Node' },
+  { img: <NPMIcon />, skill: 'NPM' },
+  { img: <ExpressIcon />, skill: 'Express' },
+  { img: <MongoDBIcon />, skill: 'MongoDB' },
+  { img: <MySQLIcon />, skill: 'MySQL' },
+  { img: <AtlassianIcon />, skill: 'Atlassian' },
+  { img: <FigmaIcon />, skill: 'Figma' },
+  { img: <JqueryIcon />, skill: 'jQuery' },
+  { img: <BootstrapIcon />, skill: 'Bootstrap' },
+  { img: <HandlebarsIcon />, skill: 'Handlebars' },
+  { img: <APIIcon />, skill: 'APIs' },
+  { img: <ResponsiveIcon />, skill: 'Responsive Web Design' },
+];
 
 function App() {
   const initAnimations = () => {
@@ -107,84 +133,7 @@ function App() {
             new challenges to tackle. At this moment I am proficient in the
             following technologies, but I am always looking to expand.
           </p>
-          <div className='section__skills'>
-            <div className='section__skill'>
-              <HTMLIcon />
-              HTML
-            </div>
-            <div className='section__skill'>
-              <CSSIcon />
-              CSS
-            </div>
-            <div className='section__skill'>
-              <JavaScriptIcon />
-              JavaScript
-            </div>
-            <div className='section__skill'>
-              <ReactIcon />
-              React
-            </div>
-            <div className='section__skill'>
-              <SvelteIcon />
-              Svelte
-            </div>
-            <div className='section__skill'>
-              <SassIcon />
-              Sass
-            </div>
-            <div className='section__skill'>
-              <GitIcon />
-              Git
-            </div>
-            <div className='section__skill'>
-              <GitHubIcon />
-              GitHub
-            </div>
-            <div className='section__skill'>
-              <NPMIcon />
-              NPM
-            </div>
-            <div className='section__skill'>
-              <NodeIcon />
-              Node
-            </div>
-            <div className='section__skill'>
-              <ExpressIcon />
-              Express
-            </div>
-            <div className='section__skill'>
-              <MongoDBIcon />
-              MongoDB
-            </div>
-            <div className='section__skill'>
-              <MySQLIcon />
-              MySQL
-            </div>
-            <div className='section__skill'>
-              <AtlassianIcon />
-              Atlassian
-            </div>
-            <div className='section__skill'>
-              <JqueryIcon />
-              jQuery
-            </div>
-            <div className='section__skill'>
-              <BootstrapIcon />
-              Bootstrap
-            </div>
-            <div className='section__skill'>
-              <HandlebarsIcon />
-              Handlebars
-            </div>
-            <div className='section__skill'>
-              <APIIcon />
-              APIs
-            </div>
-            <div className='section__skill'>
-              <ResponsiveIcon />
-              Responsive Web Design
-            </div>
-          </div>
+          <Skills skills={skills} />
           <p className='section__description'>
             Don't worry if something is missing &ndash; I pick things up pretty
             quick.
@@ -228,7 +177,7 @@ function App() {
             <Project
               title='Electoral Map'
               img={project2}
-              skills={['React', 'JavaScript', 'Sass', 'CSS', 'HTML', 'SVG']}
+              skills={['React', 'JavaScript', 'Sass', 'CSS', 'SVG']}
               paragraphs={[
                 'An interactive map of the United States electoral college. Paint each state by color to calculate a mock presidential election. You can also visualize the map by point density.',
                 'The map was created using SVG, which is how each state is able to be individually selected and dynamically updated.',
@@ -247,7 +196,6 @@ function App() {
                 'JavaScript',
                 'Sass',
                 'CSS',
-
                 'Moment.js',
                 'Emotion.js',
               ]}
@@ -258,6 +206,20 @@ function App() {
               links={[
                 'https://github.com/thnlsn/world-clock',
                 'https://thnlsn.github.io/world-clock/',
+              ]}
+            />
+
+            <Project
+              title='My Portfolio'
+              img={project6}
+              skills={['React', 'JavaScript', 'Sass', 'CSS']}
+              paragraphs={[
+                'My portfolio site! Yes, this one that you are currently browsing. Designed and developed by me.',
+                'Designed with Figma, and hand-coded with my preferred front-end stack of React, Sass, and vanilla JavaScript.',
+              ]}
+              links={[
+                'https://github.com/thnlsn/portfolio',
+                'https://thnlsn.github.io/portfolio/',
               ]}
             />
           </div>

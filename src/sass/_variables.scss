@@ -41,6 +41,8 @@ $color-secondary: #8ec9d2;
 $color-font: #b7b8bf;
 $color-bg: #141a2f;
 
+// $project-gradient: linear-gradient($color-font, #b7b8bf);
+
 $content-alpha: 0.8;
 
 $background: url('../images/curcuit-board.svg'),
@@ -60,6 +62,7 @@ $background-accent: #638b91;
 $background-skill: url('../images/curcuit-board.svg'), $color-secondary;
 $background-description: url('../images/curcuit-board-two.svg'),
   lighten($color-bg, 7);
+$background-project: url('../images/curcuit-board-three.svg'), $color-font;
 
 // Fonts
 $font-primary: 'Bungee Inline', cursive; // Main heading
@@ -70,3 +73,43 @@ $font-default: 'Exo 2', sans-serif; // Default text font
 
 // Layout
 $content-border: 1px solid $background-accent;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@mixin scrollbar(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    transition: background-color 1s, border 1s;
+    border: 3px dashed desaturate($foreground-color, 20);
+    background-color: desaturate($background-color, 20);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    border: 3px dashed desaturate($foreground-color, 40);
+    background-color: desaturate($background-color, 40);
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: darken($background-color, 15);
+    border-left: $content-border;
+    border-right: $content-border;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

@@ -12,7 +12,6 @@
   // background-image: var(--background);
   // background-size: 100vw;
   background-image: var(--background);
-  background-size: 100vw;
   overflow: hidden;
   height: 100vh;
 }
@@ -31,15 +30,27 @@
 .content {
   overflow-y: scroll;
 
-  &::-webkit-scrollbar {
+  /*   &::-webkit-scrollbar {
     display: none;
-  }
+  } */
 
   background-color: rgba(variables.$color-primary, 0.96);
   padding: 9rem 11.5rem 9rem 11rem; // Spacing around content
 
   border-left: variables.$content-border;
-  border-right: variables.$content-border;
+  border-right: variables.$content-border; // Only here if no support for
+
+  // If browser supports scrollbar styling
+  @supports selector(div::-webkit-scrollbar) {
+    // Change the scrollbar
+    @include variables.scrollbar(
+      7.5px,
+      variables.$color-secondary,
+      variables.$color-primary
+    );
+    // Remove the right border because the scrollbar will have borders
+    border-right: none;
+  }
 
   display: grid;
   grid-template-columns: 1fr;

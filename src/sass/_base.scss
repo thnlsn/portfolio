@@ -21,7 +21,12 @@ body {
   font-size: 2.4rem;
 
   // overflow-y: hidden;
-  &::-webkit-scrollbar {
+  /*   &::-webkit-scrollbar {
     display: none;
+  } */
+
+  ::selection {
+    background-color: rgba($color: variables.$color-secondary, $alpha: 0.9);
+    color: variables.$color-primary;
   }
 }
