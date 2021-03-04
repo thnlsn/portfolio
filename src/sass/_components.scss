@@ -10,9 +10,24 @@
     align-items: center;
 
     position: relative;
+
+    // Background circle behind image
+    &:before {
+      content: '';
+      width: 125%;
+      height: 125%;
+      background-color: rgba($color: variables.$color-secondary, $alpha: 0.05);
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
   }
+
   &__image {
-    border: 2px solid variables.$color-secondary;
+    border: 2px dotted variables.$color-secondary;
     border-radius: 50%;
 
     height: 25rem;
@@ -24,6 +39,11 @@
   .heading-primary {
     align-self: end;
     margin-bottom: 0.25rem;
+
+    @supports (-webkit-text-stroke: 2px black) {
+      -webkit-text-stroke: 2px variables.$color-primary; // width | color
+    }
+
     &--init {
       opacity: 0 !important;
       transform: translateY(20%) !important;
@@ -88,12 +108,13 @@
   }
   &__subject {
     color: variables.$color-white;
+    font-size: 4.8rem;
 
     &:before {
       content: attr(data-subject);
 
       color: rgba($color: variables.$color-secondary, $alpha: 0.05);
-      font-size: 3.4em;
+      font-size: 3em;
       z-index: -1;
 
       position: absolute;
@@ -104,8 +125,8 @@
 
     &:after {
       content: '';
-      height: 12px;
-      width: 12px;
+      height: 18px;
+      width: 18px;
       border-radius: 50%;
       background-color: transparent;
       border: 2px solid variables.$color-secondary;
@@ -113,13 +134,14 @@
       position: absolute;
       left: 0;
       top: 0;
-      transform: translate(-100%, -100%);
+      transform: translate(-100%, -0%);
     }
   }
 
   &__description {
   }
 
+  // SKILLS
   &__skills {
     display: flex;
     flex-wrap: wrap;
@@ -132,7 +154,8 @@
     align-items: center;
     column-gap: 1rem;
 
-    background-color: variables.$color-secondary;
+    background: variables.$background-skill;
+    background-size: 550px;
 
     color: variables.$color-primary;
     font-family: variables.$font-navigation;
@@ -140,9 +163,91 @@
 
     padding: 0.5rem 1rem;
     margin: 0.5rem;
+
+    border: 2px dotted variables.$color-primary;
     border-top-right-radius: 6px;
     border-bottom-left-radius: 14px;
     border-top-left-radius: 2px;
     border-bottom-right-radius: 2px;
   }
+
+  //PORTFOLIO
+  &__portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+
+    // Testing
+    border-radius: 10px;
+    padding: 1rem;
+  }
 }
+
+.project {
+  // Testing
+  color: variables.$color-black;
+  background-color: variables.$color-white;
+  min-height: 40rem;
+
+  // padding: 1.5rem 2rem;
+  overflow: hidden;
+  border-top-right-radius: 8px; // 16px
+  border-bottom-left-radius: 32px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  &:hover {
+    .project__heading:before,
+    .project__heading:after {
+      opacity: 1;
+    }
+  }
+
+  &__heading {
+    background-color: variables.$color-font;
+    padding: 0.5rem 2rem;
+
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+
+      opacity: 0.1;
+      transition: opacity 0.5s;
+    }
+
+    &:before {
+      content: '';
+      background-color: rgba(40, 205, 65, 0.75);
+      transform: translate(-100%, 100%);
+    }
+    &:after {
+      background-color: rgba(255, 45, 85, 0.75);
+      transform: translate(-265%, 100%);
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+/*
+& > * {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+& > *:first-child {
+  padding-top: 0.5rem;
+}
+& > *:last-child {
+  padding-bottom: 0.5rem;
+}
+*/

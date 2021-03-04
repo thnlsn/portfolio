@@ -4,6 +4,8 @@ import './css/style.css';
 // Assets
 import profile from './images/profile.jpg';
 
+import project1 from './images/mind-garden.png';
+
 // Skills Icons
 import ReactIcon from './components/svg/ReactIcon';
 import HTMLIcon from './components/svg/HTMLIcon';
@@ -44,14 +46,25 @@ function App() {
       .classList.remove('heading-subtitle--init');
   };
 
+  const initParallax = () => {
+    window.addEventListener('scroll', function (e) {
+      const target = document.querySelector('.App');
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -2;
+    });
+  };
+
   useEffect(() => {
     initAnimations();
+    initParallax();
   }, []);
 
   return (
     <div className='App'>
+      {/* <div className='background' /> */}
       <div className='navigation'></div>
       <div className='content'>
+        {/* <div className='background' /> */}
         <Header img={profile} />
         <section className='section section--who'>
           <div className='heading-secondary'>
@@ -75,7 +88,7 @@ function App() {
             <a href={'#contact'} className='section--link'>
               Contact
             </a>{' '}
-            me to discuss.
+            me to get the ball rolling!
           </p>
         </section>
 
@@ -173,6 +186,30 @@ function App() {
             Don't worry if something is missing &ndash; I pick things up pretty
             quick.
           </p>
+        </section>
+
+        <section className='section section--portfolio'>
+          <div className='heading-secondary'>
+            <span className='section__subject ' data-subject={'#portfolio'}>
+              #portfolio
+            </span>{' '}
+            of works
+          </div>
+          <p className='section__description'>
+            Below is a list of some projects I've' worked on &ndash; a healthy
+            mixture of paid and personal.{' '}
+          </p>
+          <p className='section__description'>
+            Included are links to view the live hosted sites as well as the
+            relevant GitHub repository, should you want to dig into my code.
+          </p>
+
+          <div className='section__portfolio'>
+            <div className='project'>
+              <div className='project__heading'>Mind Garden</div>
+              <img className='project__img' src={project1} alt='Mind Garden' />
+            </div>
+          </div>
         </section>
       </div>
     </div>

@@ -13,7 +13,7 @@ const Header = ({ img }) => {
       <div className='heading-primary heading-primary--init'>Thomas Nelson</div>
       <div className='divider divider--init'></div>
       <div className='heading-subtitle heading-subtitle--init'>
-        web developer & problem-solver
+        web developer & problem solver
       </div>
     </header>
   );

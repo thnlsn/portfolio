@@ -3,14 +3,39 @@
 .App {
   display: grid;
   grid-template-columns: 0.5fr 2fr 0.5fr; // Nav | Content | ...
-  height: 100vh;
 
-  border-left: variables.$content-border;
-  border-right: variables.$content-border;
+  // border-left: variables.$content-border;
+  // border-right: variables.$content-border;
+
+  // Testing
+  // height: 100vh;
+  // background-image: var(--background);
+  // background-size: 100vw;
+  background-image: var(--background);
+  background-size: 100vw;
+  overflow: hidden;
+  height: 100vh;
 }
 
+/* .background {
+  position: absolute;
+  background-image: var(--background);
+  background-size: 100vw;
+  background-repeat: repeat;
+  width: 100vw;
+  height: 500vh;
+
+  z-index: 0;
+} */
+
 .content {
-  background-color: rgba(variables.$color-primary, 0.97);
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  background-color: rgba(variables.$color-primary, 0.96);
   padding: 9rem 12.5rem 9rem 12rem; // Spacing around content
 
   border-left: variables.$content-border;
@@ -20,12 +45,20 @@
   grid-template-columns: 1fr;
   grid-template-rows: min-content;
   grid-auto-rows: min-content;
-  row-gap: 11rem; // Space between each content section
+  row-gap: 12.5rem; // Space between each content section
+
+  /*   box-shadow: rgba(variables.$background-accent, 0.4) 5px 0px,
+    rgba(variables.$background-accent, 0.3) 10px 0px,
+    rgba(variables.$background-accent, 0.2) 15px 0px; */
 
   @supports (backdrop-filter: blur(2px)) {
-    background-color: rgba(variables.$color-primary, 0.9);
+    background-color: rgba(variables.$color-primary, 0.8);
     backdrop-filter: blur(3px);
   }
+
+  /*   & > *:last-child {
+    padding-bottom: 9rem;
+  } */
 }
 
 .header {
