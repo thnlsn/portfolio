@@ -9,7 +9,6 @@ const Project = ({ title, img, skills, paragraphs, links }) => {
       <a className='project__link' href={links[1]}>
         <img className='project__img' src={img} alt={title} />
       </a>
-
       <div className='project__skills'>
         {skills.map((skill) => (
           <div className='project__skill'>{skill}</div>
@@ -22,7 +21,7 @@ const Project = ({ title, img, skills, paragraphs, links }) => {
       </div>
       <div className='links'>
         {links.map((link) => (
-          <a href={link} className='project__link'></a>
+          <a href={link} target='_blank' className='project__link'></a>
         ))}
       </div>
     </div>

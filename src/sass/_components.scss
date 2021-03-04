@@ -208,7 +208,7 @@
   border-bottom-right-radius: 8px;
 
   // border: 6px solid variables.$color-font;
-  border: 4px solid darken(variables.$color-font, 5);
+  border: 2px dotted darken(variables.$color-secondary, 10);
 
   transition: box-shadow 0.35s;
   box-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 1px;
@@ -267,10 +267,16 @@
     }
   }
 
+  &__link {
+    width: 96%;
+
+    margin: 0 auto;
+  }
+
   &__img {
     width: 100%;
     border-radius: 10px;
-    border: 1.5px solid darken(variables.$color-font, 5);
+    border: 2px solid darken(variables.$color-font, 5);
   }
 
   /*   &__link {

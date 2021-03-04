@@ -35,6 +35,7 @@ import ResponsiveIcon from './components/svg/ResponsiveIcon';
 import Header from './components/Header';
 import Skills from './components/Skills.jsx';
 import Project from './components/Project.jsx';
+import SectionHeading from './components/SectionHeading.jsx';
 
 const skills = [
   { img: <HTMLIcon />, skill: 'HTML' },
@@ -96,12 +97,7 @@ function App() {
         {/* <div className='background' /> */}
         <Header img={profile} />
         <section className='section section--who'>
-          <div className='heading-secondary'>
-            <span className='section__subject ' data-subject={'#who'}>
-              #who
-            </span>{' '}
-            I am
-          </div>
+          <SectionHeading heading={'who I am'} />
           <p className='section__description'>
             A web developer on and off the clock and a student beyond the
             classroom. I am a natural problem solver and love spending my time
@@ -122,12 +118,7 @@ function App() {
         </section>
 
         <section className='section section--portfolio'>
-          <div className='heading-secondary'>
-            <span className='section__subject ' data-subject={'#what'}>
-              #what
-            </span>{' '}
-            I can do
-          </div>
+          <SectionHeading heading={'what I can do'} />
           <p className='section__description'>
             Learning is a life style for me, and as such I am always eager for
             new challenges to tackle. At this moment I am proficient in the
@@ -141,12 +132,7 @@ function App() {
         </section>
 
         <section className='section section--portfolio'>
-          <div className='heading-secondary'>
-            <span className='section__subject ' data-subject={'#portfolio'}>
-              #portfolio
-            </span>{' '}
-            of works
-          </div>
+          <SectionHeading heading={'portfolio of works'} />
           <p className='section__description'>
             Below is a list of some projects I've' worked on &ndash; a healthy
             mixture of paid and personal.{' '}
