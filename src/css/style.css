@@ -149,6 +149,7 @@ body::-webkit-scrollbar {
   width: 125%;
   height: 125%;
   background-color: rgba(142, 201, 210, 0.05);
+  border: 2px dotted #8ec9d2;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -156,7 +157,7 @@ body::-webkit-scrollbar {
   border-radius: 50%;
 }
 .header__image {
-  border: 2px dotted #8ec9d2;
+  border: 2px solid #8ec9d2;
   border-radius: 50%;
   height: 25rem;
   width: 25rem;
@@ -278,13 +279,13 @@ body::-webkit-scrollbar {
 }
 
 .project {
-  background-color: #141a2f;
-  min-height: 40rem;
+  background-color: #b7b8bf;
   overflow: hidden;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 32px;
   border-top-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  border: 6px solid #b7b8bf;
 }
 .project:hover .project__heading:before,
 .project:hover .project__heading:after {
@@ -318,6 +319,7 @@ body::-webkit-scrollbar {
 }
 .project__img {
   width: 100%;
+  border-radius: 5px;
 }
 
 /*

@@ -18,6 +18,8 @@
       height: 125%;
       background-color: rgba($color: variables.$color-secondary, $alpha: 0.05);
 
+      border: 2px dotted variables.$color-secondary;
+
       position: absolute;
       top: 50%;
       left: 50%;
@@ -27,7 +29,7 @@
   }
 
   &__image {
-    border: 2px dotted variables.$color-secondary;
+    border: 2px solid variables.$color-secondary;
     border-radius: 50%;
 
     height: 25rem;
@@ -186,8 +188,7 @@
 .project {
   // Testing
 
-  background-color: variables.$color-bg;
-  min-height: 40rem;
+  background-color: variables.$color-font;
 
   // padding: 1.5rem 2rem;
   overflow: hidden;
@@ -195,6 +196,8 @@
   border-bottom-left-radius: 32px;
   border-top-left-radius: 8px;
   border-bottom-right-radius: 8px;
+
+  border: 6px solid variables.$color-font;
 
   &:hover {
     .project__heading:before,
@@ -237,6 +240,7 @@
 
   &__img {
     width: 100%;
+    border-radius: 5px;
   }
 }
 
