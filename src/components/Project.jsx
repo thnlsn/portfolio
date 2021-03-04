@@ -10,7 +10,7 @@ const Project = ({ title, img, skills, paragraphs, links }) => {
           <div className='project__skill'>{skill}</div>
         ))}
       </div>
-      <div className='project__description'>
+      <div className='project__descriptions'>
         {paragraphs.map((paragraph) => (
           <p className='project__description'>{paragraph}</p>
         ))}
