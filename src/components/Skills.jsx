@@ -3,8 +3,8 @@ import React from 'react';
 const Skills = ({ skills }) => {
   return (
     <div className='section__skills'>
-      {skills.map(({ img, skill }) => (
-        <div className='section__skill'>
+      {skills.map(({ img, skill }, i) => (
+        <div className='section__skill' key={i}>
           {img}
           {skill}
         </div>

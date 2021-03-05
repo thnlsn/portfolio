@@ -62,7 +62,7 @@ const skills = [
 
 function App() {
   const initAnimations = () => {
-    console.log(document.querySelector('.header__image'));
+    // console.log(document.querySelector('.header__image'));
     document
       .querySelector('.header__image')
       .classList.remove('header__image--init');
@@ -76,17 +76,17 @@ function App() {
       .classList.remove('heading-subtitle--init');
   };
 
-  const initParallax = () => {
+  /*   const initParallax = () => {
     window.addEventListener('scroll', function (e) {
       const target = document.querySelector('.App');
       const scrolled = window.pageYOffset;
       const rate = scrolled * -2;
     });
-  };
+  }; */
 
   useEffect(() => {
     initAnimations();
-    initParallax();
+    // initParallax();
   }, []);
 
   return (
@@ -205,7 +205,7 @@ function App() {
               ]}
               links={[
                 'https://github.com/thnlsn/portfolio',
-                'https://thnlsn.github.io/portfolio/',
+                'https://thomas-nelson-wd.netlify.app/',
               ]}
             />
           </div>

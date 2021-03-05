@@ -271,7 +271,7 @@
     }
   }
 
-  &__link {
+  &__img-link {
     // Make image a little smaller than the container and center it
     width: 96%;
     margin: 0 auto;
@@ -329,6 +329,55 @@
     border: 3px solid darken(variables.$color-font, 5);
     border-radius: 20px;
     box-shadow: inset 0 0 5px rgba(variables.$color-secondary, 0.99);
+  }
+
+  /*   &__links {
+    display: flex;
+    align-items: center;
+    background-color: orangered;
+    color: variables.$color-primary;
+  }
+
+  &__link {
+    display: inline-block;
+  } */
+
+  &__links {
+    padding: 0rem 1.1rem 1rem 0rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: auto;
+
+    justify-content: flex-end;
+  }
+
+  &__link {
+    background-color: variables.$color-primary;
+    color: lighten(variables.$color-font, 15);
+    padding: 0.8rem 1.2rem;
+    line-height: 1;
+
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+
+    &:first-child {
+      background-color: darken(
+        rgba($color: variables.$color-font, $alpha: 0.5),
+        15
+      );
+      color: variables.$color-bg;
+      margin-right: 1rem;
+
+      border: 2px solid variables.$color-primary;
+
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+    }
   }
 }
 
