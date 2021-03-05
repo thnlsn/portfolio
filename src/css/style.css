@@ -343,6 +343,7 @@ body ::selection {
   display: grid;
   gap: 1rem;
   grid-auto-rows: min-content;
+  grid-auto-rows: min-content min-content min-content 1fr min-content;
   /*   &__link {
     position: relative;
   } */
@@ -435,6 +436,7 @@ body ::selection {
 .project__descriptions {
   margin: 0 0.75rem;
   display: grid;
+  grid-template-rows: min-content;
   gap: 0.8rem;
   background: url("../images/curcuit-board-two.svg"), #1f2848;
   background-size: 50rem;
@@ -454,24 +456,53 @@ body ::selection {
   justify-content: flex-end;
 }
 .project__link {
-  background-color: #2e334a;
-  color: #e0e0e3;
-  padding: 0.8rem 1.2rem;
+  padding: 0.5rem 1.2rem 0.9rem 1.2rem;
   line-height: 1;
+  font-weight: 600;
+}
+.project__link:last-child {
+  color: #e0e0e3;
+  /*     background-color: desaturate(rgba(40, 205, 65, 1), 30);
+
+  border: 2px dotted darken(variables.$color-font, 0);
+
+  box-shadow: inset 0 0 2px darken(variables.$color-black, 1);
+
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px; */
+  transition: all 0.25s;
+  opacity: 0.9;
+  background-color: rgba(143, 144, 155, 0.5);
+  color: #2e334a;
+  margin-right: 1rem;
+  border: 2px dotted #b7b8bf;
+  box-shadow: inset 0 0 5px #747683;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
+  /*     &:hover {
+    opacity: 1;
+    background-color: darken(variables.$color-white, 20);
+    color: variables.$color-primary;
+    border-color: variables.$color-font;
+  } */
 }
 .project__link:first-child {
-  background-color: rgba(143, 144, 155, 0.5);
-  color: #141a2f;
+  /*       background-color: darken(
+    rgba($color: variables.$color-font, $alpha: 0.5),
+    15
+  ); */
+  color: #2e334a;
   margin-right: 1rem;
-  border: 2px solid #2e334a;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+  /*       &:hover {
+    opacity: 1;
+    background-color: variables.$color-secondary;
+    color: variables.$color-black;
+    border-color: variables.$color-font;
+  } */
 }
 
 /*
