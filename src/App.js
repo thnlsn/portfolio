@@ -40,12 +40,12 @@ import SectionHeading from './components/SectionHeading.jsx';
 const skills = [
   { img: <HTMLIcon />, skill: 'HTML' },
   { img: <CSSIcon />, skill: 'CSS' },
-  { img: <JavaScriptIcon />, skill: 'HTML' },
+  { img: <JavaScriptIcon />, skill: 'JavaScript' },
   { img: <ReactIcon />, skill: 'React' },
   { img: <SassIcon />, skill: 'Sass' },
   { img: <SvelteIcon />, skill: 'Svelte' },
   { img: <GitIcon />, skill: 'Git' },
-  { img: <GitHubIcon />, skill: 'HTML' },
+  { img: <GitHubIcon />, skill: 'GitHub' },
   { img: <NodeIcon />, skill: 'Node' },
   { img: <NPMIcon />, skill: 'NPM' },
   { img: <ExpressIcon />, skill: 'Express' },
@@ -126,8 +126,9 @@ function App() {
           </p>
           <Skills skills={skills} />
           <p className='section__description'>
-            Don't worry if something is missing &ndash; I pick things up pretty
-            quick.
+            I have experience working on a team in an agile environment with
+            Atlassian software Also, don't worry if something is missing &ndash;
+            I pick things up pretty quick.
           </p>
         </section>
 
