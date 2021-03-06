@@ -343,7 +343,7 @@ body ::selection {
   display: grid;
   gap: 1rem;
   grid-auto-rows: min-content;
-  grid-auto-rows: min-content min-content min-content 1fr min-content;
+  grid-auto-rows: min-content min-content min-content min-content 1fr;
   /*   &__link {
     position: relative;
   } */
@@ -411,6 +411,7 @@ body ::selection {
   width: 100%;
   border-radius: 10px;
   border: 2px solid #aaabb3;
+  vertical-align: top;
 }
 .project__skills {
   padding: 0rem 0rem;
@@ -503,6 +504,28 @@ body ::selection {
     color: variables.$color-black;
     border-color: variables.$color-font;
   } */
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.contact > *:not(.contact__submit) {
+  outline: none;
+  padding: 1rem 1rem;
+  background-color: transparent;
+  border: 2px solid #8ec9d2;
+  border-radius: 10px;
+}
+.contact__message {
+  grid-column: 1/-1;
+}
+.contact__submit {
+  grid-column: 1/-1;
+  justify-self: center;
+  max-width: 100%;
+  padding: 1rem 2rem;
 }
 
 /*

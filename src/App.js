@@ -146,7 +146,7 @@ function App() {
           </p>
         </section>
 
-        <section className='section section--portfolio'>
+        <section className='section'>
           <SectionHeading heading={'portfolio of works'} />
           <p className='section__description'>
             Below is a list of some projects I've' worked on &ndash; a healthy
@@ -167,7 +167,7 @@ function App() {
         /////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////
         */}
-          <div className='section'>
+          <div className='section__portfolio'>
             <Project
               title='Mind Garden'
               img={project1}
@@ -238,23 +238,34 @@ function App() {
         */}
         <section className='section' style={{ marginTop: '5rem' }}>
           <SectionHeading heading={'contact me'} />
-          <div className='contact'>
-            <form action='#' className='contact__form'>
+          <div className='contact-container'>
+            <form action='#' className='contact'>
               <input type='hidden' name='form-name' value='contact' />
-              <input type='text' name='name' placeholder='Name' required />
               <input
+                className='contact__name'
+                type='text'
+                name='name'
+                placeholder='Name'
+                required
+              />
+              <input
+                className='contact__email'
                 type='email'
                 name='email'
                 placeholder='Email address'
                 required
               />
               <textarea
+                className='contact__message'
                 name='message'
                 id='message'
                 rows='7'
                 placeholder='What can I do for you?'
+                resize='none'
               ></textarea>
-              <button type='submit'>Send!</button>
+              <button className='contact__submit' type='submit'>
+                Send!
+              </button>
             </form>
           </div>
         </section>

@@ -216,8 +216,9 @@
 
   display: grid;
   gap: 1rem;
+
   grid-auto-rows: min-content;
-  grid-auto-rows: min-content min-content min-content 1fr min-content;
+  grid-auto-rows: min-content min-content min-content min-content 1fr;
 
   &:hover {
     border: 2px dotted
@@ -282,6 +283,7 @@
     width: 100%;
     border-radius: 10px;
     border: 2px solid darken(variables.$color-font, 5);
+    vertical-align: top;
   }
 
   /*   &__link {
@@ -425,6 +427,40 @@
         border-color: variables.$color-font;
       } */
     }
+  }
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2rem;
+
+  & > *:not(.contact__submit) {
+    outline: none;
+    padding: 1rem 1rem;
+    background-color: transparent;
+    border: 2px solid variables.$color-secondary;
+    border-radius: 10px;
+  }
+
+  &__name {
+  }
+
+  &__email {
+  }
+
+  &__message {
+    grid-column: 1 / -1;
+  }
+
+  &__submit {
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    max-width: 100%;
+
+    padding: 1rem 2rem;
   }
 }
 
