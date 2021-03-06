@@ -117,7 +117,7 @@ body ::selection {
   /*   &::-webkit-scrollbar {
     display: none;
   } */
-  background-color: rgba(46, 51, 74, 0.96);
+  background-color: rgba(46, 51, 74, 0.95);
   padding: 9rem 11.5rem 9rem 11rem;
   border-left: 1px solid #638b91;
   border-right: 1px solid #638b91;
@@ -160,7 +160,7 @@ body ::selection {
 }
 @supports (backdrop-filter: blur(2px)) {
   .content {
-    background-color: rgba(46, 51, 74, 0.8);
+    background-color: rgba(46, 51, 74, 0.75);
     backdrop-filter: blur(3px);
   }
 }

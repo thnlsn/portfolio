@@ -96,7 +96,14 @@ function App() {
       <div className='content'>
         {/* <div className='background' /> */}
         <Header img={profile} />
-        <section className='section section--who'>
+
+        {/*
+        ABOUT SECTION
+        /////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////
+        */}
+        <section className='section'>
           <SectionHeading heading={'who I am'} />
           <p className='section__description'>
             A web developer on and off the clock and a student beyond the
@@ -117,7 +124,13 @@ function App() {
           </p>
         </section>
 
-        <section className='section section--portfolio'>
+        {/*
+        SKILLS SECTION
+        /////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////
+        */}
+        <section className='section'>
           <SectionHeading heading={'what I can do'} />
           <p className='section__description'>
             Learning is a life style for me, and as such I am always eager for
@@ -148,7 +161,13 @@ function App() {
             tablet!
           </p>
 
-          <div className='section__portfolio'>
+          {/*
+        PORTFOLIO SECTION
+        /////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////
+        */}
+          <div className='section'>
             <Project
               title='Mind Garden'
               img={project1}
@@ -175,7 +194,6 @@ function App() {
                 'https://thnlsn.github.io/electoral-map/',
               ]}
             />
-
             <Project
               title='World Clock'
               img={project3}
@@ -196,20 +214,48 @@ function App() {
                 'https://thnlsn.github.io/world-clock/',
               ]}
             />
-
             <Project
               title='My Portfolio'
               img={project6}
               skills={['React', 'JavaScript', 'Sass', 'CSS']}
               paragraphs={[
-                'My portfolio site! Yes, this one that you are currently browsing. Designed and developed by me.',
-                'Designed with Figma, and hand-coded with my preferred front-end stack of React, Sass, and vanilla JavaScript.',
+                'My portfolio site! The one you are currently browsing — designed and developed by me.',
+                'I used Figma to design the wireframes and hand-coded it with my preferred front-end stack of React, Sass, and vanilla JavaScript. The contact form is hooked up to Netlify forms to take advantage of serverless functions.',
               ]}
               links={[
                 'https://github.com/thnlsn/portfolio',
                 'https://thomas-nelson-wd.netlify.app/',
               ]}
             />
+          </div>
+        </section>
+
+        {/*
+        CONTACT SECTION
+        /////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////
+        */}
+        <section className='section' style={{ marginTop: '5rem' }}>
+          <SectionHeading heading={'contact me'} />
+          <div className='contact'>
+            <form action='#' className='contact__form'>
+              <input type='hidden' name='form-name' value='contact' />
+              <input type='text' name='name' placeholder='Name' required />
+              <input
+                type='email'
+                name='email'
+                placeholder='Email address'
+                required
+              />
+              <textarea
+                name='message'
+                id='message'
+                rows='7'
+                placeholder='What can I do for you?'
+              ></textarea>
+              <button type='submit'>Send!</button>
+            </form>
           </div>
         </section>
       </div>
