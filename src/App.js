@@ -126,9 +126,10 @@ function App() {
           </p>
           <Skills skills={skills} />
           <p className='section__description'>
-            I have experience working on a team in an agile environment with
-            Atlassian software Also, don't worry if something is missing &ndash;
-            I pick things up pretty quick.
+            I have experience working on a team in an agile (scrum & sprint)
+            environment using Atlassian software, but I also enjoy working
+            independently. Also, don't worry if a skill is missing &ndash; I
+            pick things up pretty quick.
           </p>
         </section>
 
