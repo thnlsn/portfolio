@@ -52,6 +52,19 @@ body ::selection {
   color: #2e334a;
 }
 
+.section--visible {
+  background-color: red;
+}
+.section--visible span {
+  background-color: yellowgreen;
+}
+.section--visible span::before {
+  background-color: blueviolet;
+}
+.section--visible p {
+  background-color: orangered;
+}
+
 .heading-primary {
   font-family: var(--font-primary);
   font-size: 7.2rem;
@@ -70,6 +83,9 @@ body ::selection {
   font-size: 4rem;
   font-weight: 900;
   font-family: var(--font-secondary);
+}
+.heading-secondary--invisible {
+  opacity: 0;
 }
 
 .heading-navigation {
@@ -322,7 +338,7 @@ body ::selection {
   border-top-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.section__portfolio {
+.section--portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(35.5rem, 1fr));
   gap: 4rem;

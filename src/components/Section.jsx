@@ -1,14 +1,12 @@
 import React from 'react';
 
-const Section = () => {
+import Heading from './SectionHeading';
+
+const Section = ({ heading, contents }) => {
   return (
-    <section className='section section--who'>
-      <div className='heading-secondary'>
-        <span className='section__subject ' data-subject={'#who'}>
-          #who
-        </span>{' '}
-        I am
-      </div>
+    <section className='section'>
+      <Heading heading={heading} />
+      {contents}
     </section>
   );
 };

@@ -15,14 +15,13 @@ const useOnScreen = function (options, once = true) {
       else once || setVisible(entry.isIntersecting);
     }, options);
 
-    console.log('ob');
+    console.log(ref);
     // Refs sometimes wont be referencing a DOM element on screen, which means ref could be null, so only proceed if it isn't falsy
     if (ref) observer.observe(ref); // If it is though, attach observer to it
 
     // useEffect can optionally return a function that acts as a clean-up function if either of the variables it is watching for changes
     // Unobserve it if it is referencing a DOM element, so as clean-up it will unobserve
     return () => {
-      console.log('unob');
       if (ref) observer.unobserve(ref);
     };
     // Watch ref and visible, so

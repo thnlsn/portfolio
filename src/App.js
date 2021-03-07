@@ -1,5 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, Fragment } from 'react';
 import './css/style.css';
+
+import { useOnScreen } from './hooks';
 
 // Assets
 import profile from './images/profile.jpg';
@@ -35,6 +37,7 @@ import ResponsiveIcon from './components/svg/ResponsiveIcon';
 import Header from './components/Header';
 import Skills from './components/Skills.jsx';
 import Project from './components/Project.jsx';
+import Section from './components/Section.jsx';
 import SectionHeading from './components/SectionHeading.jsx';
 import Contact from './components/Contact.jsx';
 
@@ -62,30 +65,16 @@ const skills = [
 ];
 
 function App() {
-  /*   const initAnimations = () => {
-    // console.log(document.querySelector('.header__image'));
-    document
-      .querySelector('.header__image')
-      .classList.remove('header__image--init');
+  const [setRef, visible] = useOnScreen({
+    rootMargin: '-200px',
+  });
 
-    document.querySelector('.divider').classList.remove('divider--init');
-    document
-      .querySelector('.heading-primary')
-      .classList.remove('heading-primary--init');
-    document
-      .querySelector('.heading-subtitle')
-      .classList.remove('heading-subtitle--init');
-  };
-  useEffect(() => {
-    initAnimations();
-  }, []); */
+  const visibility = () => (visible ? 'visible' : 'invisible');
 
   return (
     <div className='App'>
-      {/* <div className='background' /> */}
       <div className='navigation'></div>
       <div className='content'>
-        {/* <div className='background' /> */}
         <Header img={profile} />
 
         {/*
@@ -94,26 +83,30 @@ function App() {
         /////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////
         */}
-        <section className='section'>
-          <SectionHeading heading={'who I am'} />
-          <p className='section__description'>
-            A web developer on and off the clock and a student beyond the
-            classroom. I am a natural problem solver and love spending my time
-            coding and building responsive, functional, and beautiful websites.
-            Check out my{' '}
-            <a href={'#portfolio'} className='section--link'>
-              work
-            </a>{' '}
-            to see what I mean!
-          </p>
-          <p className='section__description'>
-            I’m currently available for projects no matter the scale.{' '}
-            <a href={'#contact'} className='section--link'>
-              Contact
-            </a>{' '}
-            me to get the ball rolling!
-          </p>
-        </section>
+        <Section
+          heading={'who I am'}
+          contents={
+            <Fragment>
+              <p className='section__description'>
+                A web developer on and off the clock and a student beyond the
+                classroom. I am a natural problem solver and love spending my
+                time coding and building responsive, functional, and beautiful
+                websites. Check out my{' '}
+                <a href={'#portfolio'} className='section--link'>
+                  work
+                </a>{' '}
+                to see what I mean!
+              </p>
+              <p className='section__description'>
+                I’m currently available for projects no matter the scale.{' '}
+                <a href={'#contact'} className='section--link'>
+                  Contact
+                </a>{' '}
+                me to get the ball rolling!
+              </p>
+            </Fragment>
+          }
+        />
 
         {/*
         SKILLS SECTION
@@ -121,7 +114,7 @@ function App() {
         /////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////
         */}
-        <section className='section'>
+        <section className={`section section--${visibility()}`}>
           <SectionHeading heading={'what I can do'} />
           <p className='section__description'>
             Learning is a life style for me, and as such I am always eager for
@@ -137,7 +130,7 @@ function App() {
           </p>
         </section>
 
-        <section className='section'>
+        <section className={`section section--${visibility()}`}>
           <SectionHeading heading={'portfolio of works'} />
           <p className='section__description'>
             Below is a list of some projects I've' worked on &ndash; a healthy
@@ -158,7 +151,9 @@ function App() {
         /////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////
         */}
-          <div className='section__portfolio'>
+          <div
+            className={`section section--${visibility()} section--portfolio`}
+          >
             <Project
               title='Mind Garden'
               img={project1}

@@ -1,0 +1,17 @@
+.section {
+  &--visible {
+    background-color: red;
+
+    span {
+      background-color: yellowgreen;
+
+      &::before {
+        background-color: blueviolet;
+      }
+    }
+
+    p {
+      background-color: orangered;
+    }
+  }
+}
