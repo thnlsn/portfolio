@@ -114,107 +114,120 @@ function App() {
         /////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////
         */}
-        <section className={`section section--${visibility()}`}>
-          <SectionHeading heading={'what I can do'} />
-          <p className='section__description'>
-            Learning is a life style for me, and as such I am always eager for
-            new challenges to tackle. At this moment I am proficient in the
-            following technologies, but I am always looking to expand.
-          </p>
-          <Skills skills={skills} />
-          <p className='section__description'>
-            I have experience working on a team in an agile (scrum & sprint)
-            environment using Atlassian software, but I also enjoy working
-            independently. Also, don't worry if a skill is missing &ndash; I
-            pick things up pretty quick.
-          </p>
-        </section>
+        <Section
+          heading={'what I can do'}
+          contents={
+            <Fragment>
+              <p className='section__description'>
+                Learning is a life style for me, and as such I am always eager
+                for new challenges to tackle. At this moment I am proficient in
+                the following technologies, but I am always looking to expand.
+              </p>
+              <Skills skills={skills} />
+              <p className='section__description'>
+                I have experience working on a team in an agile (scrum & sprint)
+                environment using Atlassian software, but I also enjoy working
+                independently. Also, don't worry if a skill is missing &ndash; I
+                pick things up pretty quick.
+              </p>
+            </Fragment>
+          }
+        />
 
-        <section className={`section section--${visibility()}`}>
-          <SectionHeading heading={'portfolio of works'} />
-          <p className='section__description'>
-            Below is a list of some projects I've' worked on &ndash; a healthy
-            mixture of paid and personal.{' '}
-          </p>
-          <p className='section__description'>
-            Included are links to view the live hosted sites as well as the
-            relevant GitHub repository, should you want to dig into my code.
-          </p>
-          <p className='section__description'>
-            Everything is fully responsive. Check them them out on your phone or
-            tablet!
-          </p>
-
-          {/*
+        {/*
         PORTFOLIO SECTION
         /////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////
         */}
-          <div
-            className={`section section--${visibility()} section--portfolio`}
-          >
-            <Project
-              title='Mind Garden'
-              img={project1}
-              skills={['React', 'JavaScript', 'Sass', 'CSS', 'LocalStorage']}
-              paragraphs={[
-                'A daily planner that aims to help you start every day grounded. It is simple and streamlined by design, as productivity and habit building is best when kept sustainable.',
-                'I elected not to use a database in favor of localStorage to avoid the need for a login, as to keep the app as streamlined as possible while retaining the ability to save data between sessions.',
-              ]}
-              links={[
-                'https://github.com/thnlsn/mind-garden',
-                'https://thnlsn.github.io/mind-garden/',
-              ]}
-            />
-            <Project
-              title='Electoral Map'
-              img={project2}
-              skills={['React', 'JavaScript', 'Sass', 'CSS', 'SVG']}
-              paragraphs={[
-                'An interactive map of the United States electoral college. Paint each state by color to calculate a mock presidential election. You can also visualize the map by point density.',
-                'The map was created using SVG, which is how each state is able to be individually selected and dynamically updated.',
-              ]}
-              links={[
-                'https://github.com/thnlsn/electoral-map',
-                'https://thnlsn.github.io/electoral-map/',
-              ]}
-            />
-            <Project
-              title='World Clock'
-              img={project3}
-              skills={[
-                'React',
-                'JavaScript',
-                'Sass',
-                'CSS',
-                'Moment.js',
-                'Emotion.js',
-              ]}
-              paragraphs={[
-                'A real-time updating analog clock of your timezone. You can click other timezones generated and watch the clock update.',
-                'The clock itself was made with pure CSS (with help from Sass) and the live updating is done with JavaScript and Emotion.js to calculate and update the rotation of the hands, with Moment.js supplying the timezone data.',
-              ]}
-              links={[
-                'https://github.com/thnlsn/world-clock',
-                'https://thnlsn.github.io/world-clock/',
-              ]}
-            />
-            <Project
-              title='My Portfolio'
-              img={project6}
-              skills={['React', 'JavaScript', 'Sass', 'CSS']}
-              paragraphs={[
-                'My portfolio site! The one you are currently browsing — designed and developed by me.',
-                'I used Figma to design the wireframes and hand-coded it with my preferred front-end stack of React, Sass, and vanilla JavaScript. The contact form is hooked up to Netlify forms to take advantage of serverless functions.',
-              ]}
-              links={[
-                'https://github.com/thnlsn/portfolio',
-                'https://thomas-nelson-wd.netlify.app/',
-              ]}
-            />
-          </div>
-        </section>
+
+        <Section
+          heading={'portfolio of works'}
+          contents={
+            <Fragment>
+              <p className='section__description'>
+                Below is a list of some projects I've' worked on &ndash; a
+                healthy mixture of paid and personal.{' '}
+              </p>
+              <p className='section__description'>
+                Included are links to view the live hosted sites as well as the
+                relevant GitHub repository, should you want to dig into my code.
+              </p>
+              <p className='section__description'>
+                Everything is fully responsive. Check them them out on your
+                phone or tablet!
+              </p>
+
+              <div className={`section__portfolio`}>
+                <Project
+                  title='Mind Garden'
+                  img={project1}
+                  skills={[
+                    'React',
+                    'JavaScript',
+                    'Sass',
+                    'CSS',
+                    'LocalStorage',
+                  ]}
+                  paragraphs={[
+                    'A daily planner that aims to help you start every day grounded. It is simple and streamlined by design, as productivity and habit building is best when kept sustainable.',
+                    'I elected not to use a database in favor of localStorage to avoid the need for a login, as to keep the app as streamlined as possible while retaining the ability to save data between sessions.',
+                  ]}
+                  links={[
+                    'https://github.com/thnlsn/mind-garden',
+                    'https://thnlsn.github.io/mind-garden/',
+                  ]}
+                />
+                <Project
+                  title='Electoral Map'
+                  img={project2}
+                  skills={['React', 'JavaScript', 'Sass', 'CSS', 'SVG']}
+                  paragraphs={[
+                    'An interactive map of the United States electoral college. Paint each state by color to calculate a mock presidential election. You can also visualize the map by point density.',
+                    'The map was created using SVG, which is how each state is able to be individually selected and dynamically updated.',
+                  ]}
+                  links={[
+                    'https://github.com/thnlsn/electoral-map',
+                    'https://thnlsn.github.io/electoral-map/',
+                  ]}
+                />
+                <Project
+                  title='World Clock'
+                  img={project3}
+                  skills={[
+                    'React',
+                    'JavaScript',
+                    'Sass',
+                    'CSS',
+                    'Moment.js',
+                    'Emotion.js',
+                  ]}
+                  paragraphs={[
+                    'A real-time updating analog clock of your timezone. You can click other timezones generated and watch the clock update.',
+                    'The clock itself was made with pure CSS (with help from Sass) and the live updating is done with JavaScript and Emotion.js to calculate and update the rotation of the hands, with Moment.js supplying the timezone data.',
+                  ]}
+                  links={[
+                    'https://github.com/thnlsn/world-clock',
+                    'https://thnlsn.github.io/world-clock/',
+                  ]}
+                />
+                <Project
+                  title='My Portfolio'
+                  img={project6}
+                  skills={['React', 'JavaScript', 'Sass', 'CSS']}
+                  paragraphs={[
+                    'My portfolio site! The one you are currently browsing — designed and developed by me.',
+                    'I used Figma to design the wireframes and hand-coded it with my preferred front-end stack of React, Sass, and vanilla JavaScript. The contact form is hooked up to Netlify forms to take advantage of serverless functions.',
+                  ]}
+                  links={[
+                    'https://github.com/thnlsn/portfolio',
+                    'https://thomas-nelson-wd.netlify.app/',
+                  ]}
+                />
+              </div>
+            </Fragment>
+          }
+        />
 
         {/*
         CONTACT SECTION
@@ -222,18 +235,20 @@ function App() {
         /////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////////
         */}
-        <section className='section' style={{ marginTop: '5rem' }}>
-          <SectionHeading heading={'contact me'} />
-          <Contact
-            action='#'
-            placeholders={{
-              name: 'Your name',
-              email: 'Email address',
-              message: 'What can I do for you?',
-            }}
-            btnText='Send!'
-          />
-        </section>
+        <Section
+          heading={'contact me'}
+          contents={
+            <Contact
+              action='#'
+              placeholders={{
+                name: 'Your name',
+                email: 'Email address',
+                message: 'What can I do for you?',
+              }}
+              btnText='Send!'
+            />
+          }
+        />
       </div>
     </div>
   );
