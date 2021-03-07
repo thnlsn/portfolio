@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Hook to handle intersection observing taking in IntersectionObserver options
 const useOnScreen = function (options, once = true) {

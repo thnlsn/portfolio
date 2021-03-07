@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import './css/style.css';
 
 import { useOnScreen } from './hooks';

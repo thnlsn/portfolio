@@ -4,16 +4,16 @@
 @use 'variables';
 
 .heading-primary {
-  font-family: var(--font-primary);
+  font-family: variables.$font-primary;
   font-size: 7.2rem;
-  color: var(--color-secondary);
+  color: variables.$color-secondary;
   text-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 4px;
 
   line-height: 1;
 }
 
 .heading-subtitle {
-  font-family: var(--font-white);
+  font-family: variables.$font-secondary;
   font-size: 3.6rem;
 
   line-height: 1;
@@ -22,7 +22,7 @@
 .heading-secondary {
   font-size: 4rem;
   font-weight: 900;
-  font-family: var(--font-secondary);
+  font-family: variables.$font-secondary;
 
   &--invisible {
     opacity: 0;
@@ -30,7 +30,7 @@
 }
 
 .heading-navigation {
-  font-family: var(--font-navigation);
+  font-family: variables.$font-navigation;
 }
 
 .text-emphasized {
@@ -40,20 +40,20 @@
 }
 
 .skill__icon {
-  fill: var(--color-primary);
+  fill: variables.$color-primary;
   height: 4rem;
   width: 4rem;
 }
 
 .project__skill {
-  color: var(--color-font);
-  font-family: var(--font-navigation);
+  color: variables.$color-font;
+  font-family: variables.$font-navigation;
 
   font-size: 1.4rem;
   line-height: 1;
 }
 
 .project__descriptions {
-  font-family: var(--font-secondary);
+  font-family: variables.$font-secondary;
   font-size: 2.2rem;
 }

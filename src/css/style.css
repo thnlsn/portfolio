@@ -66,15 +66,15 @@ body ::selection {
 }
 
 .heading-primary {
-  font-family: var(--font-primary);
+  font-family: "Bungee Inline", cursive;
   font-size: 7.2rem;
-  color: var(--color-secondary);
+  color: #8ec9d2;
   text-shadow: rgba(142, 201, 210, 0.99) 0px 0px 4px;
   line-height: 1;
 }
 
 .heading-subtitle {
-  font-family: var(--font-white);
+  font-family: "Exo", sans-serif;
   font-size: 3.6rem;
   line-height: 1;
 }
@@ -82,14 +82,14 @@ body ::selection {
 .heading-secondary {
   font-size: 4rem;
   font-weight: 900;
-  font-family: var(--font-secondary);
+  font-family: "Exo", sans-serif;
 }
 .heading-secondary--invisible {
   opacity: 0;
 }
 
 .heading-navigation {
-  font-family: var(--font-navigation);
+  font-family: "Bungee", cursive;
 }
 
 .text-emphasized {
@@ -99,20 +99,20 @@ body ::selection {
 }
 
 .skill__icon {
-  fill: var(--color-primary);
+  fill: #2e334a;
   height: 4rem;
   width: 4rem;
 }
 
 .project__skill {
-  color: var(--color-font);
-  font-family: var(--font-navigation);
+  color: #b7b8bf;
+  font-family: "Bungee", cursive;
   font-size: 1.4rem;
   line-height: 1;
 }
 
 .project__descriptions {
-  font-family: var(--font-secondary);
+  font-family: "Exo", sans-serif;
   font-size: 2.2rem;
 }
 
