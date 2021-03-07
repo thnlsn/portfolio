@@ -222,14 +222,14 @@ body ::selection {
     -webkit-text-stroke: 2px #2e334a;
   }
 }
-.header .heading-primary--init {
+.header .heading-primary--invisible {
   opacity: 0 !important;
   transform: translateY(20%) !important;
 }
 .header .heading-subtitle {
   align-self: start;
 }
-.header .heading-subtitle--init {
+.header .heading-subtitle--invisible {
   opacity: 0 !important;
   transform: translateY(-40%) !important;
 }
@@ -248,7 +248,7 @@ body ::selection {
   transition: width 1s;
   width: 100%;
 }
-.header .divider--init {
+.header .divider--invisible {
   width: 0;
 }
 .header .divider:after {

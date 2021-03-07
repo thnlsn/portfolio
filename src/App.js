@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './css/style.css';
 
 // Assets
@@ -62,7 +62,7 @@ const skills = [
 ];
 
 function App() {
-  const initAnimations = () => {
+  /*   const initAnimations = () => {
     // console.log(document.querySelector('.header__image'));
     document
       .querySelector('.header__image')
@@ -76,19 +76,9 @@ function App() {
       .querySelector('.heading-subtitle')
       .classList.remove('heading-subtitle--init');
   };
-
-  /*   const initParallax = () => {
-    window.addEventListener('scroll', function (e) {
-      const target = document.querySelector('.App');
-      const scrolled = window.pageYOffset;
-      const rate = scrolled * -2;
-    });
-  }; */
-
   useEffect(() => {
     initAnimations();
-    // initParallax();
-  }, []);
+  }, []); */
 
   return (
     <div className='App'>
