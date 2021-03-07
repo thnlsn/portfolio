@@ -36,6 +36,7 @@ import Header from './components/Header';
 import Skills from './components/Skills.jsx';
 import Project from './components/Project.jsx';
 import SectionHeading from './components/SectionHeading.jsx';
+import Contact from './components/Contact.jsx';
 
 const skills = [
   { img: <HTMLIcon />, skill: 'HTML' },
@@ -238,36 +239,15 @@ function App() {
         */}
         <section className='section' style={{ marginTop: '5rem' }}>
           <SectionHeading heading={'contact me'} />
-          <div className='contact-container'>
-            <form action='#' className='contact'>
-              <input type='hidden' name='form-name' value='contact' />
-              <input
-                className='contact__name'
-                type='text'
-                name='name'
-                placeholder='Name'
-                required
-              />
-              <input
-                className='contact__email'
-                type='email'
-                name='email'
-                placeholder='Email address'
-                required
-              />
-              <textarea
-                className='contact__message'
-                name='message'
-                id='message'
-                rows='10'
-                placeholder='What can I do for you?'
-                resize='none'
-              ></textarea>
-              <button className='contact__submit text-emphasized' type='submit'>
-                Send!
-              </button>
-            </form>
-          </div>
+          <Contact
+            action='#'
+            placeholders={{
+              name: 'Your name',
+              email: 'Email address',
+              message: 'What can I do for you?',
+            }}
+            btnText='Send!'
+          />
         </section>
       </div>
     </div>

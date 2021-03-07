@@ -497,7 +497,7 @@ body ::selection {
   border-top-left-radius: 10px;
 }
 .project__link:first-child:hover {
-  background-color: rgba(143, 144, 155, 0.5);
+  background-color: rgba(143, 144, 155, 0.6);
 }
 
 .contact {
@@ -522,12 +522,12 @@ body ::selection {
   background-color: rgba(20, 26, 47, 0.35);
 }
 .contact > *:not(.contact__submit)::placeholder {
-  color: #798081;
+  color: #6f7576;
 }
 .contact > *:not(.contact__submit):hover {
   border: 2px solid #1a1d2b;
-  border-color: #212224;
-  background-color: rgba(35, 46, 83, 0.35);
+  border-color: #bebeb3;
+  background-color: rgba(66, 73, 105, 0.15);
 }
 .contact > *:not(.contact__submit):focus {
   transition: border-color 0.3s, box-shadow 0.4s background-color 0.3s;
