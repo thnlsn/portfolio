@@ -263,7 +263,7 @@ function App() {
                 placeholder='What can I do for you?'
                 resize='none'
               ></textarea>
-              <button className='contact__submit' type='submit'>
+              <button className='contact__submit text-emphasized' type='submit'>
                 Send!
               </button>
             </form>

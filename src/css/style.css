@@ -76,6 +76,12 @@ body ::selection {
   font-family: var(--font-navigation);
 }
 
+.text-emphasized {
+  color: #2e334a;
+  font-family: "Bungee", cursive;
+  font-size: 2rem;
+}
+
 .skill__icon {
   fill: var(--color-primary);
   height: 4rem;
@@ -308,9 +314,6 @@ body ::selection {
   background-color: #8ec9d2;
   background: url("../images/curcuit-board.svg"), #8ec9d2;
   background-size: 550px;
-  color: #2e334a;
-  font-family: "Bungee", cursive;
-  font-size: 2rem;
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   border: 2px dotted rgba(46, 51, 74, 0.75);

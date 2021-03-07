@@ -4,7 +4,7 @@ const Skills = ({ skills }) => {
   return (
     <div className='section__skills'>
       {skills.map(({ img, skill }, i) => (
-        <div className='section__skill' key={i}>
+        <div className='section__skill text-emphasized' key={i}>
           {img}
           {skill}
         </div>

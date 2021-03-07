@@ -29,6 +29,12 @@
   font-family: var(--font-navigation);
 }
 
+.text-emphasized {
+  color: variables.$color-primary;
+  font-family: variables.$font-navigation;
+  font-size: 2rem;
+}
+
 .skill__icon {
   fill: var(--color-primary);
   height: 4rem;
