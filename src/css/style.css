@@ -52,17 +52,26 @@ body ::selection {
   color: #2e334a;
 }
 
+.section--invisible {
+  opacity: 0;
+  transform: translateY(4rem);
+}
+.section--invisible .section__subject {
+  border: 2px solid yellowgreen;
+}
+.section--invisible .section__subject::before {
+  transform: translate(-20%, -45%);
+  opacity: 0;
+}
 .section--visible {
-  background-color: red;
+  transition: opacity 1s, transform 0.85s;
+  opacity: 1;
+  transform: translateY(0rem);
 }
-.section--visible span {
-  background-color: yellowgreen;
-}
-.section--visible span::before {
-  background-color: blueviolet;
-}
-.section--visible p {
-  background-color: orangered;
+.section--visible .section__subject::before {
+  transition: transform 1.5s, opacity 1.5s;
+  transform: translate(0%, -45%);
+  opacity: 1;
 }
 
 .heading-primary {

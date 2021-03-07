@@ -1,17 +1,29 @@
 .section {
-  &--visible {
-    background-color: red;
+  &--invisible {
+    opacity: 0;
+    transform: translateY(4rem);
 
-    span {
-      background-color: yellowgreen;
+    .section__subject {
+      border: 2px solid yellowgreen;
 
       &::before {
-        background-color: blueviolet;
+        transform: translate(-20%, -45%);
+        opacity: 0;
       }
     }
+  }
 
-    p {
-      background-color: orangered;
+  &--visible {
+    transition: opacity 1s, transform 0.85s;
+    opacity: 1;
+    transform: translateY(0rem);
+
+    .section__subject {
+      &::before {
+        transition: transform 1.5s, opacity 1.5s;
+        transform: translate(0%, -45%);
+        opacity: 1;
+      }
     }
   }
 }
