@@ -173,8 +173,8 @@ function App() {
               img={project1}
               skills={['React', 'JavaScript', 'Sass', 'CSS', 'LocalStorage']}
               paragraphs={[
-                'A daily planner that aims to help you start every day grounded. It is simple and lightweight by design, as productivity and habit building is best when sustainable.',
-                'I chose not to use a back-end in favor of localStorage to avoid the need for a login, as to keep the app as streamlined as possible while retaining the ability to save data between sessions.',
+                'A daily planner that aims to help you start every day grounded. It is simple and streamlined by design, as productivity and habit building is best when kept sustainable.',
+                'I elected not to use a database in favor of localStorage to avoid the need for a login, as to keep the app as streamlined as possible while retaining the ability to save data between sessions.',
               ]}
               links={[
                 'https://github.com/thnlsn/mind-garden',
@@ -259,7 +259,7 @@ function App() {
                 className='contact__message'
                 name='message'
                 id='message'
-                rows='7'
+                rows='10'
                 placeholder='What can I do for you?'
                 resize='none'
               ></textarea>

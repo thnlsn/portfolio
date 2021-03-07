@@ -102,7 +102,7 @@ body ::selection {
 
 .App {
   display: grid;
-  grid-template-columns: 0.4fr 2fr 0.4fr;
+  grid-template-columns: 0.45fr 2fr 0.45fr;
   background-image: var(--background);
   overflow: hidden;
   height: 100vh;
@@ -324,7 +324,7 @@ body ::selection {
 }
 .section__portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(35.5rem, 1fr));
   gap: 4rem;
   border-radius: 10px;
   margin-top: 2rem;
@@ -513,22 +513,58 @@ body ::selection {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  transition: all 0.3s;
+}
+.contact > * {
+  outline: none;
 }
 .contact > *:not(.contact__submit) {
-  outline: none;
+  font-size: 2rem;
+  font-family: "Exo", sans-serif;
+  color: #f1f1e6;
+  font-weight: 500;
+  transition: all 0.3s;
   padding: 1rem 1rem;
   background-color: transparent;
-  border: 2px solid #8ec9d2;
+  border: 2px solid #2e334a;
   border-radius: 10px;
+  background-color: rgba(20, 26, 47, 0.35);
+}
+.contact > *:not(.contact__submit)::placeholder {
+  color: #798081;
+}
+.contact > *:not(.contact__submit):hover {
+  border: 2px solid #1a1d2b;
+  border-color: #212224;
+  background-color: rgba(35, 46, 83, 0.35);
+}
+.contact > *:not(.contact__submit):focus {
+  transition: border-color 0.3s, box-shadow 0.4s background-color 0.3s;
+  background-color: rgba(20, 26, 47, 0.5);
+  border-color: #8ab6bd;
 }
 .contact__message {
   grid-column: 1/-1;
+  resize: none;
 }
 .contact__submit {
+  outline: none;
+  border: 2px solid currentColor;
   grid-column: 1/-1;
   justify-self: center;
   max-width: 100%;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2.5rem;
+  line-height: 1;
+  border-radius: 5px;
+  transition: color 0.15s, background-color 0.25s, border-color 0.25s;
+}
+.contact__submit:hover {
+  color: #f1f1e6;
+  background-color: transparent;
+  border-color: #f1f1e6;
+}
+.contact__submit:active {
+  background-color: rgba(142, 201, 210, 0.5);
 }
 
 /*
