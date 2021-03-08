@@ -1,11 +1,52 @@
+@use 'variables';
+
+.header {
+  &--invisible {
+    opacity: 0;
+
+    .header__image-container {
+      &:before {
+        width: 90% !important;
+        height: 90% !important;
+        border-radius: 10% !important;
+      }
+    }
+
+    .heading-primary {
+      opacity: 0 !important;
+      transform: translateY(20%) !important;
+    }
+
+    .heading-subtitle {
+      opacity: 0 !important;
+      transform: translateY(-40%) !important;
+    }
+
+    .divider {
+      width: 0 !important;
+    }
+  }
+
+  &--visible {
+    transition: all 1s;
+    .header__image-container {
+      &:before {
+        transition: width 1s cubic-bezier(0.06, 0.81, 0.64, 1.23),
+          height 1s cubic-bezier(0.06, 0.81, 0.64, 1.23);
+        width: 125%;
+        height: 125%;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
 .section {
   &--invisible {
     opacity: 0;
     transform: translateY(4rem);
 
     .section__subject {
-      border: 2px solid yellowgreen;
-
       &::before {
         transform: translate(-20%, -45%);
         opacity: 0;

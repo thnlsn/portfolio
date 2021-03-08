@@ -37,6 +37,11 @@
   color: variables.$color-primary;
   font-family: variables.$font-navigation;
   font-size: 2rem;
+
+  &--inline {
+    font-family: variables.$font-primary;
+    font-size: 2.6rem;
+  }
 }
 
 .skill__icon {

@@ -34,11 +34,11 @@ import APIIcon from './components/svg/APIIcon';
 import ResponsiveIcon from './components/svg/ResponsiveIcon';
 
 // Components
+import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Skills from './components/Skills.jsx';
 import Project from './components/Project.jsx';
 import Section from './components/Section.jsx';
-import SectionHeading from './components/SectionHeading.jsx';
 import Contact from './components/Contact.jsx';
 
 const skills = [
@@ -65,15 +65,25 @@ const skills = [
 ];
 
 function App() {
-  const [setRef, visible] = useOnScreen({
-    rootMargin: '-200px',
+  // Intersection Observer hooks
+  const [setAboutRef, aboutVisible] = useOnScreen({
+    rootMargin: '-300px',
+  });
+  const [setSkillsRef, skillsVisible] = useOnScreen({
+    rootMargin: '-300px',
+  });
+  const [setPortfolioRef, portfolioVisible] = useOnScreen({
+    rootMargin: '-300px',
+  });
+  const [setContactRef, contactVisible] = useOnScreen({
+    rootMargin: '-300px',
   });
 
-  const visibility = () => (visible ? 'visible' : 'invisible');
+  const visibility = (visible) => (visible ? 'visible' : 'invisible');
 
   return (
     <div className='App'>
-      <div className='navigation'></div>
+      <Navigation />
       <div className='content'>
         <Header img={profile} />
 
@@ -106,6 +116,9 @@ function App() {
               </p>
             </Fragment>
           }
+          margin={'3rem'}
+          setRef={setAboutRef}
+          visible={visibility(aboutVisible)}
         />
 
         {/*
@@ -132,6 +145,8 @@ function App() {
               </p>
             </Fragment>
           }
+          setRef={setSkillsRef}
+          visible={visibility(skillsVisible)}
         />
 
         {/*
@@ -167,7 +182,7 @@ function App() {
                     'JavaScript',
                     'Sass',
                     'CSS',
-                    'LocalStorage',
+                    'localStorage',
                   ]}
                   paragraphs={[
                     'A daily planner that aims to help you start every day grounded. It is simple and streamlined by design, as productivity and habit building is best when kept sustainable.',
@@ -227,6 +242,8 @@ function App() {
               </div>
             </Fragment>
           }
+          setRef={setPortfolioRef}
+          visible={visibility(portfolioVisible)}
         />
 
         {/*
@@ -238,16 +255,28 @@ function App() {
         <Section
           heading={'contact me'}
           contents={
-            <Contact
-              action='#'
-              placeholders={{
-                name: 'Your name',
-                email: 'Email address',
-                message: 'What can I do for you?',
-              }}
-              btnText='Send!'
-            />
+            <Fragment>
+              <p className='section__description'>
+                Do you need a website? Are you a recruiter or company with a web
+                developer vacancy and you think I'd be a good fit? Please get in
+                touch with the form below, and feel free to check out my resume
+                available.
+              </p>
+
+              <Contact
+                action='#'
+                placeholders={{
+                  name: 'Your name',
+                  email: 'Email address',
+                  message: 'What can I do for you?',
+                }}
+                btnText='Send!'
+              />
+            </Fragment>
           }
+          margin={'2rem'}
+          setRef={setContactRef}
+          visible={visibility(contactVisible)}
         />
       </div>
     </div>

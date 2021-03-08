@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 // Hook to handle intersection observing taking in IntersectionObserver options
-const useOnScreen = function (options, once = true) {
+const useOnScreen = function (options = { threshhold: 1 }, once = true) {
   // ref will be a direct reference to the dom element it is attached to
   const [ref, setRef] = useState(null); // Will reference a DOM element
   const [visible, setVisible] = useState(false); // visible should be false by default

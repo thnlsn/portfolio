@@ -34,7 +34,7 @@ const Project = ({ title, img, skills, paragraphs, links }) => {
             href={link}
             target='_blank'
             rel='noopener noreferrer'
-            className='project__link text-emphasized'
+            className='project__link text-emphasized--inline'
             key={i}
           >
             {i === 0 ? 'Repo' : 'Live Link'} <span>&#8658;</span>
