@@ -22,6 +22,40 @@
     <title>Thomas Nelson</title>
   </head>
   <body>
+    <form
+      className="contact"
+      name="contact"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <input
+        className="contact__name"
+        type="text"
+        name="name"
+        placeholder="{name}"
+        required
+      />
+      <input
+        className="contact__email"
+        type="email"
+        name="email"
+        placeholder="{email}"
+        required
+      />
+      <textarea
+        className="contact__message"
+        name="message"
+        id="message"
+        rows="10"
+        placeholder="{message}"
+        resize="none"
+      ></textarea>
+      <button className="contact__submit text-emphasized" type="submit">
+        {text}
+      </button>
+    </form>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
