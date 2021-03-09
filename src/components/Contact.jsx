@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Contact = ({ action, placeholders, btnText: text }) => {
+const Contact = ({ placeholders, btnText: text }) => {
   const { name, email, message } = placeholders;
   return (
     <div className='contact-container'>
       <form
-        action={action}
         className='contact'
         name='contact'
         method='POST'
