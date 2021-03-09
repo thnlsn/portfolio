@@ -10,12 +10,16 @@ const useOnScreen = function (options = { threshhold: 1 }, once = true) {
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
       // This is what we call if intersecting
-      if (entry.isIntersecting) setVisible(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setVisible(entry.isIntersecting);
+      }
       // If false is passed in for once, then it should switch visible to false when leaving intersection, so it can be animated again when intersected
-      else once || setVisible(entry.isIntersecting);
+      else {
+        once || setVisible(entry.isIntersecting);
+      }
     }, options);
 
-    console.log(ref);
+    // console.log(ref);
     // Refs sometimes wont be referencing a DOM element on screen, which means ref could be null, so only proceed if it isn't falsy
     if (ref) observer.observe(ref); // If it is though, attach observer to it
 

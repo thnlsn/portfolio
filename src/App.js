@@ -64,26 +64,55 @@ const skills = [
   { img: <ResponsiveIcon />, skill: 'Responsive Web Design' },
 ];
 
+const visibility = (visible) => (visible ? 'visible' : 'invisible');
+
 function App() {
   // Intersection Observer hooks
-  const [setAboutRef, aboutVisible] = useOnScreen({
-    rootMargin: '-300px',
-  });
-  const [setSkillsRef, skillsVisible] = useOnScreen({
-    rootMargin: '-300px',
-  });
-  const [setPortfolioRef, portfolioVisible] = useOnScreen({
-    rootMargin: '-300px',
-  });
-  const [setContactRef, contactVisible] = useOnScreen({
-    rootMargin: '-300px',
-  });
-
-  const visibility = (visible) => (visible ? 'visible' : 'invisible');
+  const [setAboutRef, aboutVisible] = useOnScreen(
+    {
+      root: null,
+      threshold: 0,
+    }
+    // false
+    // () => setAbout(visibility(false))
+  );
+  const [setSkillsRef, skillsVisible] = useOnScreen(
+    {
+      root: null,
+      rootMargin: '-300px',
+    }
+    // false
+    // () => setAbout(visibility(false))
+  );
+  const [setPortfolioRef, portfolioVisible] = useOnScreen(
+    {
+      root: null,
+      rootMargin: '-300px',
+    }
+    // false
+    // () => setPortfolio(visibility(false))
+  );
+  const [setContactRef, contactVisible] = useOnScreen(
+    {
+      root: null,
+      rootMargin: '-300px',
+    }
+    // false
+    // () => setContact(visibility(false))
+  );
 
   return (
     <div className='App'>
-      <Navigation />
+      <Navigation
+      // aboutVisible={visibility(aboutVisible)}
+      // skillsVisible={visibility(skillsVisible)}
+      // portfolioVisible={visibility(portfolioVisible)}
+      // contactVisible={visibility(contactVisible)}
+      // aboutVisible={false}
+      // skillsVisible={false}
+      // portfolioVisible={false}
+      // contactVisible={false}
+      />
       <div className='content'>
         <Header img={profile} />
 

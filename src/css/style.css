@@ -53,6 +53,7 @@ body ::selection {
 }
 
 .header--invisible {
+  transition: all 1s;
   opacity: 0;
 }
 .header--invisible .header__image-container:before {
@@ -82,10 +83,12 @@ body ::selection {
 }
 
 .section--invisible {
+  transition: all 1s;
   opacity: 0;
   transform: translateY(4rem);
 }
 .section--invisible .section__subject::before {
+  transition: transform 1s, opacity 0.75s;
   transform: translate(-20%, -45%);
   opacity: 0;
 }
@@ -618,10 +621,10 @@ body ::selection {
   flex-direction: column;
 }
 .navigation__link {
-  background-color: blue;
+  background-color: indianred;
 }
-.navigation__link--intersected {
-  background-color: red;
+.navigation__link--visible {
+  background-color: royalblue;
 }
 .navigation__socials {
   display: flex;

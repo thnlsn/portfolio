@@ -509,10 +509,10 @@
   flex-direction: column;
 
   &__link {
-    background-color: blue;
+    background-color: indianred;
 
-    &--intersected {
-      background-color: red;
+    &--visible {
+      background-color: royalblue;
     }
   }
 

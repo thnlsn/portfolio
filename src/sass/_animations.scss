@@ -2,6 +2,7 @@
 
 .header {
   &--invisible {
+    transition: all 1s;
     opacity: 0;
 
     .header__image-container {
@@ -43,11 +44,13 @@
 
 .section {
   &--invisible {
+    transition: all 1s;
     opacity: 0;
     transform: translateY(4rem);
 
     .section__subject {
       &::before {
+        transition: transform 1s, opacity 0.75s;
         transform: translate(-20%, -45%);
         opacity: 0;
       }
