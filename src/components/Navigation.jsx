@@ -10,7 +10,7 @@ const Navigation = ({
   contactVisible,
 }) => {
   return (
-    <div className='navigation'>
+    <nav className='navigation'>
       <div className={`navigation__link navigation__link--${aboutVisible}`}>
         About
       </div>
@@ -31,7 +31,7 @@ const Navigation = ({
           <GitHubIcon />
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
