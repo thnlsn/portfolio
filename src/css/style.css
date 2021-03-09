@@ -379,7 +379,7 @@ body ::selection {
   font-weight: 600;
 }
 .section__subject {
-  scroll-margin: 8rem;
+  scroll-margin: 11rem;
   color: #f1f1e6;
   font-size: 1.45em;
 }

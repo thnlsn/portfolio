@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({ scroll }) => {
   return (
-    <div className='footer'>
+    <footer className='footer'>
       <div className='footer__text'>Thomas Nelson | 2021</div>
-      <div className='footer__link'>Back to the top</div>
-    </div>
+      <div className='footer__link' onClick={scroll}>
+        Back to the top
+      </div>
+    </footer>
   );
 };
 

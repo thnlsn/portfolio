@@ -40,6 +40,7 @@ import Skills from './components/Skills.jsx';
 import Project from './components/Project.jsx';
 import Section from './components/Section.jsx';
 import Contact from './components/Contact.jsx';
+import Footer from './components/Footer.jsx';
 
 const skills = [
   { img: <HTMLIcon />, skill: 'HTML' },
@@ -100,7 +101,7 @@ function App() {
   return (
     <div className='App'>
       {/* <div className='background' /> */}
-      <Navigation />
+      <Navigation scrollTo={scrollToSection} />
       <div className='content'>
         <Header img={profile} />
 
@@ -307,9 +308,8 @@ function App() {
           setRef={setContactRef}
           visible={visibility(contactVisible)}
         />
-        <div className='cheese' onClick={scrollToTop}>
-          cheese
-        </div>
+
+        <Footer scroll={scrollToTop} />
       </div>
     </div>
   );
