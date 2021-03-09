@@ -11,18 +11,30 @@ const Navigation = ({
 }) => {
   return (
     <nav className='navigation'>
-      <div className={`navigation__link navigation__link--${aboutVisible}`}>
+      <a
+        href={'#who'}
+        className={`navigation__link navigation__link--${aboutVisible}`}
+      >
         About
-      </div>
-      <div className={`navigation__link navigation__link--${skillsVisible}`}>
+      </a>
+      <a
+        href={'#what'}
+        className={`navigation__link navigation__link--${skillsVisible}`}
+      >
         Skills
-      </div>
-      <div className={`navigation__link navigation__link--${portfolioVisible}`}>
+      </a>
+      <a
+        href={'#portfolio'}
+        className={`navigation__link navigation__link--${portfolioVisible}`}
+      >
         Portfolio
-      </div>
-      <div className={`navigation__link navigation__link--${contactVisible}`}>
+      </a>
+      <a
+        href={'#contact'}
+        className={`navigation__link navigation__link--${contactVisible}`}
+      >
         Contact
-      </div>
+      </a>
       <div className='navigation__socials'>
         <div className='navigation__social-link'>
           <LinkedInIcon />

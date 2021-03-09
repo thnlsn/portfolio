@@ -85,13 +85,21 @@ function App() {
     rootMargin: '-300px',
   });
 
+  const scrollToSection = (section) => {
+    document
+      .querySelector(`.section__subject[data-subject=${section}]`)
+      .scrollIntoView({ behavior: 'smooth' });
+  };
+
   const scrollToTop = () => {
-    console.log('scroll');
-    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+    document
+      .querySelector('.content')
+      .scroll({ top: 0, left: 0, behavior: 'smooth' });
   };
 
   return (
     <div className='App'>
+      {/* <div className='background' /> */}
       <Navigation />
       <div className='content'>
         <Header img={profile} />
@@ -113,7 +121,7 @@ function App() {
                 websites. Check out my{' '}
                 <a
                   onClick={() => {
-                    console.log('hi');
+                    scrollToSection('portfolio');
                   }}
                   href={'#portfolio'}
                   className='section--link'
@@ -124,7 +132,13 @@ function App() {
               </p>
               <p className='section__description'>
                 I’m currently available for projects no matter the scale.{' '}
-                <a href={'#contact'} className='section--link'>
+                <a
+                  onClick={() => {
+                    scrollToSection('contact');
+                  }}
+                  href={'#contact'}
+                  className='section--link'
+                >
                   Contact
                 </a>{' '}
                 me to get the ball rolling!
