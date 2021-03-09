@@ -88,7 +88,7 @@ function App() {
 
   const scrollToSection = (section) => {
     document
-      .querySelector(`.section__subject[data-subject=${section}]`)
+      .querySelector(`div[data-subject=${section}]`)
       .scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -146,7 +146,6 @@ function App() {
               </p>
             </Fragment>
           }
-          margin={'3rem'}
           setRef={setAboutRef}
           visible={visibility(aboutVisible)}
         />
@@ -274,6 +273,7 @@ function App() {
           }
           setRef={setPortfolioRef}
           visible={visibility(portfolioVisible)}
+          margin={'2rem'}
         />
 
         {/*
@@ -304,7 +304,6 @@ function App() {
               />
             </Fragment>
           }
-          margin={'2rem'}
           setRef={setContactRef}
           visible={visibility(contactVisible)}
         />

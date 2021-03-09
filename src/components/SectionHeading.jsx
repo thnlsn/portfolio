@@ -1,15 +1,6 @@
 import React from 'react';
 
-const SectionHeading = ({ heading }) => {
-  /*     const [setRef, visible] = useOnScreen({
-    rootMargin: '-200px',
-  });
-
-  const visibility = () => (visible ? 'visible' : 'invisible'); */
-
-  const split = heading.split(' ');
-  const emphasis = heading.split(' ')[0];
-  const text = split.slice(1).join(' ');
+const SectionHeading = ({ emphasis, text }) => {
   return (
     <div className={`heading-secondary`}>
       <span className='section__subject' data-subject={`#${emphasis}`}>

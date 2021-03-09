@@ -78,6 +78,12 @@
   grid-template-columns: max-content 1fr;
   grid-template-rows: 1fr min-content 1fr;
   row-gap: 2rem;
+
+  margin-bottom: 3rem;
+}
+
+.section-container {
+  scroll-margin: 9rem;
 }
 
 .section {
@@ -113,7 +119,7 @@
   &__link {
     text-decoration: none;
     color: variables.$color-bg;
-    background-color: variables.$background-accent;
+    background-color: rgba(variables.$background-accent, 0.95);
 
     padding: 1rem 2rem;
 
@@ -135,8 +141,16 @@
 
   &__social-link {
     .skill__icon {
-      fill: white;
-      color: white;
+      fill: variables.$color-bg;
+      padding: 0.5rem;
+      border-radius: 50%;
+
+      transition: background-color 0.25s;
+      background-color: rgba(variables.$background-accent, 0.95);
+
+      &:hover {
+        background-color: rgba(variables.$color-secondary, 0.95);
+      }
     }
   }
 }

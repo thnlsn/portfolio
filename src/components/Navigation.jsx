@@ -12,30 +12,30 @@ const Navigation = ({
 }) => {
   return (
     <nav className='navigation'>
-      <button
+      <a
         onClick={() => scrollTo("'#who'")}
         className={`navigation__link navigation__link--${aboutVisible}`}
       >
         About
-      </button>
-      <button
+      </a>
+      <a
         onClick={() => scrollTo("'#what'")}
         className={`navigation__link navigation__link--${skillsVisible}`}
       >
         Skills
-      </button>
-      <button
+      </a>
+      <a
         onClick={() => scrollTo("'#portfolio'")}
         className={`navigation__link navigation__link--${portfolioVisible}`}
       >
         Portfolio
-      </button>
-      <button
+      </a>
+      <a
         onClick={() => scrollTo("'#contact'")}
         className={`navigation__link navigation__link--${contactVisible}`}
       >
         Contact
-      </button>
+      </a>
       <div className='navigation__socials'>
         <a
           href={'https://www.linkedin.com/in/thnlsn/'}
