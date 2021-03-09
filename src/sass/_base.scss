@@ -29,4 +29,17 @@ body {
     background-color: rgba($color: variables.$color-secondary, $alpha: 0.9);
     color: variables.$color-primary;
   }
+
+  overflow-y: scroll;
+  // If browser supports scrollbar styling
+  @supports selector(div::-webkit-scrollbar) {
+    // Change the scrollbar
+    @include variables.scrollbar(
+      7.5px,
+      variables.$color-secondary,
+      variables.$color-primary
+    );
+    // Remove the right border because the scrollbar will have borders
+    border-right: none;
+  }
 }

@@ -95,6 +95,11 @@
     color: variables.$color-white;
     font-weight: 600;
   }
+  &--emphasis {
+    color: variables.$color-secondary;
+    font-weight: 600;
+  }
+
   &__subject {
     color: variables.$color-white;
     font-size: 1.45em;
@@ -508,16 +513,28 @@
   display: flex;
   flex-direction: column;
 
+  margin: auto 0;
+
   &__link {
-    background-color: indianred;
+    color: variables.$color-bg;
+    background-color: variables.$background-accent;
+
+    padding: 1rem 2rem;
 
     &--true {
-      background-color: royalblue;
+      background-color: variables.$color-secondary;
     }
   }
 
   &__socials {
     display: flex;
+    justify-content: center;
+
+    padding: 2rem 0;
+
+    & > *:not(:last-child) {
+      margin-right: 3rem;
+    }
   }
 
   &__social-link {

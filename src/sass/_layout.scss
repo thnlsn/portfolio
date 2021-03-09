@@ -12,8 +12,8 @@
   // background-image: var(--background);
   // background-size: 100vw;
   background-image: var(--background);
-  overflow: hidden;
-  height: 100vh;
+  /*   overflow: hidden;
+  height: 100vh; */
 }
 
 /* .background {
@@ -28,8 +28,6 @@
 } */
 
 .content {
-  overflow-y: scroll;
-
   /*   &::-webkit-scrollbar {
     display: none;
   } */
@@ -40,18 +38,6 @@
 
   border-left: variables.$content-border;
   border-right: variables.$content-border; // Only here if no support for
-
-  // If browser supports scrollbar styling
-  @supports selector(div::-webkit-scrollbar) {
-    // Change the scrollbar
-    @include variables.scrollbar(
-      7.5px,
-      variables.$color-secondary,
-      variables.$color-primary
-    );
-    // Remove the right border because the scrollbar will have borders
-    border-right: none;
-  }
 
   display: grid;
   grid-template-columns: 1fr;

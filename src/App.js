@@ -68,51 +68,31 @@ const visibility = (visible) => (visible ? 'visible' : 'invisible');
 
 function App() {
   // Intersection Observer hooks
-  const [setAboutRef, aboutVisible] = useOnScreen(
-    {
-      root: null,
-      threshold: 0,
-    }
-    // false
-    // () => setAbout(visibility(false))
-  );
-  const [setSkillsRef, skillsVisible] = useOnScreen(
-    {
-      root: null,
-      rootMargin: '-300px',
-    }
-    // false
-    // () => setAbout(visibility(false))
-  );
-  const [setPortfolioRef, portfolioVisible] = useOnScreen(
-    {
-      root: null,
-      rootMargin: '-300px',
-    }
-    // false
-    // () => setPortfolio(visibility(false))
-  );
-  const [setContactRef, contactVisible] = useOnScreen(
-    {
-      root: null,
-      rootMargin: '-300px',
-    }
-    // false
-    // () => setContact(visibility(false))
-  );
+  const [setAboutRef, aboutVisible] = useOnScreen({
+    root: null,
+    threshold: 0,
+  });
+  const [setSkillsRef, skillsVisible] = useOnScreen({
+    root: null,
+    rootMargin: '-300px',
+  });
+  const [setPortfolioRef, portfolioVisible] = useOnScreen({
+    root: null,
+    rootMargin: '-300px',
+  });
+  const [setContactRef, contactVisible] = useOnScreen({
+    root: null,
+    rootMargin: '-300px',
+  });
+
+  const scrollToTop = () => {
+    console.log('scroll');
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className='App'>
-      <Navigation
-      // aboutVisible={visibility(aboutVisible)}
-      // skillsVisible={visibility(skillsVisible)}
-      // portfolioVisible={visibility(portfolioVisible)}
-      // contactVisible={visibility(contactVisible)}
-      // aboutVisible={false}
-      // skillsVisible={false}
-      // portfolioVisible={false}
-      // contactVisible={false}
-      />
+      <Navigation />
       <div className='content'>
         <Header img={profile} />
 
@@ -131,7 +111,13 @@ function App() {
                 classroom. I am a natural problem solver and love spending my
                 time coding and building responsive, functional, and beautiful
                 websites. Check out my{' '}
-                <a href={'#portfolio'} className='section--link'>
+                <a
+                  onClick={() => {
+                    console.log('hi');
+                  }}
+                  href={'#portfolio'}
+                  className='section--link'
+                >
                   work
                 </a>{' '}
                 to see what I mean!
@@ -286,10 +272,11 @@ function App() {
           contents={
             <Fragment>
               <p className='section__description'>
-                Do you need a website? Are you a recruiter or company with a web
-                developer vacancy and you think I'd be a good fit? Please get in
-                touch with the form below, and feel free to check out my resume
-                available.
+                Do you need a website? Are you a recruiter or company with a
+                vacancy I'd be a good fit for? Please get in touch either
+                through my email address at{' '}
+                <span className='section--emphasis'>thnlsn@gmail.com</span> or
+                the form below. If needed, I can provide references.
               </p>
 
               <Contact
@@ -306,6 +293,9 @@ function App() {
           setRef={setContactRef}
           visible={visibility(contactVisible)}
         />
+        <div className='cheese' onClick={scrollToTop}>
+          cheese
+        </div>
       </div>
     </div>
   );
