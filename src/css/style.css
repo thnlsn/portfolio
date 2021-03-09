@@ -623,7 +623,7 @@ body ::selection {
 .navigation__link {
   background-color: indianred;
 }
-.navigation__link--visible {
+.navigation__link--true {
   background-color: royalblue;
 }
 .navigation__socials {

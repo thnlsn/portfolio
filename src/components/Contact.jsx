@@ -4,7 +4,13 @@ const Contact = ({ action, placeholders, btnText: text }) => {
   const { name, email, message } = placeholders;
   return (
     <div className='contact-container'>
-      <form action={action} className='contact'>
+      <form
+        action={action}
+        className='contact'
+        name='contact'
+        method='POST'
+        data-netlify='true'
+      >
         {/* <input type='hidden' name='form-name' value='contact' /> */}
         <input
           className='contact__name'

@@ -1,65 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import LinkedInIcon from './svg/LinkedInIcon';
 import GitHubIcon from './svg/GitHubIcon';
 
-const Navigation = ({}) => {
-  const visibility = (visible) => (visible ? 'visible' : 'invisible');
-  const [intersections, setIntersections] = useState({
-    about: false,
-    skills: false,
-    portfolio: false,
-    contact: false,
-  });
-
-  const sectionOptions = {
-    root: null,
-    threshold: 0.15,
-  };
-
-  // Function to highlight the tab in the nav as its section intersects
-  const sectionHighlight = function (entries) {
-    const [{ isIntersecting, target: section }] = entries;
-    const sectionNum = section.id[section.id.length - 1]; // Section number
-    const navigationLinks = document.querySelectorAll('.navigation__link'); // navlinks Nodelist
-    console.log(sectionNum);
-    if (isIntersecting) {
-      console.log('butty');
-    }
-  };
-
-  const allTabSections = document.querySelectorAll('.section');
-
-  // Observer for each of the tabbed sections
-  const tabSectionObserver = new IntersectionObserver(
-    sectionHighlight,
-    sectionOptions
-  );
-  // Observe each of the tabbed sections
-  allTabSections.forEach((section) => {
-    tabSectionObserver.observe(section);
-  });
-
+const Navigation = ({
+  aboutVisible,
+  skillsVisible,
+  portfolioVisible,
+  contactVisible,
+}) => {
   return (
     <div className='navigation'>
-      <div
-        className={`navigation__link navigation__link--${intersections.about}`}
-      >
+      <div className={`navigation__link navigation__link--${aboutVisible}`}>
         About
       </div>
-      <div
-        className={`navigation__link navigation__link--${intersections.skills}`}
-      >
+      <div className={`navigation__link navigation__link--${skillsVisible}`}>
         Skills
       </div>
-      <div
-        className={`navigation__link navigation__link--${intersections.portfolio}`}
-      >
+      <div className={`navigation__link navigation__link--${portfolioVisible}`}>
         Portfolio
       </div>
-      <div
-        className={`navigation__link navigation__link--${intersections.contact}`}
-      >
+      <div className={`navigation__link navigation__link--${contactVisible}`}>
         Contact
       </div>
       <div className='navigation__socials'>
