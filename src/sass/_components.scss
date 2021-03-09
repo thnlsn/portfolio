@@ -94,6 +94,7 @@
   &--link {
     color: variables.$color-white;
     font-weight: 600;
+    cursor: pointer;
   }
   &--emphasis {
     color: variables.$color-secondary;
