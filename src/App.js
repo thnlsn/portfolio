@@ -293,7 +293,7 @@ function App() {
               </p>
 
               <Contact
-                action='#'
+                action='POST'
                 placeholders={{
                   name: 'Your name',
                   email: 'Email address',
