@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { useOnScreen } from '../hooks';
-
 const SectionHeading = ({ heading }) => {
   /*     const [setRef, visible] = useOnScreen({
     rootMargin: '-200px',
@@ -14,7 +12,7 @@ const SectionHeading = ({ heading }) => {
   const text = split.slice(1).join(' ');
   return (
     <div className={`heading-secondary`}>
-      <span className='section__subject' data-subject={`${emphasis}`}>
+      <span className='section__subject' data-subject={`#${emphasis}`}>
         #{emphasis}
       </span>{' '}
       {text}

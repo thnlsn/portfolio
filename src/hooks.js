@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Hook to handle intersection observing taking in IntersectionObserver options
 const useOnScreen = function (options = { threshhold: 1 }, once = true) {
@@ -29,7 +29,7 @@ const useOnScreen = function (options = { threshhold: 1 }, once = true) {
       if (ref) observer.unobserve(ref);
     };
     // Watch ref and visible, so
-  }, [ref, options]);
+  }, [ref, options, once]);
 
   // Return the setRef function and the value of visible
   // Return setRef instead of ref because of cases where we want IntersectionObserver to conditionally render an entire element, where a ref would not exist at first.

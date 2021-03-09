@@ -12,41 +12,47 @@ const Navigation = ({
 }) => {
   return (
     <nav className='navigation'>
-      <a
-        onClick={() => scrollTo('who')}
-        href={'#who'}
+      <button
+        onClick={() => scrollTo("'#who'")}
         className={`navigation__link navigation__link--${aboutVisible}`}
       >
         About
-      </a>
-      <a
-        onClick={() => scrollTo('what')}
-        href={'#what'}
+      </button>
+      <button
+        onClick={() => scrollTo("'#what'")}
         className={`navigation__link navigation__link--${skillsVisible}`}
       >
         Skills
-      </a>
-      <a
-        onClick={() => scrollTo('portfolio')}
-        href={'#portfolio'}
+      </button>
+      <button
+        onClick={() => scrollTo("'#portfolio'")}
         className={`navigation__link navigation__link--${portfolioVisible}`}
       >
         Portfolio
-      </a>
-      <a
-        onClick={() => scrollTo('contact')}
-        href={'#contact'}
+      </button>
+      <button
+        onClick={() => scrollTo("'#contact'")}
         className={`navigation__link navigation__link--${contactVisible}`}
       >
         Contact
-      </a>
+      </button>
       <div className='navigation__socials'>
-        <div className='navigation__social-link'>
+        <a
+          href={'https://www.linkedin.com/in/thnlsn/'}
+          rel='noopener noreferrer'
+          target='_blank'
+          className='navigation__social-link'
+        >
           <LinkedInIcon />
-        </div>
-        <div className='navigation__social-link'>
+        </a>
+        <a
+          href={'https://github.com/thnlsn'}
+          rel='noopener noreferrer'
+          target='_blank'
+          className='navigation__social-link'
+        >
           <GitHubIcon />
-        </div>
+        </a>
       </div>
     </nav>
   );
