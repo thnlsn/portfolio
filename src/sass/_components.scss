@@ -1,4 +1,5 @@
 @use 'variables';
+@use 'breakpoints';
 
 // Header
 .header {
@@ -38,6 +39,15 @@
     width: 25rem;
 
     z-index: 1; // So it is above the dot
+
+    @media only screen and (max-width: breakpoints.$bp-largest) {
+      height: 22.5rem;
+      width: 22.5rem;
+    }
+    @media only screen and (max-width: breakpoints.$bp-larger) {
+      height: 20rem;
+      width: 20rem;
+    }
   }
 
   .heading-primary {

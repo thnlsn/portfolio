@@ -5,8 +5,14 @@
   display: grid;
   grid-template-columns: 0.4fr 2fr 0.4fr; // Nav | Content | ...
 
+  @media only screen and (max-width: breakpoints.$bp-largest) {
+    grid-template-columns: 0.3fr 2fr 0.285fr;
+  }
+  @media only screen and (max-width: breakpoints.$bp-larger) {
+    grid-template-columns: min-content 1fr;
+  }
   @media only screen and (max-width: breakpoints.$bp-large) {
-    grid-template-columns: 0.4fr 1fr;
+    grid-template-columns: min-content 1fr;
   }
 
   // border-left: variables.$content-border;
@@ -44,8 +50,8 @@
   background-color: rgba(variables.$color-primary, 0.95);
   padding: 9rem 11.5rem 9rem 11rem; // Spacing around content
 
-  @media only screen and (max-width: breakpoints.$bp-larger) {
-    padding: 9rem 7.5rem 9rem 7rem;
+  @media only screen and (max-width: breakpoints.$bp-largest) {
+    padding: 9rem 6.5rem 9rem 7rem;
   }
 
   border-left: variables.$content-border;

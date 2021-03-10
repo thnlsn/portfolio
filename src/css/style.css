@@ -152,10 +152,11 @@ body ::selection {
   color: #8ec9d2;
   text-shadow: rgba(142, 201, 210, 0.99) 0px 0px 4px;
   line-height: 1;
+  padding-left: 3rem;
 }
 @media only screen and (max-width: 103.125em) {
   .heading-primary {
-    font-size: 6rem;
+    font-size: 5.5rem;
   }
 }
 
@@ -166,7 +167,7 @@ body ::selection {
 }
 @media only screen and (max-width: 103.125em) {
   .heading-subtitle {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -218,9 +219,19 @@ body ::selection {
   overflow: hidden;
   height: 100vh;
 }
+@media only screen and (max-width: 103.125em) {
+  .App {
+    grid-template-columns: 0.3fr 2fr 0.285fr;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .App {
+    grid-template-columns: min-content 1fr;
+  }
+}
 @media only screen and (max-width: 62.5em) {
   .App {
-    grid-template-columns: 0.4fr 1fr;
+    grid-template-columns: min-content 1fr;
   }
 }
 
@@ -253,9 +264,9 @@ body ::selection {
     rgba(variables.$background-accent, 0.3) 10px 0px,
     rgba(variables.$background-accent, 0.2) 15px 0px; */
 }
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 103.125em) {
   .content {
-    padding: 9rem 7.5rem 9rem 7rem;
+    padding: 9rem 6.5rem 9rem 7rem;
   }
 }
 @supports selector(div::-webkit-scrollbar) {
@@ -395,6 +406,18 @@ body ::selection {
   height: 25rem;
   width: 25rem;
   z-index: 1;
+}
+@media only screen and (max-width: 103.125em) {
+  .header__image {
+    height: 22.5rem;
+    width: 22.5rem;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .header__image {
+    height: 20rem;
+    width: 20rem;
+  }
 }
 .header .heading-primary {
   align-self: end;
