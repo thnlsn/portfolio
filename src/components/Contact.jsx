@@ -4,7 +4,7 @@ const Contact = ({ placeholders, btnText: text }) => {
   const { name, email, message } = placeholders;
   return (
     <div className='contact-container'>
-      <form className='contact' method='post' name='contact' netlify={true}>
+      <form className='contact' method='post' name='contact' netlify={'true'}>
         <input type='hidden' name='form-name' value='contact' />
         <input
           className='contact__name'

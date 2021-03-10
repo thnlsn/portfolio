@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import './css/style.css';
 
+/* Move ladder to main entrance room and move tree out of the way */
+
 import { useOnScreen } from './hooks';
 
 // Assets
@@ -88,7 +90,7 @@ function App() {
 
   const scrollToSection = (section) => {
     document
-      .querySelector(`div[data-subject=${section}]`)
+      .querySelector(`[data-subject=${section}]`)
       .scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -122,7 +124,7 @@ function App() {
                 websites. Check out my{' '}
                 <a
                   onClick={() => {
-                    scrollToSection('portfolio');
+                    scrollToSection("'#portfolio'");
                   }}
                   href={'#portfolio'}
                   className='section--link'
@@ -135,7 +137,7 @@ function App() {
                 I’m currently available for projects no matter the scale.{' '}
                 <a
                   onClick={() => {
-                    scrollToSection('contact');
+                    scrollToSection("'#contact'");
                   }}
                   href={'#contact'}
                   className='section--link'
@@ -148,6 +150,7 @@ function App() {
           }
           setRef={setAboutRef}
           visible={visibility(aboutVisible)}
+          num={1}
         />
 
         {/*
@@ -176,6 +179,7 @@ function App() {
           }
           setRef={setSkillsRef}
           visible={visibility(skillsVisible)}
+          num={2}
         />
 
         {/*
@@ -274,6 +278,7 @@ function App() {
           setRef={setPortfolioRef}
           visible={visibility(portfolioVisible)}
           margin={'2rem'}
+          num={3}
         />
 
         {/*
@@ -306,6 +311,7 @@ function App() {
           }
           setRef={setContactRef}
           visible={visibility(contactVisible)}
+          num={4}
         />
 
         <Footer scroll={scrollToTop} />

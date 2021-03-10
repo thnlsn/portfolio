@@ -211,6 +211,7 @@ body ::selection {
 } */
 .content {
   overflow-y: scroll;
+  overflow-x: hidden;
   /*   &::-webkit-scrollbar {
     display: none;
   } */
@@ -307,8 +308,12 @@ body ::selection {
 .navigation__link {
   text-decoration: none;
   color: #141a2f;
+  padding: 0.5rem 2rem;
+  transition: background-color 0.25s;
   background-color: rgba(99, 139, 145, 0.95);
-  padding: 1rem 2rem;
+}
+.navigation__link:hover {
+  background-color: rgba(142, 201, 210, 0.95);
 }
 .navigation__link--true {
   background-color: #8ec9d2;
@@ -332,6 +337,9 @@ body ::selection {
   background-color: rgba(142, 201, 210, 0.95);
 }
 
+.header {
+  scroll-margin: 9rem;
+}
 .header__image-container {
   align-self: center;
   grid-row: 1/-1;

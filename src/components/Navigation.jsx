@@ -1,38 +1,78 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import LinkedInIcon from './svg/LinkedInIcon';
 import GitHubIcon from './svg/GitHubIcon';
 
-const Navigation = ({
-  scrollTo,
-  aboutVisible,
-  skillsVisible,
-  portfolioVisible,
-  contactVisible,
-}) => {
+const Navigation = ({ scrollTo }) => {
+  const [visibility, setVisibility] = useState([false, false, false, false]);
+
+  // Options for all section enter effects, so for the 3 tab sections highlighting their tabs in the navbar as well as the sections themselves appearing when they get close enough
+  const sectionOptions = {
+    root: null,
+    rootMargin: '-300px',
+  };
+
+  // Function to highlight the tab in the nav as its section intersects
+  const sectionHighlight = function (entries) {
+    console.log(entries);
+    const [{ isIntersecting, target: section }] = entries;
+    const sectionNum = +section.id - 1; // Section number
+    let copy = [...visibility];
+    if (isIntersecting) {
+      // When a new section is intersected, scale all to default (so that there is never 2 tabs being scaled up)
+      setVisibility(copy.map((link) => (link = false)));
+      // The one that was intersected should be the only one scaled up
+      copy[sectionNum] = true;
+      setVisibility(copy);
+      // Else is for the case of the last section, when there are no more intersections to take place, which would leave the last tab scaled up even when left, so target the tab that is NO longer intersecting, and scale it back down
+    } else {
+      copy[sectionNum] = false;
+    }
+  };
+
+  useEffect(() => {
+    // Select all tab sections (not the contact section) by targetting all sections with id's prefixed with section (since contact doesn't have an id and all the other sections do, but with different suffixes/BEM modifiers)
+    const allTabSections = document.querySelectorAll('.section-container');
+    console.log(allTabSections);
+
+    // Observer for each of the tabbed sections
+    const tabSectionObserver = new IntersectionObserver(
+      sectionHighlight,
+      sectionOptions
+    );
+    // Observe each of the tabbed sections
+    allTabSections.forEach((section) => {
+      tabSectionObserver.observe(section);
+    });
+  }, []);
+
   return (
-    <nav className='navigation'>
+    <nav className='navigation heading-navigation'>
       <a
+        href={'#who'}
         onClick={() => scrollTo("'#who'")}
-        className={`navigation__link navigation__link--${aboutVisible}`}
+        className={`navigation__link navigation__link--${visibility[0]}`}
       >
         About
       </a>
       <a
+        href={'#what'}
         onClick={() => scrollTo("'#what'")}
-        className={`navigation__link navigation__link--${skillsVisible}`}
+        className={`navigation__link navigation__link--${visibility[1]}`}
       >
         Skills
       </a>
       <a
+        href={'#portfolio'}
         onClick={() => scrollTo("'#portfolio'")}
-        className={`navigation__link navigation__link--${portfolioVisible}`}
+        className={`navigation__link navigation__link--${visibility[2]}`}
       >
         Portfolio
       </a>
       <a
+        href={'#contact'}
         onClick={() => scrollTo("'#contact'")}
-        className={`navigation__link navigation__link--${contactVisible}`}
+        className={`navigation__link navigation__link--${visibility[3]}`}
       >
         Contact
       </a>

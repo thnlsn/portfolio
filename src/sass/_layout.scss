@@ -29,6 +29,7 @@
 
 .content {
   overflow-y: scroll;
+  overflow-x: hidden;
 
   /*   &::-webkit-scrollbar {
     display: none;
@@ -119,9 +120,14 @@
   &__link {
     text-decoration: none;
     color: variables.$color-bg;
+    padding: 0.5rem 2rem;
+
+    transition: background-color 0.25s;
     background-color: rgba(variables.$background-accent, 0.95);
 
-    padding: 1rem 2rem;
+    &:hover {
+      background-color: rgba(variables.$color-secondary, 0.95);
+    }
 
     &--true {
       background-color: variables.$color-secondary;

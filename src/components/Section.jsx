@@ -2,13 +2,14 @@ import React from 'react';
 
 import Heading from './SectionHeading';
 
-const Section = ({ heading, contents, margin, setRef, visible }) => {
+const Section = ({ heading, contents, margin, setRef, visible, num }) => {
   const split = heading.split(' ');
   const emphasis = heading.split(' ')[0];
   const text = split.slice(1).join(' ');
   return (
     <div
       className='section-container'
+      id={num}
       ref={setRef}
       data-subject={`#${emphasis}`}
     >
