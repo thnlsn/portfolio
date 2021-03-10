@@ -34,6 +34,16 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+@media only screen and (max-width: 62.5em) {
+  html {
+    font-size: 56.5%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 *,
 *::before,
@@ -143,11 +153,21 @@ body ::selection {
   text-shadow: rgba(142, 201, 210, 0.99) 0px 0px 4px;
   line-height: 1;
 }
+@media only screen and (max-width: 103.125em) {
+  .heading-primary {
+    font-size: 6rem;
+  }
+}
 
 .heading-subtitle {
   font-family: "Exo", sans-serif;
   font-size: 3.6rem;
   line-height: 1;
+}
+@media only screen and (max-width: 103.125em) {
+  .heading-subtitle {
+    font-size: 2.8rem;
+  }
 }
 
 .heading-secondary {
@@ -198,6 +218,11 @@ body ::selection {
   overflow: hidden;
   height: 100vh;
 }
+@media only screen and (max-width: 62.5em) {
+  .App {
+    grid-template-columns: 0.4fr 1fr;
+  }
+}
 
 /* .background {
   position: absolute;
@@ -227,6 +252,11 @@ body ::selection {
   /*   box-shadow: rgba(variables.$background-accent, 0.4) 5px 0px,
     rgba(variables.$background-accent, 0.3) 10px 0px,
     rgba(variables.$background-accent, 0.2) 15px 0px; */
+}
+@media only screen and (max-width: 75em) {
+  .content {
+    padding: 9rem 7.5rem 9rem 7rem;
+  }
 }
 @supports selector(div::-webkit-scrollbar) {
   .content {

@@ -1,8 +1,13 @@
 @use 'variables';
+@use 'breakpoints';
 
 .App {
   display: grid;
   grid-template-columns: 0.4fr 2fr 0.4fr; // Nav | Content | ...
+
+  @media only screen and (max-width: breakpoints.$bp-large) {
+    grid-template-columns: 0.4fr 1fr;
+  }
 
   // border-left: variables.$content-border;
   // border-right: variables.$content-border;
@@ -38,6 +43,10 @@
   // background-color: rgba(variables.$color-primary, 0.1);
   background-color: rgba(variables.$color-primary, 0.95);
   padding: 9rem 11.5rem 9rem 11rem; // Spacing around content
+
+  @media only screen and (max-width: breakpoints.$bp-larger) {
+    padding: 9rem 7.5rem 9rem 7rem;
+  }
 
   border-left: variables.$content-border;
   border-right: variables.$content-border; // Only here if no support for
