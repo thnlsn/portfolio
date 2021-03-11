@@ -3,7 +3,7 @@
 
 .App {
   display: grid;
-  grid-template-columns: 0.4fr 2fr 0.4fr; // Nav | Content | ...
+  grid-template-columns: 0.4fr 2fr minmax(0px, 0.4fr); // Nav | Content | ...
 
   @media only screen and (max-width: breakpoints.$bp-largest) {
     grid-template-columns: 0.3fr 2fr 0.285fr;
@@ -13,6 +13,9 @@
   }
   @media only screen and (max-width: breakpoints.$bp-large) {
     grid-template-columns: min-content 1fr;
+  }
+  @media only screen and (max-width: breakpoints.$bp-medium) {
+    grid-template-columns: 1fr;
   }
 
   // border-left: variables.$content-border;
@@ -129,6 +132,16 @@
   display: flex;
   flex-direction: column;
 
+  @media only screen and (max-width: breakpoints.$bp-medium) {
+    flex-direction: row;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: variables.$content-border;
+    border-bottom: variables.$content-border;
+    background-color: rgba(variables.$color-bg, 0.85);
+    align-items: center;
+  }
+
   margin-top: 20vh;
   margin-bottom: auto;
 
@@ -139,17 +152,35 @@
 
     transition: background-color 0.25s;
     background-color: rgba(variables.$background-accent, 0.95);
+    @media only screen and (max-width: breakpoints.$bp-medium) {
+      background-color: transparent;
+      color: variables.$color-secondary;
+    }
 
     &:hover {
       background-color: rgba(variables.$color-secondary, 0.95);
+      @media only screen and (max-width: breakpoints.$bp-medium) {
+        background-color: transparent;
+        color: lighten(variables.$color-secondary, 20);
+      }
     }
 
     &--true {
       background-color: variables.$color-secondary;
+      // text-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 4px;
+      @media only screen and (max-width: breakpoints.$bp-medium) {
+        background-color: transparent;
+        color: variables.$color-white;
+        text-decoration: underline;
+      }
     }
   }
 
   &__socials {
+    @media only screen and (max-width: breakpoints.$bp-medium) {
+      margin-left: auto;
+      margin-right: 2rem;
+    }
     display: flex;
     justify-content: center;
 
@@ -161,7 +192,25 @@
   }
 
   &__social-link {
+    @media only screen and (max-width: breakpoints.$bp-medium) {
+      display: relative;
+    }
+
     .skill__icon {
+      display: block;
+
+      @media only screen and (max-width: breakpoints.$bp-medium) {
+        fill: variables.$color-secondary;
+
+        border-radius: 0;
+        transition: background-color 0.25s;
+        background-color: transparent;
+
+        &:hover {
+          fill: lighten(variables.$color-secondary, 20);
+        }
+      }
+
       fill: variables.$color-bg;
       padding: 0.5rem;
       border-radius: 50%;

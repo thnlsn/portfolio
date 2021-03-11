@@ -34,12 +34,12 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
-@media only screen and (max-width: 62.5em) {
+@media only screen and (max-width: 75em) {
   html {
     font-size: 56.5%;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 62.5em) {
   html {
     font-size: 50%;
   }
@@ -159,6 +159,11 @@ body ::selection {
     font-size: 5.5rem;
   }
 }
+@media only screen and (max-width: 75em) {
+  .heading-primary {
+    font-size: 5.2rem;
+  }
+}
 
 .heading-subtitle {
   font-family: "Exo", sans-serif;
@@ -176,12 +181,28 @@ body ::selection {
   font-weight: 900;
   font-family: "Exo", sans-serif;
 }
+.heading-secondary span:before {
+  font-size: 3em;
+}
+@media only screen and (max-width: 103.125em) {
+  .heading-secondary {
+    font-size: 3.8rem;
+  }
+  .heading-secondary span:before {
+    font-size: 2.5em;
+  }
+}
 .heading-secondary--invisible {
   opacity: 0;
 }
 
 .heading-navigation {
   font-family: "Bungee", cursive;
+}
+@media only screen and (max-width: 75em) {
+  .heading-navigation {
+    font-size: 2rem;
+  }
 }
 
 .text-emphasized {
@@ -211,10 +232,15 @@ body ::selection {
   font-family: "Exo", sans-serif;
   font-size: 2.2rem;
 }
+@media only screen and (max-width: 62.5em) {
+  .project__descriptions {
+    font-size: 2.1rem;
+  }
+}
 
 .App {
   display: grid;
-  grid-template-columns: 0.4fr 2fr 0.4fr;
+  grid-template-columns: 0.4fr 2fr minmax(0px, 0.4fr);
   background-image: var(--background);
   overflow: hidden;
   height: 100vh;
@@ -232,6 +258,11 @@ body ::selection {
 @media only screen and (max-width: 62.5em) {
   .App {
     grid-template-columns: min-content 1fr;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .App {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -346,6 +377,17 @@ body ::selection {
   margin-top: 20vh;
   margin-bottom: auto;
 }
+@media only screen and (max-width: 50em) {
+  .navigation {
+    flex-direction: row;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: 1px solid #638b91;
+    border-bottom: 1px solid #638b91;
+    background-color: rgba(20, 26, 47, 0.85);
+    align-items: center;
+  }
+}
 .navigation__link {
   text-decoration: none;
   color: #141a2f;
@@ -353,26 +395,68 @@ body ::selection {
   transition: background-color 0.25s;
   background-color: rgba(99, 139, 145, 0.95);
 }
+@media only screen and (max-width: 50em) {
+  .navigation__link {
+    background-color: transparent;
+    color: #8ec9d2;
+  }
+}
 .navigation__link:hover {
   background-color: rgba(142, 201, 210, 0.95);
 }
+@media only screen and (max-width: 50em) {
+  .navigation__link:hover {
+    background-color: transparent;
+    color: #d7ecef;
+  }
+}
 .navigation__link--true {
   background-color: #8ec9d2;
+}
+@media only screen and (max-width: 50em) {
+  .navigation__link--true {
+    background-color: transparent;
+    color: #f1f1e6;
+    text-decoration: underline;
+  }
 }
 .navigation__socials {
   display: flex;
   justify-content: center;
   padding: 2rem 0;
 }
+@media only screen and (max-width: 50em) {
+  .navigation__socials {
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+}
 .navigation__socials > *:not(:last-child) {
   margin-right: 3rem;
 }
+@media only screen and (max-width: 50em) {
+  .navigation__social-link {
+    display: relative;
+  }
+}
 .navigation__social-link .skill__icon {
+  display: block;
   fill: #141a2f;
   padding: 0.5rem;
   border-radius: 50%;
   transition: background-color 0.25s;
   background-color: rgba(99, 139, 145, 0.95);
+}
+@media only screen and (max-width: 50em) {
+  .navigation__social-link .skill__icon {
+    fill: #8ec9d2;
+    border-radius: 0;
+    transition: background-color 0.25s;
+    background-color: transparent;
+  }
+  .navigation__social-link .skill__icon:hover {
+    fill: #d7ecef;
+  }
 }
 .navigation__social-link .skill__icon:hover {
   background-color: rgba(142, 201, 210, 0.95);
@@ -478,7 +562,6 @@ body ::selection {
 .section__subject:before {
   content: attr(data-subject);
   color: rgba(142, 201, 210, 0.05);
-  font-size: 3em;
   z-index: -1;
   position: absolute;
   top: 0;

@@ -17,6 +17,9 @@
   @media only screen and (max-width: breakpoints.$bp-largest) {
     font-size: 5.5rem;
   }
+  @media only screen and (max-width: breakpoints.$bp-larger) {
+    font-size: 5.2rem;
+  }
 }
 
 .heading-subtitle {
@@ -35,6 +38,18 @@
   font-weight: 900;
   font-family: variables.$font-secondary;
 
+  span:before {
+    font-size: 3em;
+  }
+
+  @media only screen and (max-width: breakpoints.$bp-largest) {
+    font-size: 3.8rem;
+
+    span:before {
+      font-size: 2.5em;
+    }
+  }
+
   &--invisible {
     opacity: 0;
   }
@@ -42,6 +57,10 @@
 
 .heading-navigation {
   font-family: variables.$font-navigation;
+
+  @media only screen and (max-width: breakpoints.$bp-larger) {
+    font-size: 2rem;
+  }
 }
 
 .text-emphasized {
@@ -72,4 +91,8 @@
 .project__descriptions {
   font-family: variables.$font-secondary;
   font-size: 2.2rem;
+
+  @media only screen and (max-width: breakpoints.$bp-large) {
+    font-size: 2.1rem;
+  }
 }
