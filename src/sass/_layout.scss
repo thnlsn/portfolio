@@ -151,14 +151,27 @@
     padding: 0.5rem 2rem;
 
     transition: background-color 0.25s;
-    background-color: rgba(variables.$background-accent, 0.95);
+    background-color: rgba(variables.$color-secondary, 0.95);
+
     @media only screen and (max-width: breakpoints.$bp-medium) {
       background-color: transparent;
       color: variables.$color-secondary;
     }
+    span {
+      transition: transform 0.25s;
+      transform: translateX(0rem);
+      display: inline-block;
+    }
 
     &:hover {
-      background-color: rgba(variables.$color-secondary, 0.95);
+      span {
+        transition: transform 0.25s;
+        transform: translateX(1rem);
+        display: inline-block;
+      }
+
+      // background-color: lighten(rgba(variables.$color-secondary, 0.95), 10);
+
       @media only screen and (max-width: breakpoints.$bp-medium) {
         background-color: transparent;
         color: lighten(variables.$color-secondary, 20);
@@ -166,7 +179,7 @@
     }
 
     &--true {
-      background-color: variables.$color-secondary;
+      background-color: rgba(variables.$color-white, 0.95);
       // text-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 4px;
       @media only screen and (max-width: breakpoints.$bp-medium) {
         background-color: transparent;
@@ -211,15 +224,19 @@
         }
       }
 
+      height: 5rem;
+      width: 5rem;
       fill: variables.$color-bg;
-      padding: 0.5rem;
+      padding: 0.85rem;
       border-radius: 50%;
 
+      overflow: visible;
+
       transition: background-color 0.25s;
-      background-color: rgba(variables.$background-accent, 0.95);
+      background-color: rgba(variables.$color-secondary, 0.95);
 
       &:hover {
-        background-color: rgba(variables.$color-secondary, 0.95);
+        background-color: lighten(rgba(variables.$color-secondary, 0.95), 10);
       }
     }
   }

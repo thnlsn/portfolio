@@ -393,7 +393,7 @@ body ::selection {
   color: #141a2f;
   padding: 0.5rem 2rem;
   transition: background-color 0.25s;
-  background-color: rgba(99, 139, 145, 0.95);
+  background-color: rgba(142, 201, 210, 0.95);
 }
 @media only screen and (max-width: 50em) {
   .navigation__link {
@@ -401,8 +401,15 @@ body ::selection {
     color: #8ec9d2;
   }
 }
-.navigation__link:hover {
-  background-color: rgba(142, 201, 210, 0.95);
+.navigation__link span {
+  transition: transform 0.25s;
+  transform: translateX(0rem);
+  display: inline-block;
+}
+.navigation__link:hover span {
+  transition: transform 0.25s;
+  transform: translateX(1rem);
+  display: inline-block;
 }
 @media only screen and (max-width: 50em) {
   .navigation__link:hover {
@@ -411,7 +418,7 @@ body ::selection {
   }
 }
 .navigation__link--true {
-  background-color: #8ec9d2;
+  background-color: rgba(241, 241, 230, 0.95);
 }
 @media only screen and (max-width: 50em) {
   .navigation__link--true {
@@ -441,11 +448,14 @@ body ::selection {
 }
 .navigation__social-link .skill__icon {
   display: block;
+  height: 5rem;
+  width: 5rem;
   fill: #141a2f;
-  padding: 0.5rem;
+  padding: 0.85rem;
   border-radius: 50%;
+  overflow: visible;
   transition: background-color 0.25s;
-  background-color: rgba(99, 139, 145, 0.95);
+  background-color: rgba(142, 201, 210, 0.95);
 }
 @media only screen and (max-width: 50em) {
   .navigation__social-link .skill__icon {
@@ -459,7 +469,7 @@ body ::selection {
   }
 }
 .navigation__social-link .skill__icon:hover {
-  background-color: rgba(142, 201, 210, 0.95);
+  background-color: rgba(178, 218, 225, 0.95);
 }
 
 .header {

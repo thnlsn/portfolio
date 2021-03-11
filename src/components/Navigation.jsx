@@ -53,28 +53,28 @@ const Navigation = ({ scrollTo }) => {
         onClick={() => scrollTo("'#who'")}
         className={`navigation__link navigation__link--${visibility[0]}`}
       >
-        About
+        <span>About</span>
       </a>
       <a
         href={'#what'}
         onClick={() => scrollTo("'#what'")}
         className={`navigation__link navigation__link--${visibility[1]}`}
       >
-        Skills
+        <span>Skills</span>
       </a>
       <a
         href={'#portfolio'}
         onClick={() => scrollTo("'#portfolio'")}
         className={`navigation__link navigation__link--${visibility[2]}`}
       >
-        Portfolio
+        <span>Portfolio</span>
       </a>
       <a
         href={'#contact'}
         onClick={() => scrollTo("'#contact'")}
         className={`navigation__link navigation__link--${visibility[3]}`}
       >
-        Contact
+        <span>Contact</span>
       </a>
       <div className='navigation__socials'>
         <a
