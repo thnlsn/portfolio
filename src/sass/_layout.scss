@@ -167,7 +167,6 @@
       span {
         transition: transform 0.25s;
         transform: translateX(1rem);
-        display: inline-block;
       }
 
       // background-color: lighten(rgba(variables.$color-secondary, 0.95), 10);
@@ -227,7 +226,7 @@
       height: 5rem;
       width: 5rem;
       fill: variables.$color-bg;
-      padding: 0.85rem;
+      padding: 1rem;
       border-radius: 50%;
 
       overflow: visible;
@@ -236,7 +235,7 @@
       background-color: rgba(variables.$color-secondary, 0.95);
 
       &:hover {
-        background-color: lighten(rgba(variables.$color-secondary, 0.95), 10);
+        background-color: rgba(variables.$color-white, 0.95);
       }
     }
   }

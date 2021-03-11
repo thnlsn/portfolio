@@ -409,7 +409,6 @@ body ::selection {
 .navigation__link:hover span {
   transition: transform 0.25s;
   transform: translateX(1rem);
-  display: inline-block;
 }
 @media only screen and (max-width: 50em) {
   .navigation__link:hover {
@@ -451,7 +450,7 @@ body ::selection {
   height: 5rem;
   width: 5rem;
   fill: #141a2f;
-  padding: 0.85rem;
+  padding: 1rem;
   border-radius: 50%;
   overflow: visible;
   transition: background-color 0.25s;
@@ -469,7 +468,7 @@ body ::selection {
   }
 }
 .navigation__social-link .skill__icon:hover {
-  background-color: rgba(178, 218, 225, 0.95);
+  background-color: rgba(241, 241, 230, 0.95);
 }
 
 .header {
