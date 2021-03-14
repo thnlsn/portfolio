@@ -29,6 +29,10 @@
       transform: translate(-50%, -50%);
       border-radius: 50%;
     }
+
+    @media only screen and (max-width: breakpoints.$bp-small) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__image {
@@ -48,11 +52,18 @@
       height: 20rem;
       width: 20rem;
     }
+    @media only screen and (max-width: breakpoints.$bp-small) {
+      height: 30rem;
+      width: 30rem;
+    }
   }
 
   .heading-primary {
     align-self: end;
     margin-bottom: 0.25rem;
+
+    // For seperance between image and header
+    padding-left: 3rem;
 
     @supports (-webkit-text-stroke: 2px black) {
       -webkit-text-stroke: 2px variables.$color-primary; // width | color
@@ -96,6 +107,12 @@
       right: 0;
       top: 50%;
       transform: translate(50%, -50%);
+    }
+
+    @media only screen and (max-width: breakpoints.$bp-small) {
+      &:after {
+        display: none;
+      }
     }
   }
 }
@@ -145,6 +162,9 @@
   }
 
   &__description {
+    @media only screen and (max-width: breakpoints.$bp-small) {
+      font-size: 2.4rem;
+    }
   }
 
   // SKILLS

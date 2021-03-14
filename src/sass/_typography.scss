@@ -12,8 +12,6 @@
 
   line-height: 1;
 
-  padding-left: 3rem;
-
   @media only screen and (max-width: breakpoints.$bp-largest) {
     font-size: 5.5rem;
   }
@@ -30,6 +28,9 @@
 
   @media only screen and (max-width: breakpoints.$bp-largest) {
     font-size: 2.5rem;
+  }
+  @media only screen and (max-width: breakpoints.$bp-small) {
+    font-size: 2.9rem;
   }
 }
 
@@ -48,6 +49,10 @@
     span:before {
       font-size: 2.5em;
     }
+  }
+
+  @media only screen and (max-width: breakpoints.$bp-small) {
+    font-size: 3.5rem;
   }
 
   &--invisible {

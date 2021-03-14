@@ -11,6 +11,9 @@ html {
   @media only screen and (max-width: breakpoints.$bp-large) {
     font-size: 50%;
   }
+  @media only screen and (max-width: breakpoints.$bp-small) {
+    font-size: 45%;
+  }
 }
 
 *,

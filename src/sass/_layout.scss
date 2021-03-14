@@ -98,6 +98,14 @@
   grid-template-rows: 1fr min-content 1fr;
   row-gap: 2rem;
 
+  @media only screen and (max-width: breakpoints.$bp-small) {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+
+    justify-items: center;
+  }
+
   margin-bottom: 3rem;
 }
 
@@ -140,6 +148,9 @@
     border-bottom: variables.$content-border;
     background-color: rgba(variables.$color-bg, 0.85);
     align-items: center;
+  }
+  @media only screen and (max-width: breakpoints.$bp-small) {
+    display: none;
   }
 
   margin-top: 20vh;

@@ -44,6 +44,11 @@ html {
     font-size: 50%;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 45%;
+  }
+}
 
 *,
 *::before,
@@ -152,7 +157,6 @@ body ::selection {
   color: #8ec9d2;
   text-shadow: rgba(142, 201, 210, 0.99) 0px 0px 4px;
   line-height: 1;
-  padding-left: 3rem;
 }
 @media only screen and (max-width: 103.125em) {
   .heading-primary {
@@ -175,6 +179,11 @@ body ::selection {
     font-size: 2.5rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .heading-subtitle {
+    font-size: 2.9rem;
+  }
+}
 
 .heading-secondary {
   font-size: 4rem;
@@ -190,6 +199,11 @@ body ::selection {
   }
   .heading-secondary span:before {
     font-size: 2.5em;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 3.5rem;
   }
 }
 .heading-secondary--invisible {
@@ -345,6 +359,14 @@ body ::selection {
   row-gap: 2rem;
   margin-bottom: 3rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    justify-items: center;
+  }
+}
 
 .section-container {
   scroll-margin: 9rem;
@@ -386,6 +408,11 @@ body ::selection {
     border-bottom: 1px solid #638b91;
     background-color: rgba(20, 26, 47, 0.85);
     align-items: center;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .navigation {
+    display: none;
   }
 }
 .navigation__link {
@@ -493,6 +520,11 @@ body ::selection {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
+@media only screen and (max-width: 37.5em) {
+  .header__image-container {
+    margin-bottom: 5rem;
+  }
+}
 .header__image {
   border: 2px solid #8ec9d2;
   border-radius: 50%;
@@ -512,9 +544,16 @@ body ::selection {
     width: 20rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .header__image {
+    height: 30rem;
+    width: 30rem;
+  }
+}
 .header .heading-primary {
   align-self: end;
   margin-bottom: 0.25rem;
+  padding-left: 3rem;
 }
 @supports (-webkit-text-stroke: 2px black) {
   .header .heading-primary {
@@ -550,6 +589,11 @@ body ::selection {
   right: 0;
   top: 50%;
   transform: translate(50%, -50%);
+}
+@media only screen and (max-width: 37.5em) {
+  .header .divider:after {
+    display: none;
+  }
 }
 
 .section {
@@ -588,6 +632,11 @@ body ::selection {
   left: 0;
   top: 0;
   transform: translate(-100%, 0%);
+}
+@media only screen and (max-width: 37.5em) {
+  .section__description {
+    font-size: 2.4rem;
+  }
 }
 .section__skills {
   display: flex;
