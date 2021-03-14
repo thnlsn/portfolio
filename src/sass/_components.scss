@@ -110,6 +110,7 @@
     }
 
     @media only screen and (max-width: breakpoints.$bp-small) {
+      border-radius: 45%;
       &:after {
         display: none;
       }

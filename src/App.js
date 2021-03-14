@@ -70,22 +70,23 @@ const skills = [
 const visibility = (visible) => (visible ? 'visible' : 'invisible');
 
 function App() {
+  console.log(false == true);
   // Intersection Observer hooks
   const [setAboutRef, aboutVisible] = useOnScreen({
     root: null,
-    threshold: 0,
+    threshold: 0.1,
   });
   const [setSkillsRef, skillsVisible] = useOnScreen({
     root: null,
-    rootMargin: '-300px',
+    threshold: 0.4,
   });
   const [setPortfolioRef, portfolioVisible] = useOnScreen({
     root: null,
-    rootMargin: '-300px',
+    threshold: 0.1,
   });
   const [setContactRef, contactVisible] = useOnScreen({
     root: null,
-    rootMargin: '-300px',
+    threshold: 0.5,
   });
 
   const scrollToSection = (section) => {

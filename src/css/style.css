@@ -591,6 +591,9 @@ body ::selection {
   transform: translate(50%, -50%);
 }
 @media only screen and (max-width: 37.5em) {
+  .header .divider {
+    border-radius: 45%;
+  }
   .header .divider:after {
     display: none;
   }
