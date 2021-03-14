@@ -148,6 +148,9 @@
       top: 0;
       left: 0;
       transform: translate(0%, -45%);
+
+      // Phone
+      // left: -10%;
     }
 
     &:after {
@@ -223,8 +226,6 @@
 .project {
   // Testing
   color: darken(variables.$color-primary, 10);
-
-  width: 50%;
 
   background-color: variables.$color-font; // Fallback for circuit board pattern failure
   background: variables.$background-project;
@@ -459,6 +460,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
+  @media only screen and (max-width: breakpoints.$bp-phone-large) {
+    grid-template-columns: 1fr;
+  }
+
   gap: 2rem;
   transition: all 0.3s;
 
@@ -517,8 +522,6 @@
 
     grid-column: 1 / -1;
     justify-self: center;
-
-    max-width: 100%;
 
     padding: 1.5rem 2.5rem;
     line-height: 1;

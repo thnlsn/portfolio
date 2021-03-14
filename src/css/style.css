@@ -699,7 +699,6 @@ body ::selection {
 
 .project {
   color: #1a1d2b;
-  width: 50%;
   background-color: #b7b8bf;
   background: url("../images/curcuit-board-three.svg"), #b7b8bf;
   background-size: 800px;
@@ -873,6 +872,11 @@ body ::selection {
   gap: 2rem;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 31.25em) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
 .contact > * {
   outline: none;
 }
@@ -910,7 +914,6 @@ body ::selection {
   border: 2px solid currentColor;
   grid-column: 1/-1;
   justify-self: center;
-  max-width: 100%;
   padding: 1.5rem 2.5rem;
   line-height: 1;
   border-radius: 5px;
