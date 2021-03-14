@@ -78,15 +78,15 @@ function App() {
   });
   const [setSkillsRef, skillsVisible] = useOnScreen({
     root: null,
-    threshold: 0.4,
+    threshold: 0.45,
   });
   const [setPortfolioRef, portfolioVisible] = useOnScreen({
     root: null,
-    threshold: 0.1,
+    threshold: 0.125,
   });
   const [setContactRef, contactVisible] = useOnScreen({
     root: null,
-    threshold: 0.5,
+    threshold: 0.55,
   });
 
   const scrollToSection = (section) => {

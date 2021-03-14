@@ -168,6 +168,11 @@ body ::selection {
     font-size: 5.2rem;
   }
 }
+@media only screen and (max-width: 31.25em) {
+  .heading-primary {
+    font-size: 5rem;
+  }
+}
 
 .heading-subtitle {
   font-family: "Exo", sans-serif;
@@ -198,12 +203,20 @@ body ::selection {
     font-size: 3.8rem;
   }
   .heading-secondary span:before {
-    font-size: 2.5em;
+    font-size: 2.25em;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .heading-secondary {
     font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .heading-secondary {
+    font-size: 3.25rem;
+  }
+  .heading-secondary span:before {
+    font-size: 2em;
   }
 }
 .heading-secondary--invisible {
@@ -560,6 +573,11 @@ body ::selection {
     -webkit-text-stroke: 2px #2e334a;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .header .heading-primary {
+    padding-left: 0rem;
+  }
+}
 .header .heading-subtitle {
   align-self: start;
 }
@@ -673,9 +691,15 @@ body ::selection {
   border-radius: 10px;
   margin-top: 2rem;
 }
+@media only screen and (max-width: 31.25em) {
+  .section__portfolio {
+    grid-template-columns: repeat(auto-fill, minmax(35.5rem, 1fr));
+  }
+}
 
 .project {
   color: #1a1d2b;
+  width: 50%;
   background-color: #b7b8bf;
   background: url("../images/curcuit-board-three.svg"), #b7b8bf;
   background-size: 800px;

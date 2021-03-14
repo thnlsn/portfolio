@@ -68,6 +68,9 @@
     @supports (-webkit-text-stroke: 2px black) {
       -webkit-text-stroke: 2px variables.$color-primary; // width | color
     }
+    @media only screen and (max-width: breakpoints.$bp-small) {
+      padding-left: 0rem;
+    }
   }
   .heading-subtitle {
     align-self: start;
@@ -209,12 +212,19 @@
     // Testing
     border-radius: 10px;
     margin-top: 2rem;
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    @media only screen and (max-width: breakpoints.$bp-phone-large) {
+      grid-template-columns: repeat(auto-fill, minmax(35.5rem, 1fr));
+    }
   }
 }
 
 .project {
   // Testing
   color: darken(variables.$color-primary, 10);
+
+  width: 50%;
 
   background-color: variables.$color-font; // Fallback for circuit board pattern failure
   background: variables.$background-project;
