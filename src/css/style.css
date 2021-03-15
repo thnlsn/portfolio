@@ -691,6 +691,27 @@ body ::selection {
     display: none;
   }
 }
+.header__resume {
+  outline: none;
+  text-decoration: none;
+  color: #2e334a;
+  background-color: #f1f1e6;
+  border: 2px solid currentColor;
+  grid-column: 1/-1;
+  justify-self: center;
+  padding: 1.5rem 2.5rem;
+  line-height: 1;
+  border-radius: 5px;
+  transition: color 0.15s, background-color 0.25s, border-color 0.25s;
+}
+.header__resume:hover {
+  color: #f1f1e6;
+  background-color: transparent;
+  border-color: #f1f1e6;
+}
+.header__resume:active {
+  background-color: rgba(142, 201, 210, 0.5);
+}
 .header__socials {
   display: none;
 }
