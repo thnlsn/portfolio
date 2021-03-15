@@ -237,6 +237,12 @@ body ::selection {
   font-family: "Bungee", cursive;
   font-size: 2rem;
 }
+@media only screen and (max-width: 25em) {
+  .text-emphasized {
+    font-size: 1rem;
+    display: none;
+  }
+}
 .text-emphasized--inline {
   font-family: "Bungee Inline", cursive;
   font-size: 2.6rem;
@@ -246,6 +252,12 @@ body ::selection {
   fill: #2e334a;
   height: 4rem;
   width: 4rem;
+}
+@media only screen and (max-width: 25em) {
+  .skill__icon {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
 }
 
 .project__skill {
@@ -325,6 +337,16 @@ body ::selection {
 @media only screen and (max-width: 103.125em) {
   .content {
     padding: 9rem 6.5rem 9rem 7rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .content {
+    padding: 9rem 4.9rem 9rem 5.4rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .content {
+    padding: 9rem 4.5rem 9rem 5rem;
   }
 }
 @supports selector(div::-webkit-scrollbar) {
@@ -563,6 +585,12 @@ body ::selection {
     width: 30rem;
   }
 }
+@media only screen and (max-width: 25em) {
+  .header__image {
+    height: 27.5rem;
+    width: 27.5rem;
+  }
+}
 .header .heading-primary {
   align-self: end;
   margin-bottom: 0.25rem;
@@ -576,6 +604,11 @@ body ::selection {
 @media only screen and (max-width: 37.5em) {
   .header .heading-primary {
     padding-left: 0rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .header .heading-primary {
+    width: 115%;
   }
 }
 .header .heading-subtitle {
@@ -642,6 +675,11 @@ body ::selection {
   left: 0;
   transform: translate(0%, -45%);
 }
+@media only screen and (max-width: 31.25em) {
+  .section__subject:before {
+    left: -5%;
+  }
+}
 .section__subject:after {
   content: "";
   height: 18px;
@@ -653,6 +691,11 @@ body ::selection {
   left: 0;
   top: 0;
   transform: translate(-100%, 0%);
+}
+@media only screen and (max-width: 31.25em) {
+  .section__subject:after {
+    display: none;
+  }
 }
 @media only screen and (max-width: 37.5em) {
   .section__description {
@@ -690,6 +733,12 @@ body ::selection {
   gap: 4rem;
   border-radius: 10px;
   margin-top: 2rem;
+}
+@media only screen and (max-width: 25em) {
+  .section__portfolio {
+    font-size: 1rem;
+    display: none;
+  }
 }
 @media only screen and (max-width: 31.25em) {
   .section__portfolio {
@@ -869,6 +918,7 @@ body ::selection {
 .contact {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   gap: 2rem;
   transition: all 0.3s;
 }

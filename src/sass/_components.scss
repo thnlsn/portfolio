@@ -56,6 +56,10 @@
       height: 30rem;
       width: 30rem;
     }
+    @media only screen and (max-width: breakpoints.$bp-phone-small) {
+      height: 27.5rem;
+      width: 27.5rem;
+    }
   }
 
   .heading-primary {
@@ -70,6 +74,9 @@
     }
     @media only screen and (max-width: breakpoints.$bp-small) {
       padding-left: 0rem;
+    }
+    @media only screen and (max-width: breakpoints.$bp-phone-small) {
+      width: 115%;
     }
   }
   .heading-subtitle {
@@ -151,6 +158,9 @@
 
       // Phone
       // left: -10%;
+      @media only screen and (max-width: breakpoints.$bp-phone-large) {
+        left: -5%;
+      }
     }
 
     &:after {
@@ -165,6 +175,10 @@
       left: 0;
       top: 0;
       transform: translate(-100%, -0%);
+
+      @media only screen and (max-width: breakpoints.$bp-phone-large) {
+        display: none;
+      }
     }
   }
 
@@ -215,6 +229,11 @@
     // Testing
     border-radius: 10px;
     margin-top: 2rem;
+
+    @media only screen and (max-width: breakpoints.$bp-phone-small) {
+      font-size: 1rem;
+      display: none;
+    }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     @media only screen and (max-width: breakpoints.$bp-phone-large) {
@@ -459,6 +478,7 @@
 .contact {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 
   @media only screen and (max-width: breakpoints.$bp-phone-large) {
     grid-template-columns: 1fr;
@@ -505,10 +525,12 @@
     }
   }
 
-  &__name {
-  }
+  @media only screen and (max-width: breakpoints.$bp-phone-small) {
+    &__name {
+    }
 
-  &__email {
+    &__email {
+    }
   }
 
   &__message {

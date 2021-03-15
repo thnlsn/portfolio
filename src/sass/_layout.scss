@@ -56,6 +56,12 @@
   @media only screen and (max-width: breakpoints.$bp-largest) {
     padding: 9rem 6.5rem 9rem 7rem;
   }
+  @media only screen and (max-width: breakpoints.$bp-phone-large) {
+    padding: 9rem 4.9rem 9rem 5.4rem;
+  }
+  @media only screen and (max-width: breakpoints.$bp-phone-small) {
+    padding: 9rem 4.5rem 9rem 5rem;
+  }
 
   border-left: variables.$content-border;
   border-right: variables.$content-border; // Only here if no support for
