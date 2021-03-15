@@ -26,6 +26,13 @@ const Header = ({ img }) => {
       <div className='heading-primary'>Thomas Nelson</div>
       <div className='divider'></div>
       <div className='heading-subtitle'>web developer & problem solver</div>
+      <a
+        href='./files/Thomas_Nelson_Resume.pdf'
+        target='_blank'
+        className='header__resume'
+      >
+        Download Resume
+      </a>
       <div className='header__socials'>
         <a
           href={'https://www.linkedin.com/in/thnlsn/'}

@@ -268,8 +268,13 @@ body ::selection {
 .project__skill {
   color: #b7b8bf;
   font-family: "Bungee", cursive;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   line-height: 1;
+}
+@media only screen and (max-width: 25em) {
+  .project__skill {
+    font-size: 2rem;
+  }
 }
 
 .project__descriptions {
@@ -326,7 +331,8 @@ body ::selection {
   /*   &::-webkit-scrollbar {
     display: none;
   } */
-  background-color: rgba(46, 51, 74, 0.95);
+  background-color: rgba(46, 51, 74, 0.15);
+  background-color: orangered;
   padding: 9rem 11.5rem 9rem 11rem;
   border-left: 1px solid #638b91;
   border-right: 1px solid #638b91;
@@ -352,6 +358,11 @@ body ::selection {
 @media only screen and (max-width: 25em) {
   .content {
     padding: 9rem 4.5rem 9rem 5rem;
+  }
+}
+@media only screen and (max-width: 21.875em) {
+  .content {
+    padding: 8rem 3.5rem 8rem 4rem;
   }
 }
 @supports selector(div::-webkit-scrollbar) {
@@ -380,6 +391,15 @@ body ::selection {
   .content {
     scrollbar-face-color: #8ec9d2;
     scrollbar-track-color: #2e334a;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .content {
+    background-color: transparent;
+    /*     @supports (backdrop-filter: blur(2px)) {
+      background-color: rgba(variables.$color-primary, 0.1);
+      backdrop-filter: blur(3px);
+    } */
   }
 }
 @supports (backdrop-filter: blur(2px)) {
@@ -455,12 +475,26 @@ body ::selection {
     display: none;
   }
 }
+.navigation > *:first-child {
+  border-top: 2px solid #638b91;
+}
+.navigation > .navigation__link:last-of-type {
+  border-bottom: 2px solid #638b91;
+}
+@media only screen and (max-width: 50em) {
+  .navigation > *:first-child {
+    border-top: none;
+  }
+  .navigation > .navigation__link:last-of-type {
+    border-bottom: none;
+  }
+}
 .navigation__link {
   text-decoration: none;
-  color: #141a2f;
+  color: #f1f1e6;
   padding: 0.5rem 2rem;
-  transition: background-color 0.25s;
-  background-color: rgba(142, 201, 210, 0.95);
+  transition: background-color 0.25s, color 0.25s;
+  background-color: rgba(20, 26, 47, 0.65);
 }
 @media only screen and (max-width: 50em) {
   .navigation__link {
@@ -484,7 +518,8 @@ body ::selection {
   }
 }
 .navigation__link--true {
-  background-color: rgba(241, 241, 230, 0.95);
+  background-color: rgba(142, 201, 210, 0.95);
+  color: #141a2f;
 }
 @media only screen and (max-width: 50em) {
   .navigation__link--true {
@@ -516,17 +551,18 @@ body ::selection {
   display: block;
   height: 5rem;
   width: 5rem;
-  fill: #141a2f;
+  fill: #8ec9d2;
   padding: 1rem;
   border-radius: 50%;
   overflow: visible;
-  transition: background-color 0.25s;
-  background-color: rgba(142, 201, 210, 0.95);
+  transition: background-color 0.45s, fill 0.65s;
+  border: 2px solid rgba(142, 201, 210, 0.95);
+  background-color: rgba(20, 26, 47, 0.65);
 }
 @media only screen and (max-width: 50em) {
   .navigation__social-link .skill__icon {
     fill: #8ec9d2;
-    border-radius: 0;
+    border-radius: 50%;
     transition: background-color 0.25s;
     background-color: transparent;
   }
@@ -535,7 +571,8 @@ body ::selection {
   }
 }
 .navigation__social-link .skill__icon:hover {
-  background-color: rgba(241, 241, 230, 0.95);
+  background-color: rgba(142, 201, 210, 0.95);
+  fill: #141a2f;
 }
 
 .header {
@@ -666,6 +703,14 @@ body ::selection {
 .section {
   position: relative;
 }
+.section .heading-secondary {
+  margin-bottom: -1rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .section .heading-secondary {
+    margin-bottom: -2rem;
+  }
+}
 .section--link {
   color: #f1f1e6;
   font-weight: 600;
@@ -744,6 +789,11 @@ body ::selection {
   border-bottom-left-radius: 14px;
   border-top-left-radius: 2px;
   border-bottom-right-radius: 2px;
+}
+@media only screen and (max-width: 25em) {
+  .section__skill {
+    padding: 0rem 1rem;
+  }
 }
 @media only screen and (max-width: 31.25em) {
   .section__skill {
@@ -866,6 +916,11 @@ body ::selection {
   border-bottom-left-radius: 14px;
   border-top-left-radius: 2px;
   border-bottom-right-radius: 2px;
+}
+@media only screen and (max-width: 25em) {
+  .project__skill {
+    font-size: 2rem;
+  }
 }
 .project__skill:last-child {
   border-bottom-right-radius: 14px;

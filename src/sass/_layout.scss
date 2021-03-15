@@ -50,7 +50,9 @@
   } */
 
   // background-color: rgba(variables.$color-primary, 0.1);
-  background-color: rgba(variables.$color-primary, 0.95);
+  background-color: rgba(variables.$color-primary, 0.15);
+  background-color: orangered;
+
   padding: 9rem 11.5rem 9rem 11rem; // Spacing around content
 
   @media only screen and (max-width: breakpoints.$bp-largest) {
@@ -61,6 +63,9 @@
   }
   @media only screen and (max-width: breakpoints.$bp-phone-small) {
     padding: 9rem 4.5rem 9rem 5rem;
+  }
+  @media only screen and (max-width: breakpoints.$bp-smallest) {
+    padding: 8rem 3.5rem 8rem 4rem;
   }
 
   border-left: variables.$content-border;
@@ -88,6 +93,13 @@
     rgba(variables.$background-accent, 0.3) 10px 0px,
     rgba(variables.$background-accent, 0.2) 15px 0px; */
 
+  @media only screen and (max-width: breakpoints.$bp-medium) {
+    background-color: transparent;
+    /*     @supports (backdrop-filter: blur(2px)) {
+      background-color: rgba(variables.$color-primary, 0.1);
+      backdrop-filter: blur(3px);
+    } */
+  }
   @supports (backdrop-filter: blur(2px)) {
     background-color: rgba(variables.$color-primary, 0.75);
     backdrop-filter: blur(3px);
@@ -159,16 +171,31 @@
     display: none;
   }
 
+  & > *:first-child {
+    border-top: 2px solid variables.$background-accent;
+  }
+  & > &__link:last-of-type {
+    border-bottom: 2px solid variables.$background-accent;
+  }
+  @media only screen and (max-width: breakpoints.$bp-medium) {
+    & > *:first-child {
+      border-top: none;
+    }
+    & > &__link:last-of-type {
+      border-bottom: none;
+    }
+  }
+
   margin-top: 20vh;
   margin-bottom: auto;
 
   &__link {
     text-decoration: none;
-    color: variables.$color-bg;
+    color: variables.$color-white;
     padding: 0.5rem 2rem;
 
-    transition: background-color 0.25s;
-    background-color: rgba(variables.$color-secondary, 0.95);
+    transition: background-color 0.25s, color 0.25s;
+    background-color: rgba(variables.$color-bg, 0.65);
 
     @media only screen and (max-width: breakpoints.$bp-medium) {
       background-color: transparent;
@@ -195,7 +222,8 @@
     }
 
     &--true {
-      background-color: rgba(variables.$color-white, 0.95);
+      background-color: rgba(variables.$color-secondary, 0.95);
+      color: variables.$color-bg;
       // text-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 4px;
       @media only screen and (max-width: breakpoints.$bp-medium) {
         background-color: transparent;
@@ -231,7 +259,7 @@
       @media only screen and (max-width: breakpoints.$bp-medium) {
         fill: variables.$color-secondary;
 
-        border-radius: 0;
+        border-radius: 50%;
         transition: background-color 0.25s;
         background-color: transparent;
 
@@ -242,17 +270,19 @@
 
       height: 5rem;
       width: 5rem;
-      fill: variables.$color-bg;
+      fill: variables.$color-secondary;
       padding: 1rem;
       border-radius: 50%;
 
       overflow: visible;
 
-      transition: background-color 0.25s;
-      background-color: rgba(variables.$color-secondary, 0.95);
+      transition: background-color 0.45s, fill 0.65s;
+      border: 2px solid rgba(variables.$color-secondary, 0.95);
+      background-color: rgba(variables.$color-bg, 0.65);
 
       &:hover {
-        background-color: rgba(variables.$color-white, 0.95);
+        background-color: rgba(variables.$color-secondary, 0.95);
+        fill: variables.$color-bg;
       }
     }
   }

@@ -138,6 +138,14 @@
 .section {
   position: relative;
 
+  .heading-secondary {
+    margin-bottom: -1rem;
+
+    @media only screen and (max-width: breakpoints.$bp-small) {
+      margin-bottom: -2rem;
+    }
+  }
+
   &--link {
     color: variables.$color-white;
     font-weight: 600;
@@ -223,6 +231,9 @@
 
     padding: 0.5rem 1rem;
     margin: 0.5rem;
+    @media only screen and (max-width: breakpoints.$bp-phone-small) {
+      padding: 0rem 1rem;
+    }
 
     border: 2px dotted rgba($color: variables.$color-primary, $alpha: 0.75);
     border-top-right-radius: 6px;
@@ -366,6 +377,10 @@
 
     padding: 0.8rem 1rem 0.7rem;
     margin: 0.15rem;
+
+    @media only screen and (max-width: breakpoints.$bp-phone-small) {
+      font-size: 2rem;
+    }
 
     border: 2px dotted rgba($color: variables.$color-font, $alpha: 0.75);
     border-top-right-radius: 6px;

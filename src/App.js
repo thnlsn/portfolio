@@ -34,7 +34,6 @@ import BootstrapIcon from './components/svg/BootstrapIcon';
 import HandlebarsIcon from './components/svg/HandlebarsIcon';
 import APIIcon from './components/svg/APIIcon';
 import ResponsiveIcon from './components/svg/ResponsiveIcon';
-import LinkedInIcon from './components/svg/LinkedInIcon';
 
 // Components
 import Navigation from './components/Navigation';
