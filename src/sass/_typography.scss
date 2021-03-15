@@ -19,7 +19,10 @@
     font-size: 5.2rem;
   }
   @media only screen and (max-width: breakpoints.$bp-phone-large) {
-    font-size: 5rem;
+    font-size: 4.45rem;
+  }
+  @media only screen and (max-width: breakpoints.$bp-phone-small) {
+    font-size: 4.5rem;
   }
 }
 

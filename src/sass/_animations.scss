@@ -26,6 +26,11 @@
     .divider {
       width: 0 !important;
     }
+
+    .header__resume {
+      opacity: 0 !important;
+      transform: translateY(-40%) !important;
+    }
   }
 
   &--visible {
@@ -38,6 +43,9 @@
         height: 125%;
         border-radius: 50%;
       }
+    }
+    .header__resume {
+      transition: color 0.15s, background-color 0.25s, border-color 0.25s;
     }
   }
 }

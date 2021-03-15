@@ -93,16 +93,17 @@
     rgba(variables.$background-accent, 0.3) 10px 0px,
     rgba(variables.$background-accent, 0.2) 15px 0px; */
 
-  @media only screen and (max-width: breakpoints.$bp-medium) {
-    background-color: transparent;
-    /*     @supports (backdrop-filter: blur(2px)) {
-      background-color: rgba(variables.$color-primary, 0.1);
-      backdrop-filter: blur(3px);
-    } */
-  }
   @supports (backdrop-filter: blur(2px)) {
     background-color: rgba(variables.$color-primary, 0.75);
     backdrop-filter: blur(3px);
+  }
+
+  @media only screen and (max-width: breakpoints.$bp-medium) {
+    border: none;
+    @supports (backdrop-filter: blur(2px)) {
+      background-color: rgba(variables.$color-primary, 0.4);
+      backdrop-filter: blur(3px);
+    }
   }
 
   & > *:last-child {
@@ -113,8 +114,7 @@
 .header {
   display: grid;
   grid-template-columns: max-content 1fr;
-  grid-template-rows: 1fr min-content 1fr;
-  row-gap: 2rem;
+  grid-template-rows: 1fr min-content 0.5fr 0.5fr;
 
   @media only screen and (max-width: breakpoints.$bp-small) {
     display: grid;
@@ -172,10 +172,10 @@
   }
 
   & > *:first-child {
-    border-top: 2px solid variables.$background-accent;
+    border-top: variables.$content-border;
   }
   & > &__link:last-of-type {
-    border-bottom: 2px solid variables.$background-accent;
+    border-bottom: variables.$content-border;
   }
   @media only screen and (max-width: breakpoints.$bp-medium) {
     & > *:first-child {

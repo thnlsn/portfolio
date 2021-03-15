@@ -46,7 +46,7 @@ html {
 }
 @media only screen and (max-width: 37.5em) {
   html {
-    font-size: 45%;
+    font-size: 49.5%;
   }
 }
 
@@ -91,8 +91,8 @@ body ::selection {
   }
   body::-webkit-scrollbar-track {
     background: #11121b;
-    border-left: 1px solid #638b91;
-    border-right: 1px solid #638b91;
+    border-left: 2px solid #638b91;
+    border-right: 2px solid #638b91;
   }
   body {
     scrollbar-face-color: #8ec9d2;
@@ -120,6 +120,10 @@ body ::selection {
 .header--invisible .divider {
   width: 0 !important;
 }
+.header--invisible .header__resume {
+  opacity: 0 !important;
+  transform: translateY(-40%) !important;
+}
 .header--visible {
   transition: all 1s;
 }
@@ -128,6 +132,9 @@ body ::selection {
   width: 125%;
   height: 125%;
   border-radius: 50%;
+}
+.header--visible .header__resume {
+  transition: color 0.15s, background-color 0.25s, border-color 0.25s;
 }
 
 .section--invisible {
@@ -170,7 +177,12 @@ body ::selection {
 }
 @media only screen and (max-width: 31.25em) {
   .heading-primary {
-    font-size: 5rem;
+    font-size: 4.45rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .heading-primary {
+    font-size: 4.5rem;
   }
 }
 
@@ -334,8 +346,8 @@ body ::selection {
   background-color: rgba(46, 51, 74, 0.15);
   background-color: orangered;
   padding: 9rem 11.5rem 9rem 11rem;
-  border-left: 1px solid #638b91;
-  border-right: 1px solid #638b91;
+  border-left: 2px solid #638b91;
+  border-right: 2px solid #638b91;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content;
@@ -385,27 +397,29 @@ body ::selection {
   }
   .content::-webkit-scrollbar-track {
     background: #11121b;
-    border-left: 1px solid #638b91;
-    border-right: 1px solid #638b91;
+    border-left: 2px solid #638b91;
+    border-right: 2px solid #638b91;
   }
   .content {
     scrollbar-face-color: #8ec9d2;
     scrollbar-track-color: #2e334a;
   }
 }
-@media only screen and (max-width: 50em) {
-  .content {
-    background-color: transparent;
-    /*     @supports (backdrop-filter: blur(2px)) {
-      background-color: rgba(variables.$color-primary, 0.1);
-      backdrop-filter: blur(3px);
-    } */
-  }
-}
 @supports (backdrop-filter: blur(2px)) {
   .content {
     background-color: rgba(46, 51, 74, 0.75);
     backdrop-filter: blur(3px);
+  }
+}
+@media only screen and (max-width: 50em) {
+  .content {
+    border: none;
+  }
+  @supports (backdrop-filter: blur(2px)) {
+    .content {
+      background-color: rgba(46, 51, 74, 0.4);
+      backdrop-filter: blur(3px);
+    }
   }
 }
 .content > *:last-child {
@@ -415,8 +429,7 @@ body ::selection {
 .header {
   display: grid;
   grid-template-columns: max-content 1fr;
-  grid-template-rows: 1fr min-content 1fr;
-  row-gap: 2rem;
+  grid-template-rows: 1fr min-content 0.5fr 0.5fr;
   margin-bottom: 3rem;
 }
 @media only screen and (max-width: 37.5em) {
@@ -464,8 +477,8 @@ body ::selection {
     flex-direction: row;
     margin-top: 0;
     margin-bottom: 0;
-    border-top: 1px solid #638b91;
-    border-bottom: 1px solid #638b91;
+    border-top: 2px solid #638b91;
+    border-bottom: 2px solid #638b91;
     background-color: rgba(20, 26, 47, 0.85);
     align-items: center;
   }
@@ -657,16 +670,22 @@ body ::selection {
   align-self: start;
 }
 .header .heading-primary,
-.header .heading-subtitle {
-  text-align: center;
+.header .heading-subtitle,
+.header .header__resume {
   transition: opacity 0.5s 0.75s, transform 0.7s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
   opacity: 1;
+}
+.header .heading-primary,
+.header .heading-subtitle {
+  text-align: center;
   transform: translateY(0);
 }
 .header .divider {
   height: 2px;
   background-color: #8ec9d2;
   position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   z-index: 0;
   transition: width 1s;
   width: 100%;
@@ -697,11 +716,12 @@ body ::selection {
   color: #2e334a;
   background-color: #f1f1e6;
   border: 2px solid currentColor;
-  grid-column: 1/-1;
   justify-self: center;
+  transform: translateY(1rem);
   padding: 1.5rem 2.5rem;
   line-height: 1;
   border-radius: 5px;
+  font-size: 1.05em;
   transition: color 0.15s, background-color 0.25s, border-color 0.25s;
 }
 .header__resume:hover {
@@ -717,7 +737,10 @@ body ::selection {
 }
 @media only screen and (max-width: 37.5em) {
   .header__socials {
-    display: flex;
+    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.75rem;
   }
 }
 
