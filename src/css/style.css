@@ -194,6 +194,9 @@ body ::selection {
   font-size: 4rem;
   font-weight: 900;
   font-family: "Exo", sans-serif;
+  /*   @media only screen and (max-width: breakpoints.$bp-small) {
+    font-size: 3.5rem;
+  } */
 }
 .heading-secondary span:before {
   font-size: 3em;
@@ -206,17 +209,20 @@ body ::selection {
     font-size: 2.25em;
   }
 }
-@media only screen and (max-width: 37.5em) {
-  .heading-secondary {
-    font-size: 3.5rem;
-  }
-}
 @media only screen and (max-width: 31.25em) {
   .heading-secondary {
-    font-size: 3.25rem;
+    font-size: 3.2rem;
   }
   .heading-secondary span:before {
-    font-size: 2em;
+    font-size: 2.2em;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .heading-secondary {
+    font-size: 3.1rem;
+  }
+  .heading-secondary span:before {
+    font-size: 1.9em;
   }
 }
 .heading-secondary--invisible {
@@ -239,8 +245,7 @@ body ::selection {
 }
 @media only screen and (max-width: 25em) {
   .text-emphasized {
-    font-size: 1rem;
-    display: none;
+    font-size: 2rem;
   }
 }
 .text-emphasized--inline {
@@ -649,6 +654,14 @@ body ::selection {
     display: none;
   }
 }
+.header__socials {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .header__socials {
+    display: flex;
+  }
+}
 
 .section {
   position: relative;
@@ -707,6 +720,11 @@ body ::selection {
   flex-wrap: wrap;
   margin: -0.5rem 0 -1rem 0;
 }
+@media only screen and (max-width: 31.25em) {
+  .section__skills {
+    justify-content: center;
+  }
+}
 .section__skills ::selection {
   background-color: rgba(46, 51, 74, 0.9);
   color: #b7b8bf;
@@ -727,18 +745,18 @@ body ::selection {
   border-top-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
+@media only screen and (max-width: 31.25em) {
+  .section__skill {
+    margin: 0.35rem;
+    padding: 0.45 0.85rem;
+  }
+}
 .section__portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(35.5rem, 1fr));
   gap: 4rem;
   border-radius: 10px;
   margin-top: 2rem;
-}
-@media only screen and (max-width: 25em) {
-  .section__portfolio {
-    font-size: 1rem;
-    display: none;
-  }
 }
 @media only screen and (max-width: 31.25em) {
   .section__portfolio {
@@ -869,7 +887,7 @@ body ::selection {
   box-shadow: inset 0 0 5px rgba(142, 201, 210, 0.99);
 }
 .project__links {
-  padding: 0rem 1.1rem 1rem 0rem;
+  padding: 0rem 1.1rem 1rem 1.75rem;
   display: flex;
   flex-wrap: wrap;
   margin-top: auto;

@@ -52,13 +52,19 @@
       font-size: 2.25em;
     }
   }
-  @media only screen and (max-width: breakpoints.$bp-small) {
+  /*   @media only screen and (max-width: breakpoints.$bp-small) {
     font-size: 3.5rem;
-  }
+  } */
   @media only screen and (max-width: breakpoints.$bp-phone-large) {
-    font-size: 3.25rem;
+    font-size: 3.2rem;
     span:before {
-      font-size: 2em;
+      font-size: 2.2em;
+    }
+  }
+  @media only screen and (max-width: breakpoints.$bp-phone-small) {
+    font-size: 3.1rem;
+    span:before {
+      font-size: 1.9em;
     }
   }
 
@@ -75,16 +81,17 @@
   }
 }
 
+// Used for skills and links to other sections
 .text-emphasized {
   color: variables.$color-primary;
   font-family: variables.$font-navigation;
   font-size: 2rem;
 
   @media only screen and (max-width: breakpoints.$bp-phone-small) {
-    font-size: 1rem;
-    display: none;
+    font-size: 2rem;
   }
 
+  // For links to other sections
   &--inline {
     font-family: variables.$font-primary;
     font-size: 2.6rem;

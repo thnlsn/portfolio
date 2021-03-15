@@ -1,5 +1,8 @@
 import React from 'react';
 
+import LinkedInIcon from './svg/LinkedInIcon';
+import GitHubIcon from './svg/GitHubIcon';
+
 import { useOnScreen } from '../hooks';
 
 const Header = ({ img }) => {
@@ -23,6 +26,24 @@ const Header = ({ img }) => {
       <div className='heading-primary'>Thomas Nelson</div>
       <div className='divider'></div>
       <div className='heading-subtitle'>web developer & problem solver</div>
+      <div className='header__socials'>
+        <a
+          href={'https://www.linkedin.com/in/thnlsn/'}
+          rel='noopener noreferrer'
+          target='_blank'
+          className='navigation__social-link'
+        >
+          <LinkedInIcon />
+        </a>
+        <a
+          href={'https://github.com/thnlsn'}
+          rel='noopener noreferrer'
+          target='_blank'
+          className='navigation__social-link'
+        >
+          <GitHubIcon />
+        </a>
+      </div>
     </header>
   );
 };
