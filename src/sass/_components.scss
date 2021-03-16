@@ -352,8 +352,6 @@
   border-bottom-right-radius: 8px;
 
   // border: 6px solid variables.$color-font;
-
-  transition: border 0.3s, box-shadow 0.4s;
   border: 2px dotted
     darken(rgba($color: variables.$color-primary, $alpha: 0.3), 10);
   box-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 1px;
@@ -646,14 +644,21 @@
     padding: 1.5rem 2.5rem;
     line-height: 1;
 
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 10px;
 
-    transition: color 0.15s, background-color 0.25s, border-color 0.25s;
+    transition: color 0.15s, background-color 0.25s, border-color 0.25s,
+      box-shadow 0.4s;
+
+    box-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 2px;
 
     &:hover {
       color: variables.$color-white;
       background-color: transparent;
       border-color: variables.$color-white;
+      box-shadow: rgba(variables.$color-secondary, 1) 0px 0px 10px;
     }
 
     &:active {

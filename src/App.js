@@ -296,8 +296,13 @@ function App() {
                 Do you need a website? Are you a recruiter or company with a
                 vacancy I'd be a good fit for? Please get in touch either
                 through my email address at{' '}
-                <span className='section--emphasis'>thnlsn@gmail.com</span> or
-                the form below. If needed, I can provide references.
+                <a
+                  className='section--emphasis'
+                  href='mailto:thnlsn.dev@gmail.com'
+                >
+                  thnlsn@gmail.com
+                </a>{' '}
+                or the form below. If needed, I can provide references.
               </p>
 
               <Contact

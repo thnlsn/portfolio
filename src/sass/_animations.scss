@@ -84,7 +84,7 @@
 
 .section {
   &--invisible {
-    transition: all 1s;
+    // transition: all 1s;
     opacity: 0;
     transform: translateY(4rem);
 
@@ -94,6 +94,15 @@
         transform: translate(-20%, -45%);
         opacity: 0;
       }
+    }
+
+    .project:nth-child(odd) {
+      // transition: transform 1s;
+      transform: translateX(-2rem);
+    }
+    .project:nth-child(even) {
+      // transition: transform 1s;
+      transform: translateX(2rem);
     }
   }
 
@@ -108,6 +117,17 @@
         transform: translate(0%, -45%);
         opacity: 1;
       }
+    }
+
+    .project {
+      transition: transform 1s, border 0.2s, box-shadow 0.35s;
+    }
+
+    .project:nth-child(odd) {
+      transform: translateX(0);
+    }
+    .project:nth-child(even) {
+      transform: translateX(0);
     }
   }
 }

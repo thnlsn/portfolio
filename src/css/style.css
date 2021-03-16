@@ -157,7 +157,6 @@ body ::selection {
 }
 
 .section--invisible {
-  transition: all 1s;
   opacity: 0;
   transform: translateY(4rem);
 }
@@ -165,6 +164,12 @@ body ::selection {
   transition: transform 1s, opacity 0.75s;
   transform: translate(-20%, -45%);
   opacity: 0;
+}
+.section--invisible .project:nth-child(odd) {
+  transform: translateX(-2rem);
+}
+.section--invisible .project:nth-child(even) {
+  transform: translateX(2rem);
 }
 .section--visible {
   transition: opacity 1s, transform 0.85s;
@@ -175,6 +180,15 @@ body ::selection {
   transition: transform 1.5s, opacity 1.5s;
   transform: translate(0%, -45%);
   opacity: 1;
+}
+.section--visible .project {
+  transition: transform 1s, border 0.2s, box-shadow 0.35s;
+}
+.section--visible .project:nth-child(odd) {
+  transform: translateX(0);
+}
+.section--visible .project:nth-child(even) {
+  transform: translateX(0);
 }
 
 .heading-primary {
@@ -480,7 +494,7 @@ body ::selection {
 }
 
 .section-container {
-  scroll-margin: 9rem;
+  scroll-margin: 10rem;
 }
 
 .section {
@@ -943,7 +957,6 @@ body ::selection {
   border-bottom-left-radius: 32px;
   border-top-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  transition: border 0.3s, box-shadow 0.4s;
   border: 2px dotted rgba(26, 29, 43, 0.3);
   box-shadow: rgba(142, 201, 210, 0.99) 0px 0px 1px;
   display: grid;
@@ -1158,13 +1171,18 @@ body ::selection {
   justify-self: center;
   padding: 1.5rem 2.5rem;
   line-height: 1;
-  border-radius: 5px;
-  transition: color 0.15s, background-color 0.25s, border-color 0.25s;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 10px;
+  transition: color 0.15s, background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
+  box-shadow: rgba(142, 201, 210, 0.99) 0px 0px 2px;
 }
 .contact__submit:hover {
   color: #f1f1e6;
   background-color: transparent;
   border-color: #f1f1e6;
+  box-shadow: #8ec9d2 0px 0px 10px;
 }
 .contact__submit:active {
   background-color: rgba(142, 201, 210, 0.5);
