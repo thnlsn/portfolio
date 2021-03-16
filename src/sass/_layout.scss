@@ -16,6 +16,7 @@
   }
   @media only screen and (max-width: breakpoints.$bp-medium) {
     grid-template-columns: 1fr;
+    background-size: 1000px;
   }
 
   // border-left: variables.$content-border;
@@ -101,8 +102,8 @@
   @media only screen and (max-width: breakpoints.$bp-medium) {
     border: none;
     @supports (backdrop-filter: blur(2px)) {
-      background-color: rgba(variables.$color-primary, 0.4);
-      backdrop-filter: blur(3px);
+      background-color: rgba(variables.$color-primary, 0.65);
+      backdrop-filter: blur(2px);
     }
   }
 
@@ -116,15 +117,16 @@
   grid-template-columns: max-content 1fr;
   grid-template-rows: 1fr min-content 0.5fr 0.5fr;
 
+  margin-bottom: 3rem;
+
   @media only screen and (max-width: breakpoints.$bp-small) {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 1rem;
 
     justify-items: center;
+    margin-bottom: 0rem;
   }
-
-  margin-bottom: 3rem;
 }
 
 .section-container {
