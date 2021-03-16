@@ -310,6 +310,11 @@ body ::selection {
     font-size: 2.1rem;
   }
 }
+@media only screen and (max-width: 22.8125em) {
+  .project__descriptions {
+    font-size: 2rem;
+  }
+}
 
 .App {
   display: grid;
@@ -472,9 +477,16 @@ body ::selection {
   align-items: center;
   padding-top: 2rem;
   margin-top: -4rem;
-  background-color: rgba(20, 26, 47, 0.15);
+  background: linear-gradient(to right, transparent, rgba(20, 26, 47, 0.45), transparent);
   border-top-right-radius: 100px;
   border-top-left-radius: 100px;
+}
+@media only screen and (max-width: 37.5em) {
+  .footer {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: -5rem;
+  }
 }
 .footer > *:not(:first-child) {
   margin-top: 0.25rem;
@@ -704,6 +716,12 @@ body ::selection {
   transition: width 1s;
   width: 100%;
 }
+@media only screen and (max-width: 22.8125em) {
+  .header .divider {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+}
 .header .divider:after {
   content: "";
   height: 12px;
@@ -738,6 +756,12 @@ body ::selection {
   font-size: 1.05em;
   transition: color 0.15s, background-color 0.25s, border-color 0.25s;
 }
+@media only screen and (max-width: 22.8125em) {
+  .header__resume {
+    font-size: 0.9em;
+    padding: 1.5rem 1.75rem;
+  }
+}
 .header__resume:hover {
   color: #f1f1e6;
   background-color: transparent;
@@ -758,19 +782,6 @@ body ::selection {
   }
 }
 
-/* .section-container[data-subject='#who'] {
-  display: none;
-} */
-/* .section-container[data-subject='#what'] {
-  display: none;
-} */
-.section-container[data-subject="#portfolio"] {
-  display: none;
-}
-
-/* .section-container[data-subject='#who'] {
-  display: none;
-} */
 .section {
   position: relative;
 }
@@ -882,6 +893,11 @@ body ::selection {
 @media only screen and (max-width: 31.25em) {
   .section__portfolio {
     grid-template-columns: repeat(auto-fill, minmax(35.5rem, 1fr));
+  }
+}
+@media only screen and (max-width: 22.8125em) {
+  .section__portfolio {
+    grid-template-columns: repeat(auto-fill, minmax(27.5rem, 1fr));
   }
 }
 

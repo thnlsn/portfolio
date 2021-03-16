@@ -107,6 +107,11 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 
+    @media only screen and (max-width: breakpoints.$bp-smallest) {
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
     z-index: 0;
 
     // TRANSITIONING PROPERTIES
@@ -158,6 +163,11 @@
 
     font-size: 1.05em;
 
+    @media only screen and (max-width: breakpoints.$bp-smallest) {
+      font-size: 0.9em;
+      padding: 1.5rem 1.75rem;
+    }
+
     transition: color 0.15s, background-color 0.25s, border-color 0.25s;
 
     &:hover {
@@ -182,19 +192,6 @@
     }
   }
 }
-
-/* .section-container[data-subject='#who'] {
-  display: none;
-} */
-/* .section-container[data-subject='#what'] {
-  display: none;
-} */
-.section-container[data-subject='#portfolio'] {
-  display: none;
-}
-/* .section-container[data-subject='#who'] {
-  display: none;
-} */
 
 .section {
   position: relative;
@@ -321,6 +318,9 @@
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     @media only screen and (max-width: breakpoints.$bp-phone-large) {
       grid-template-columns: repeat(auto-fill, minmax(35.5rem, 1fr));
+    }
+    @media only screen and (max-width: breakpoints.$bp-smallest) {
+      grid-template-columns: repeat(auto-fill, minmax(27.5rem, 1fr));
     }
   }
 }

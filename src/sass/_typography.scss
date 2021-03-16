@@ -141,4 +141,7 @@
   @media only screen and (max-width: breakpoints.$bp-large) {
     font-size: 2.1rem;
   }
+  @media only screen and (max-width: breakpoints.$bp-smallest) {
+    font-size: 2rem;
+  }
 }

@@ -147,9 +147,20 @@
   padding-top: 2rem;
   margin-top: -4rem;
 
-  background-color: rgba(variables.$color-bg, 0.15);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(variables.$color-bg, 0.45),
+    transparent
+  );
   border-top-right-radius: 100px;
   border-top-left-radius: 100px;
+
+  @media only screen and (max-width: breakpoints.$bp-small) {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: -5rem;
+  }
 
   & > *:not(:first-child) {
     margin-top: 0.25rem;
