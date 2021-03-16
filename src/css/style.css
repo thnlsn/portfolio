@@ -276,6 +276,12 @@ body ::selection {
     width: 3.5rem;
   }
 }
+@media only screen and (max-width: 22.8125em) {
+  .skill__icon {
+    height: 2.9rem;
+    width: 2.9rem;
+  }
+}
 
 .project__skill {
   color: #b7b8bf;
@@ -286,6 +292,12 @@ body ::selection {
 @media only screen and (max-width: 25em) {
   .project__skill {
     font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 22.8125em) {
+  .section__skill {
+    font-size: 1.85rem;
   }
 }
 
@@ -746,6 +758,19 @@ body ::selection {
   }
 }
 
+/* .section-container[data-subject='#who'] {
+  display: none;
+} */
+/* .section-container[data-subject='#what'] {
+  display: none;
+} */
+.section-container[data-subject="#portfolio"] {
+  display: none;
+}
+
+/* .section-container[data-subject='#who'] {
+  display: none;
+} */
 .section {
   position: relative;
 }

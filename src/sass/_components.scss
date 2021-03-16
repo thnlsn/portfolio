@@ -183,6 +183,19 @@
   }
 }
 
+/* .section-container[data-subject='#who'] {
+  display: none;
+} */
+/* .section-container[data-subject='#what'] {
+  display: none;
+} */
+.section-container[data-subject='#portfolio'] {
+  display: none;
+}
+/* .section-container[data-subject='#who'] {
+  display: none;
+} */
+
 .section {
   position: relative;
 
@@ -336,6 +349,7 @@
   box-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 1px;
 
   display: grid;
+
   gap: 1rem;
 
   grid-auto-rows: min-content;

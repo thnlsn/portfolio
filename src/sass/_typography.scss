@@ -110,6 +110,10 @@
     height: 3.5rem;
     width: 3.5rem;
   }
+  @media only screen and (max-width: breakpoints.$bp-smallest) {
+    height: 2.9rem;
+    width: 2.9rem;
+  }
 }
 
 .project__skill {
@@ -121,6 +125,12 @@
 
   @media only screen and (max-width: breakpoints.$bp-phone-small) {
     font-size: 2rem;
+  }
+}
+
+.section__skill {
+  @media only screen and (max-width: breakpoints.$bp-smallest) {
+    font-size: 1.85rem;
   }
 }
 
