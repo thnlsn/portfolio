@@ -2,7 +2,7 @@
 
 .header {
   &--invisible {
-    transition: all 1s;
+    // transition: all 1s;
     opacity: 0;
 
     .header__image-container {
@@ -38,7 +38,7 @@
   }
 
   &--visible {
-    transition: all 1s;
+    // transition: all 1s;
 
     .header__image-container {
       &:before {
@@ -62,7 +62,7 @@
       // TRANSITIONING PROPERTIES
       transition: opacity 0.6s 0.75s,
         transform 0.8s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s, color 0.15s,
-        background-color 0.25s, border-color 0.25s;
+        background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
       opacity: 1;
     }
 

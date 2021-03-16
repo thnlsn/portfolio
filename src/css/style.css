@@ -101,7 +101,6 @@ body ::selection {
 }
 
 .header--invisible {
-  transition: all 1s;
   opacity: 0;
 }
 .header--invisible .header__image-container:before {
@@ -129,7 +128,6 @@ body ::selection {
   transform: translateY(-40%) !important;
 }
 .header--visible {
-  transition: all 1s;
   /*     .header__resume {
     transition: color 0.15s, background-color 0.25s, border-color 0.25s;
   } */
@@ -150,7 +148,7 @@ body ::selection {
   opacity: 1;
 }
 .header--visible .header__resume {
-  transition: opacity 0.6s 0.75s, transform 0.8s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s, color 0.15s, background-color 0.25s, border-color 0.25s;
+  transition: opacity 0.6s 0.75s, transform 0.8s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s, color 0.15s, background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
   opacity: 1;
 }
 .header--visible .header__socials {
@@ -413,7 +411,7 @@ body ::selection {
 }
 @media only screen and (max-width: 22.8125em) {
   .content {
-    padding: 8rem 3.5rem 8rem 4rem;
+    padding: 8rem 2.5rem 8rem 3rem;
   }
 }
 @supports selector(div::-webkit-scrollbar) {
@@ -770,11 +768,15 @@ body ::selection {
   background-color: rgba(171, 215, 222, 0.85);
   margin-left: 3rem;
   border: 2px solid currentColor;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 10px;
+  box-shadow: rgba(142, 201, 210, 0.99) 0px 0px 2px;
   justify-self: center;
   transform: translateY(1rem);
   padding: 1.5rem 2.5rem;
   line-height: 1;
-  border-radius: 5px;
   font-size: 1.05em;
 }
 @media only screen and (max-width: 22.8125em) {
@@ -783,13 +785,19 @@ body ::selection {
     padding: 1.5rem 1.75rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .header__resume {
+    margin-left: 0rem;
+  }
+}
 .header__resume:hover {
   color: #f1f1e6;
   background-color: transparent;
   border-color: #f1f1e6;
+  box-shadow: #8ec9d2 0px 0px 10px;
 }
 .header__resume:active {
-  background-color: rgba(142, 201, 210, 0.5);
+  background-color: rgba(142, 201, 210, 0.7);
 }
 .header__socials {
   display: none;
@@ -871,9 +879,9 @@ body ::selection {
   flex-wrap: wrap;
   margin: -0.5rem 0 -1rem 0;
 }
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 25em) {
   .section__skills {
-    justify-content: center;
+    margin: -0.25rem 0rem -0.75rem 0rem;
   }
 }
 .section__skills ::selection {

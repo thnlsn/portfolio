@@ -74,11 +74,11 @@ function App() {
   // Intersection Observer hooks
   const [setAboutRef, aboutVisible] = useOnScreen({
     root: null,
-    threshold: 0.1,
+    threshold: 0.45,
   });
   const [setSkillsRef, skillsVisible] = useOnScreen({
     root: null,
-    threshold: 0.45,
+    threshold: 0.35,
   });
   const [setPortfolioRef, portfolioVisible] = useOnScreen({
     root: null,
@@ -196,7 +196,7 @@ function App() {
             <Fragment>
               <p className='section__description'>
                 Below is a list of some projects I've' worked on &ndash; a
-                healthy mixture of paid and personal.{' '}
+                healthy mixture of paid, personal, and for practice.{' '}
               </p>
               <p className='section__description'>
                 Included are links to view the live hosted sites as well as the
@@ -266,7 +266,7 @@ function App() {
                   skills={['React', 'JavaScript', 'Sass', 'CSS']}
                   paragraphs={[
                     'My portfolio site! The one you are currently browsing — designed and developed by me.',
-                    'I used Figma to design the wireframes and hand-coded it with my preferred front-end stack of React, Sass, and vanilla JavaScript. The contact form is hooked up to Netlify forms to take advantage of serverless functions.',
+                    'Coded from scratch with my preferred front-end stack of React, Sass, and vanilla JavaScript. The contact form below is serverless, being handled by JavaScript and relayed to me via Netlify forms.',
                   ]}
                   links={[
                     'https://github.com/thnlsn/portfolio',
