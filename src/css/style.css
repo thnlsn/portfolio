@@ -124,8 +124,19 @@ body ::selection {
   opacity: 0 !important;
   transform: translateY(-40%) !important;
 }
+.header--invisible .header__socials {
+  opacity: 0 !important;
+  transform: translateY(-40%) !important;
+}
 .header--visible {
   transition: all 1s;
+  /*     .header__resume {
+    transition: color 0.15s, background-color 0.25s, border-color 0.25s;
+  } */
+  /*     .header__socials {
+    opacity: 1;
+    transform: translateY(0) !important;
+  } */
 }
 .header--visible .header__image-container:before {
   transition: width 1s cubic-bezier(0.06, 0.81, 0.64, 1.23), height 1s cubic-bezier(0.06, 0.81, 0.64, 1.23);
@@ -133,8 +144,18 @@ body ::selection {
   height: 125%;
   border-radius: 50%;
 }
+.header--visible .heading-primary,
+.header--visible .heading-subtitle {
+  transition: opacity 0.5s 0.75s, transform 0.75s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
+  opacity: 1;
+}
 .header--visible .header__resume {
-  transition: color 0.15s, background-color 0.25s, border-color 0.25s;
+  transition: opacity 0.6s 0.75s, transform 0.8s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s, color 0.15s, background-color 0.25s, border-color 0.25s;
+  opacity: 1;
+}
+.header--visible .header__socials {
+  transition: opacity 0.7s 0.75s, transform 0.85s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
+  opacity: 1;
 }
 
 .section--invisible {
@@ -694,12 +715,12 @@ body ::selection {
 }
 .header .heading-subtitle {
   align-self: start;
+  padding-left: 3rem;
 }
-.header .heading-primary,
-.header .heading-subtitle,
-.header .header__resume {
-  transition: opacity 0.5s 0.75s, transform 0.7s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
-  opacity: 1;
+@media only screen and (max-width: 37.5em) {
+  .header .heading-subtitle {
+    padding-left: 0rem;
+  }
 }
 .header .heading-primary,
 .header .heading-subtitle {
@@ -716,7 +737,7 @@ body ::selection {
   transition: width 1s;
   width: 100%;
 }
-@media only screen and (max-width: 22.8125em) {
+@media only screen and (max-width: 37.5em) {
   .header .divider {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
@@ -746,7 +767,8 @@ body ::selection {
   outline: none;
   text-decoration: none;
   color: #2e334a;
-  background-color: #f1f1e6;
+  background-color: rgba(171, 215, 222, 0.85);
+  margin-left: 3rem;
   border: 2px solid currentColor;
   justify-self: center;
   transform: translateY(1rem);
@@ -754,7 +776,6 @@ body ::selection {
   line-height: 1;
   border-radius: 5px;
   font-size: 1.05em;
-  transition: color 0.15s, background-color 0.25s, border-color 0.25s;
 }
 @media only screen and (max-width: 22.8125em) {
   .header__resume {
@@ -779,6 +800,9 @@ body ::selection {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1.75rem;
+    transform: translateY(1px);
+    opacity: 1;
+    transition: color 0.15s, background-color 0.25s, border-color 0.25s;
   }
 }
 
