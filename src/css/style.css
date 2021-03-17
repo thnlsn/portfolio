@@ -211,17 +211,6 @@ body ::selection {
 }
 .section--visible .section__skill {
   transition: transform 2s;
-}
-.section--visible .section__skill:nth-child(4n+1) {
-  transform: translate(0, 0);
-}
-.section--visible .section__skill:nth-child(4n+2) {
-  transform: translate(0, 0);
-}
-.section--visible .section__skill:nth-child(4n+3) {
-  transform: translate(0, 0);
-}
-.section--visible .section__skill:nth-child(4n+4) {
   transform: translate(0, 0);
 }
 
