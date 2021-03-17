@@ -94,6 +94,9 @@
         transform: translate(-20%, -45%);
         opacity: 0;
       }
+      &::after {
+        background-color: transparent;
+      }
     }
 
     .project:nth-child(odd) {
@@ -116,6 +119,10 @@
         transition: transform 1.5s, opacity 1.5s;
         transform: translate(0%, -45%);
         opacity: 1;
+      }
+      &::after {
+        transition: background-color 1s 0.75s;
+        background-color: rgba($color: variables.$color-secondary, $alpha: 0.5);
       }
     }
 

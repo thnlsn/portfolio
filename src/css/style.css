@@ -165,6 +165,9 @@ body ::selection {
   transform: translate(-20%, -45%);
   opacity: 0;
 }
+.section--invisible .section__subject::after {
+  background-color: transparent;
+}
 .section--invisible .project:nth-child(odd) {
   transform: translateX(-2rem);
 }
@@ -180,6 +183,10 @@ body ::selection {
   transition: transform 1.5s, opacity 1.5s;
   transform: translate(0%, -45%);
   opacity: 1;
+}
+.section--visible .section__subject::after {
+  transition: background-color 1s 0.75s;
+  background-color: rgba(142, 201, 210, 0.5);
 }
 .section--visible .project {
   transition: transform 1s, border 0.2s, box-shadow 0.35s;
@@ -328,6 +335,23 @@ body ::selection {
   }
 }
 
+.section--link, .section--emphasis {
+  font-weight: 600;
+  cursor: pointer;
+  transition: text-decoration-color 0.25s;
+}
+.section--link {
+  color: #f1f1e6;
+}
+.section--link:hover {
+  text-decoration-color: #8ec9d2;
+}
+.section--emphasis {
+  color: #8ec9d2;
+}
+.section--emphasis:hover {
+  text-decoration-color: #f1f1e6;
+}
 @media only screen and (max-width: 22.8125em) {
   .section__skill {
     font-size: 1.85rem;
@@ -505,11 +529,12 @@ body ::selection {
 
 .footer {
   font-weight: 300;
-  display: flex;
+  display: grid;
   flex-direction: column;
-  align-items: center;
-  padding-top: 2rem;
+  justify-items: center;
+  padding-top: 4rem;
   margin-top: -4rem;
+  row-gap: 0.75rem;
   background: linear-gradient(to right, transparent, rgba(20, 26, 47, 0.45), transparent);
   border-top-right-radius: 100px;
   border-top-left-radius: 100px;
@@ -536,6 +561,7 @@ body ::selection {
     flex-direction: row;
     margin-top: 0;
     margin-bottom: 0;
+    padding-left: 2rem;
     border-top: 2px solid #638b91;
     border-bottom: 2px solid #638b91;
     background-color: rgba(20, 26, 47, 0.85);
@@ -621,15 +647,15 @@ body ::selection {
 }
 .navigation__social-link .skill__icon {
   display: block;
-  height: 5rem;
-  width: 5rem;
-  fill: #8ec9d2;
+  height: 5.25rem;
+  width: 5.25rem;
+  fill: #f1f1e6;
   padding: 1rem;
   border-radius: 50%;
   overflow: visible;
   transition: background-color 0.45s, fill 0.65s;
   border: 2px solid rgba(142, 201, 210, 0.95);
-  background-color: rgba(20, 26, 47, 0.65);
+  background-color: rgba(20, 26, 47, 0.85);
 }
 @media only screen and (max-width: 50em) {
   .navigation__social-link .skill__icon {
@@ -643,7 +669,7 @@ body ::selection {
   }
 }
 .navigation__social-link .skill__icon:hover {
-  background-color: rgba(142, 201, 210, 0.95);
+  background-color: rgba(142, 201, 210, 0.85);
   fill: #141a2f;
 }
 
@@ -838,15 +864,6 @@ body ::selection {
   .section .heading-secondary {
     margin-bottom: -2rem;
   }
-}
-.section--link {
-  color: #f1f1e6;
-  font-weight: 600;
-  cursor: pointer;
-}
-.section--emphasis {
-  color: #8ec9d2;
-  font-weight: 600;
 }
 .section__subject {
   color: #f1f1e6;
@@ -1084,7 +1101,6 @@ body ::selection {
   padding: 0.9rem 1.2rem 0.9rem 1.2rem;
   line-height: 1;
   text-decoration: none;
-  transition: all 0.25s;
   opacity: 0.9;
   color: #141a2f;
   margin-right: 1rem;

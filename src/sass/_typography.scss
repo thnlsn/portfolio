@@ -128,9 +128,36 @@
   }
 }
 
-.section__skill {
-  @media only screen and (max-width: breakpoints.$bp-smallest) {
-    font-size: 1.85rem;
+.section {
+  // Links to other parts on the page
+  &--link,
+  &--emphasis {
+    font-weight: 600;
+    cursor: pointer;
+    transition: text-decoration-color 0.25s;
+  }
+
+  &--link {
+    color: variables.$color-white;
+
+    &:hover {
+      text-decoration-color: variables.$color-secondary;
+    }
+  }
+
+  // Link to email
+  &--emphasis {
+    color: variables.$color-secondary;
+
+    &:hover {
+      text-decoration-color: variables.$color-white;
+    }
+  }
+
+  &__skill {
+    @media only screen and (max-width: breakpoints.$bp-smallest) {
+      font-size: 1.85rem;
+    }
   }
 }
 

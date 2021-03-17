@@ -214,16 +214,6 @@
     }
   }
 
-  &--link {
-    color: variables.$color-white;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  &--emphasis {
-    color: variables.$color-secondary;
-    font-weight: 600;
-  }
-
   &__subject {
     color: variables.$color-white;
     font-size: 1.45em;
@@ -522,7 +512,6 @@
       transform: translateX(4px);
     }
 
-    transition: all 0.25s;
     opacity: 0.9;
 
     color: variables.$color-bg;
