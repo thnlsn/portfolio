@@ -107,6 +107,19 @@
       // transition: transform 1s;
       transform: translateX(2rem);
     }
+
+    .section__skill:nth-child(4n + 1) {
+      transform: translate(-1rem, 0);
+    }
+    .section__skill:nth-child(4n + 2) {
+      transform: translate(0, -1rem);
+    }
+    .section__skill:nth-child(4n + 3) {
+      transform: translate(1rem, 0);
+    }
+    .section__skill:nth-child(4n + 4) {
+      transform: translate(0, 1rem);
+    }
   }
 
   &--visible {
@@ -135,6 +148,23 @@
     }
     .project:nth-child(even) {
       transform: translateX(0);
+    }
+
+    .section__skill {
+      transition: transform 2s;
+    }
+
+    .section__skill:nth-child(4n + 1) {
+      transform: translate(0, 0);
+    }
+    .section__skill:nth-child(4n + 2) {
+      transform: translate(0, 0);
+    }
+    .section__skill:nth-child(4n + 3) {
+      transform: translate(0, 0);
+    }
+    .section__skill:nth-child(4n + 4) {
+      transform: translate(0, 0);
     }
   }
 }
