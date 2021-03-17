@@ -116,6 +116,12 @@
   }
 }
 
+.project__heading {
+  @media only screen and (max-width: breakpoints.$bp-small) {
+    font-size: 2.75rem;
+  }
+}
+
 .project__skill {
   color: variables.$color-font;
   font-family: variables.$font-navigation;

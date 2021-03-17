@@ -293,7 +293,7 @@
       overflow: visible;
 
       transition: background-color 0.45s, fill 0.65s;
-      border: 2px solid rgba(variables.$color-secondary, 0.95);
+      border: 2px solid variables.$color-secondary;
       background-color: rgba(variables.$color-bg, 0.85);
 
       &:hover {

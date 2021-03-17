@@ -130,8 +130,7 @@
     .section__subject {
       &::before {
         transition: transform 1.5s, opacity 1.5s;
-        transform: translate(0%, -45%);
-        opacity: 1;
+        transform: translateY(-45%);
       }
       &::after {
         transition: background-color 1s 0.75s;

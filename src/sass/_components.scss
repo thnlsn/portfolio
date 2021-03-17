@@ -462,7 +462,7 @@
 
     background: variables.$background-description;
     background-size: 50rem;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 2rem;
     border-radius: 5px;
     color: lighten(variables.$color-font, 15);
     font-weight: 300;
@@ -523,6 +523,8 @@
 
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
+
+    transition: background-color 0.4s;
 
     &:last-child {
       background-color: darken(
