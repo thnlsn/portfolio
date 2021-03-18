@@ -641,8 +641,8 @@
 
     transition: color 0.15s, background-color 0.25s, border-color 0.25s,
       box-shadow 0.4s;
-
-    box-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 2px;
+    background-color: variables.$color-white;
+    box-shadow: variables.$color-secondary 0px 0px 2px;
 
     &:hover {
       color: variables.$color-white;

@@ -8,7 +8,7 @@
   font-family: variables.$font-primary;
   font-size: 7.2rem;
   color: variables.$color-secondary;
-  text-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 4px;
+  text-shadow: variables.$color-secondary 0px 0px 4px;
 
   line-height: 1;
 

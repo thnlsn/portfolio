@@ -18,6 +18,10 @@
     grid-template-columns: 1fr;
     background-size: 1000px;
   }
+  @media only screen and (max-width: breakpoints.$bp-small) {
+    grid-template-columns: 1fr;
+    background-size: 850px;
+  }
 
   // border-left: variables.$content-border;
   // border-right: variables.$content-border;
@@ -104,7 +108,7 @@
     border: none;
     @supports (backdrop-filter: blur(2px)) {
       background-color: rgba(variables.$color-primary, 0.65);
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(1px);
     }
   }
 

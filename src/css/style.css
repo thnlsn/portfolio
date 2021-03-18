@@ -220,7 +220,7 @@ body ::selection {
   font-family: "Bungee Inline", cursive;
   font-size: 7.2rem;
   color: #8ec9d2;
-  text-shadow: rgba(142, 201, 210, 0.99) 0px 0px 4px;
+  text-shadow: #8ec9d2 0px 0px 4px;
   line-height: 1;
 }
 @media only screen and (max-width: 103.125em) {
@@ -428,6 +428,12 @@ body ::selection {
     background-size: 1000px;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .App {
+    grid-template-columns: 1fr;
+    background-size: 850px;
+  }
+}
 
 /* .background {
   position: absolute;
@@ -520,7 +526,7 @@ body ::selection {
   @supports (backdrop-filter: blur(2px)) {
     .content {
       background-color: rgba(46, 51, 74, 0.65);
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(1px);
     }
   }
 }
@@ -1219,7 +1225,8 @@ body ::selection {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 10px;
   transition: color 0.15s, background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
-  box-shadow: rgba(142, 201, 210, 0.99) 0px 0px 2px;
+  background-color: #f1f1e6;
+  box-shadow: #8ec9d2 0px 0px 2px;
 }
 .contact__submit:hover {
   color: #f1f1e6;
