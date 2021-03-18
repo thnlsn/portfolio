@@ -10,7 +10,7 @@
 
 This is my professional portfolio site
 
-## Live Link: [https://thnlsn.github.io/electoral-map/](https://thnlsn.github.io/electoral-map/)
+## Live Link: [thnlsn.me](https://www.thnlsn.me/)
 
 Check it out on your phone or tablet, it's fully responsive!
 
