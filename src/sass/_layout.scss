@@ -108,7 +108,7 @@
     border: none;
     @supports (backdrop-filter: blur(2px)) {
       background-color: rgba(variables.$color-primary, 0.65);
-      backdrop-filter: blur(1px);
+      backdrop-filter: blur(2px);
     }
   }
 

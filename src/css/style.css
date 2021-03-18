@@ -220,8 +220,12 @@ body ::selection {
   font-family: "Bungee Inline", cursive;
   font-size: 7.2rem;
   color: #8ec9d2;
-  text-shadow: #8ec9d2 0px 0px 4px;
   line-height: 1;
+}
+@supports (text-shadow: orangered 0px 0px 4px) {
+  .heading-primary {
+    text-shadow: #8ec9d2 0px 0px 4px;
+  }
 }
 @media only screen and (max-width: 103.125em) {
   .heading-primary {
@@ -526,7 +530,7 @@ body ::selection {
   @supports (backdrop-filter: blur(2px)) {
     .content {
       background-color: rgba(46, 51, 74, 0.65);
-      backdrop-filter: blur(1px);
+      backdrop-filter: blur(2px);
     }
   }
 }
@@ -839,12 +843,13 @@ body ::selection {
   color: #2e334a;
   background-color: rgba(171, 215, 222, 0.85);
   margin-left: 3rem;
+  margin-top: 1rem;
   border: 2px solid currentColor;
   border-top-left-radius: 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 10px;
-  box-shadow: rgba(142, 201, 210, 0.99) 0px 0px 2px;
+  box-shadow: #8ec9d2 0px 0px 2px;
   justify-self: center;
   transform: translateY(1rem);
   padding: 1.5rem 2.5rem;

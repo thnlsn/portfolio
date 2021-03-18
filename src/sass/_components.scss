@@ -146,6 +146,7 @@
     );
 
     margin-left: 3rem;
+    margin-top: 1rem;
 
     border: 2px solid currentColor;
     border-top-left-radius: 5px;
@@ -153,7 +154,7 @@
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 10px;
 
-    box-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 2px;
+    box-shadow: variables.$color-secondary 0px 0px 2px;
 
     justify-self: center;
 
