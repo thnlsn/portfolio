@@ -56,6 +56,7 @@
       transition: opacity 0.5s 0.75s,
         transform 0.75s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
       opacity: 1;
+      transform: translateY(0);
     }
 
     .header__resume {
@@ -64,6 +65,7 @@
         transform 0.8s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s, color 0.15s,
         background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
       opacity: 1;
+      transform: translateY(0%);
     }
 
     .header__socials {
@@ -71,6 +73,7 @@
       transition: opacity 0.7s 0.75s,
         transform 0.85s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
       opacity: 1;
+      transform: translateY(0%);
     }
     /*     .header__resume {
       transition: color 0.15s, background-color 0.25s, border-color 0.25s;

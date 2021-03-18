@@ -146,14 +146,17 @@ body ::selection {
 .header--visible .heading-subtitle {
   transition: opacity 0.5s 0.75s, transform 0.75s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
   opacity: 1;
+  transform: translateY(0);
 }
 .header--visible .header__resume {
   transition: opacity 0.6s 0.75s, transform 0.8s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s, color 0.15s, background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
   opacity: 1;
+  transform: translateY(0%);
 }
 .header--visible .header__socials {
   transition: opacity 0.7s 0.75s, transform 0.85s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
   opacity: 1;
+  transform: translateY(0%);
 }
 
 .section--invisible {
@@ -324,6 +327,8 @@ body ::selection {
   fill: #2e334a;
   height: 4rem;
   width: 4rem;
+  overflow-x: visible;
+  overflow-y: visible;
 }
 @media only screen and (max-width: 25em) {
   .skill__icon {
@@ -398,7 +403,8 @@ body ::selection {
   display: grid;
   grid-template-columns: 0.4fr 2fr minmax(0px, 0.4fr);
   background-image: var(--background);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   height: 100vh;
 }
 @media only screen and (max-width: 103.125em) {
@@ -441,7 +447,7 @@ body ::selection {
   } */
   background-color: rgba(46, 51, 74, 0.15);
   background-color: orangered;
-  padding: 9rem 11.5rem 9rem 11rem;
+  padding: 9rem 11.5rem 0rem 11rem;
   border-left: 2px solid #638b91;
   border-right: 2px solid #638b91;
   display: grid;
@@ -455,22 +461,22 @@ body ::selection {
 }
 @media only screen and (max-width: 103.125em) {
   .content {
-    padding: 9rem 6.5rem 9rem 7rem;
+    padding: 9rem 6.5rem 0rem 7rem;
   }
 }
 @media only screen and (max-width: 31.25em) {
   .content {
-    padding: 9rem 4.9rem 9rem 5.4rem;
+    padding: 8rem 2.5rem 0rem 3rem;
   }
 }
 @media only screen and (max-width: 25em) {
   .content {
-    padding: 9rem 4.5rem 9rem 5rem;
+    padding: 8rem 2.5rem 0rem 3rem;
   }
 }
 @media only screen and (max-width: 22.8125em) {
   .content {
-    padding: 8rem 2.5rem 8rem 3rem;
+    padding: 8rem 1.5rem 0rem 2rem;
   }
 }
 @supports selector(div::-webkit-scrollbar) {
@@ -784,7 +790,6 @@ body ::selection {
 .header .heading-primary,
 .header .heading-subtitle {
   text-align: center;
-  transform: translateY(0);
 }
 .header .divider {
   height: 2px;

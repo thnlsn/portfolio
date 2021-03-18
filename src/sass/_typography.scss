@@ -106,6 +106,9 @@
   height: 4rem;
   width: 4rem;
 
+  overflow-x: visible;
+  overflow-y: visible;
+
   @media only screen and (max-width: breakpoints.$bp-phone-small) {
     height: 3.5rem;
     width: 3.5rem;
