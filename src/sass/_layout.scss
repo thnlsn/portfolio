@@ -260,6 +260,7 @@
     }
 
     &--true {
+      will-change: background-color, color;
       background-color: rgba(variables.$color-secondary, 0.95);
       color: variables.$color-bg;
       // text-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 4px;

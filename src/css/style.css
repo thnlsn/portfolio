@@ -677,6 +677,7 @@ body ::selection {
   }
 }
 .navigation__link--true {
+  will-change: background-color, color;
   background-color: rgba(142, 201, 210, 0.95);
   color: #141a2f;
 }
