@@ -151,7 +151,7 @@ function App() {
         /////////////////////////////////////////////////////////////////////////
         */}
         <Section
-          heading={'who I am'}
+          heading={'about me'}
           contents={
             <Fragment>
               <p className='section__description'>
@@ -196,7 +196,7 @@ function App() {
         /////////////////////////////////////////////////////////////////////////
         */}
         <Section
-          heading={'what I can do'}
+          heading={'skills and technologies'}
           contents={
             <Fragment>
               <p className='section__description'>
@@ -226,7 +226,7 @@ function App() {
         */}
 
         <Section
-          heading={'portfolio of work'}
+          heading={'portfolio of projects'}
           contents={
             <Fragment>
               <p className='section__description'>

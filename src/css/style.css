@@ -376,8 +376,8 @@ body ::selection {
 }
 
 .section--link, .section--emphasis {
-  font-weight: 600;
   cursor: pointer;
+  font-weight: 600;
   transition: text-decoration-color 0.25s;
 }
 .section--link {
@@ -609,6 +609,12 @@ body ::selection {
 }
 .footer > *:not(:first-child) {
   margin-top: 0.25rem;
+}
+.footer__divider {
+  color: #8ec9d2;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .navigation {

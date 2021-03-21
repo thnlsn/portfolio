@@ -187,6 +187,13 @@
   & > *:not(:first-child) {
     margin-top: 0.25rem;
   }
+
+  &__divider {
+    color: variables.$color-secondary;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
 }
 
 .navigation {
