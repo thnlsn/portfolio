@@ -344,7 +344,7 @@
   // border: 6px solid variables.$color-font;
   border: 2px dotted
     darken(rgba($color: variables.$color-primary, $alpha: 0.3), 10);
-  box-shadow: rgba(variables.$color-secondary, 0.99) 0px 0px 1px;
+  box-shadow: rgba(variables.$color-secondary, 1) 0px 0px 1px;
 
   display: grid;
 
@@ -355,8 +355,8 @@
 
   &:hover {
     border: 2px dotted
-      darken(rgba($color: variables.$color-secondary, $alpha: 0.75), 10);
-    box-shadow: rgba(variables.$color-secondary, 1) 0px 0px 16px;
+      darken(rgba($color: variables.$color-secondary, $alpha: 0.75), 12);
+    box-shadow: rgba(variables.$color-secondary, 1) 0px 0px 10px;
 
     .project__heading:before,
     .project__heading:after {

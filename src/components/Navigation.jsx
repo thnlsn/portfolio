@@ -3,13 +3,16 @@ import React, { useState, useEffect } from 'react';
 import LinkedInIcon from './svg/LinkedInIcon';
 import GitHubIcon from './svg/GitHubIcon';
 
+console.log(document);
 const Navigation = ({ scrollTo }) => {
   const [visibility, setVisibility] = useState([false, false, false, false]);
+  const content = document.querySelector('.content');
+  const vh = window.innerHeight;
 
   // Options for all section enter effects, so for the 3 tab sections highlighting their tabs in the navbar as well as the sections themselves appearing when they get close enough
   const sectionOptions = {
-    root: null,
-    rootMargin: '-300px',
+    root: content,
+    rootMargin: `${vh - vh / 4}px 0px -${vh / 4}px 0px`,
   };
 
   // Function to highlight the tab in the nav as its section intersects
@@ -19,12 +22,12 @@ const Navigation = ({ scrollTo }) => {
     const sectionNum = +section.id - 1; // Section number
     let copy = [...visibility];
     if (isIntersecting) {
-      // When a new section is intersected, scale all to default (so that there is never 2 tabs being scaled up)
+      // When a new section is intersected, transform all to default (so that there is never 2 tabs being transformed up)
       setVisibility(copy.map((link) => (link = false)));
-      // The one that was intersected should be the only one scaled up
+      // The one that was intersected should be the only one transformed up
       copy[sectionNum] = true;
       setVisibility(copy);
-      // Else is for the case of the last section, when there are no more intersections to take place, which would leave the last tab scaled up even when left, so target the tab that is NO longer intersecting, and scale it back down
+      // Else is for the case of the last section, when there are no more intersections to take place, which would leave the last tab transformed up even when left, so target the tab that is NO longer intersecting, and transform it back down
     } else {
       copy[sectionNum] = false;
     }
@@ -33,7 +36,7 @@ const Navigation = ({ scrollTo }) => {
   useEffect(() => {
     // Select all tab sections (not the contact section) by targetting all sections with id's prefixed with section (since contact doesn't have an id and all the other sections do, but with different suffixes/BEM modifiers)
     const allTabSections = document.querySelectorAll('.section-container');
-    console.log(allTabSections);
+    // console.log(allTabSections);
 
     // Observer for each of the tabbed sections
     const tabSectionObserver = new IntersectionObserver(
