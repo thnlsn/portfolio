@@ -156,9 +156,8 @@ function App() {
             <Fragment>
               <p className='section__description'>
                 A web developer on and off the clock and a student beyond the
-                classroom. I am a natural problem solver and love spending my
-                time coding and building responsive, functional, and beautiful
-                websites. Check out my{' '}
+                classroom. I am a problem solver at heart, with a keen eye
+                towards responsiveness. Check out my{' '}
                 <a
                   onClick={() => {
                     scrollToSection("'#portfolio'");
@@ -168,10 +167,10 @@ function App() {
                 >
                   work
                 </a>{' '}
-                to see what I mean!
+                to check out what I'm talking about!
               </p>
               <p className='section__description'>
-                I’m currently available for projects no matter the scale.{' '}
+                I am currently avaiable for any kind of work.{' '}
                 <a
                   onClick={() => {
                     scrollToSection("'#contact'");
@@ -201,7 +200,7 @@ function App() {
           contents={
             <Fragment>
               <p className='section__description'>
-                Learning is a life style for me, and as such I am always eager
+                Learning is a lifestyle for me, and as such I am always eager
                 for new challenges to tackle. At this moment I am proficient in
                 the following technologies, but I am always looking to expand.
               </p>
@@ -227,12 +226,11 @@ function App() {
         */}
 
         <Section
-          heading={'portfolio of works'}
+          heading={'portfolio of work'}
           contents={
             <Fragment>
               <p className='section__description'>
-                Below is a list of some projects I've' worked on &ndash; a
-                healthy mixture of paid, personal, and for practice.{' '}
+                Below is a mixture of some projects I've worked on.{' '}
               </p>
               <p className='section__description'>
                 Included are links to view the live hosted sites as well as the
