@@ -10,7 +10,7 @@
 
 This is my professional portfolio site, you can view it to download my resume, get in contact with me, as well as view all my favorite projects. I built it using my favorite front-end stack of React, Sass, and vanilla JavaScript. For deployment I opted for Netlify to leverage their Netlify forms to relay contact form submissions to me. It was made responsive with a mixture of CSS Grid and Flexbox as well as CSS functions such as minmax() and repeat(), and scroll activated animations are utilizing the Intersection Observer built in Web API.
 
-## Live Link: [https://thnlsn.github.io/electoral-map/](https://thnlsn.github.io/electoral-map/)
+## Live Link: [thnlsn.me](https://www.thnlsn.me/)
 
 Check it out on your phone or tablet, it's fully responsive!
 
