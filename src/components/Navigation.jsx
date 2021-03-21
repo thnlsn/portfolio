@@ -14,8 +14,8 @@ const Navigation = ({ scrollTo }) => {
   const sectionOptions = {
     root: content,
     // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
-    rootMargin: `${vh < 1300 && vw < vh ? vh / 4 : -(vh - vh / 2)}px 0px -${
-      vh < 1300 ? vh / 4 : vh / 2
+    rootMargin: `${vw < vh ? vh / 4 : -(vh - vh / 3)}px 0px -${
+      vh < 1300 ? vh / 4 : vh / 3
     }px 0px`,
   };
 

@@ -132,6 +132,11 @@
         display: none;
       }
     }
+    @media only screen and (orientation: portrait) {
+      &:after {
+        display: none;
+      }
+    }
   }
 
   // position: relative;

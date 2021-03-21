@@ -76,26 +76,26 @@ function App() {
 
   const [setAboutRef, aboutVisible] = useOnScreen({
     root: content,
-    rootMargin: `${vh < 1300 && vw < vh ? vh / 4 : -(vh - vh / 2)}px 0px -${
-      vh < 1300 ? vh / 4 : vh / 2
+    rootMargin: `${vw < vh ? vh / 4 : -(vh - vh / 3)}px 0px -${
+      vh < 1300 ? vh / 4 : vh / 3
     }px 0px`,
   });
   const [setSkillsRef, skillsVisible] = useOnScreen({
     root: content,
-    rootMargin: `${vh < 1300 && vw < vh ? vh / 4 : -(vh - vh / 2)}px 0px -${
-      vh < 1300 ? vh / 4 : vh / 2
+    rootMargin: `${vw < vh ? vh / 4 : -(vh - vh / 3)}px 0px -${
+      vh < 1300 ? vh / 4 : vh / 3
     }px 0px`,
   });
   const [setPortfolioRef, portfolioVisible] = useOnScreen({
     root: document.querySelector('.content'),
-    rootMargin: `${vh < 1300 && vw < vh ? vh / 4 : -(vh - vh / 2)}px 0px -${
-      vh < 1300 ? vh / 4 : vh / 2
+    rootMargin: `${vw < vh ? vh / 4 : -(vh - vh / 3)}px 0px -${
+      vh < 1300 ? vh / 4 : vh / 3
     }px 0px`,
   });
   const [setContactRef, contactVisible] = useOnScreen({
     root: document.querySelector('.content'),
-    rootMargin: `${vh < 1300 && vw < vh ? vh / 4 : -(vh - vh / 2)}px 0px -${
-      vh < 1300 ? vh / 4 : vh / 2
+    rootMargin: `${vw < vh ? vh / 4 : -(vh - vh / 3)}px 0px -${
+      vh < 1300 ? vh / 4 : vh / 3
     }px 0px`,
   });
 

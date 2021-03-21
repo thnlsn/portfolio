@@ -33,6 +33,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 @media only screen and (max-width: 75em) {
   html {
@@ -59,6 +60,7 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   font-family: "Exo 2", sans-serif;
   color: var(--color-font);
   font-size: 2.4rem;
@@ -447,7 +449,7 @@ body ::selection {
     background-size: 850px;
   }
 }
-@media only screen and (min-height: 1300px) {
+@media only screen and (orientation: portrait) {
   .App {
     grid-template-columns: 0.475fr 2fr 0.4fr;
   }
@@ -531,9 +533,9 @@ body ::selection {
     scrollbar-track-color: #2e334a;
   }
 }
-@media only screen and (min-height: 1300px) {
+@media only screen and (orientation: portrait) {
   .content {
-    row-gap: 17.5rem;
+    row-gap: 19.5rem;
   }
 }
 @supports (backdrop-filter: blur(2px)) {
@@ -571,7 +573,7 @@ body ::selection {
     margin-bottom: 0rem;
   }
 }
-@media only screen and (min-height: 1300px) {
+@media only screen and (orientation: portrait) {
   .header {
     grid-template-columns: 1fr;
     row-gap: 1rem;
@@ -859,6 +861,11 @@ body ::selection {
   .header .divider {
     border-radius: 45%;
   }
+  .header .divider:after {
+    display: none;
+  }
+}
+@media only screen and (orientation: portrait) {
   .header .divider:after {
     display: none;
   }
