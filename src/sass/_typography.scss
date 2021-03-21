@@ -9,9 +9,9 @@
   font-size: 7.2rem;
   color: variables.$color-secondary;
 
-  @supports (text-shadow: orangered 0px 0px 4px) {
-    text-shadow: variables.$color-secondary 0px 0px 4px;
-  }
+  /*   @supports (text-shadow: orangered 0px 0px 4px) {
+    dow: variables.$color-secondary 0px 0px 4px;
+  } */
 
   line-height: 1;
 
