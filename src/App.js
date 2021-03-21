@@ -77,22 +77,22 @@ function App() {
   const [setAboutRef, aboutVisible] = useOnScreen({
     root: content,
     // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
-    rootMargin: `${vh / 4}px 0px -${vh / 4}px 0px`,
+    rootMargin: `${(vh / 4) * 3}px 0px -${vh / 3}px 0px`,
   });
   const [setSkillsRef, skillsVisible] = useOnScreen({
     root: content,
     // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
-    rootMargin: `${vh / 4}px 0px -${vh / 4}px 0px`,
+    rootMargin: `${(vh / 4) * 3}px 0px -${vh / 3}px 0px`,
   });
   const [setPortfolioRef, portfolioVisible] = useOnScreen({
     root: content,
     // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
-    rootMargin: `${vh / 4}px 0px -${vh / 4}px 0px`,
+    rootMargin: `${(vh / 4) * 3}px 0px -${vh / 3}px 0px`,
   });
   const [setContactRef, contactVisible] = useOnScreen({
     root: content,
     // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
-    rootMargin: `${vh / 4}px 0px -${vh / 4}px 0px`,
+    rootMargin: `${(vh / 4) * 3}px 0px -${vh / 3}px 0px`,
   });
 
   const scrollToSection = (section) => {

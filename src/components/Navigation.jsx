@@ -6,18 +6,12 @@ import GitHubIcon from './svg/GitHubIcon';
 console.log(document);
 const Navigation = ({ scrollTo }) => {
   const [visibility, setVisibility] = useState([false, false, false, false]);
-  const content = document.querySelector('.content');
-  const vh = window.innerHeight;
-  const vw = window.innerWidth;
+  let content;
+  let navWidth;
+  let rightWidth;
 
   // Options for all section enter effects, so for the 3 tab sections highlighting their tabs in the navbar as well as the sections themselves appearing when they get close enough
-  const sectionOptions = {
-    root: content,
-    // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
-    rootMargin: `${vw < vh ? vh / 4 : -(vh - vh / 3)}px 0px -${
-      vh < 1300 ? vh / 4 : vh / 3
-    }px 0px`,
-  };
+  let sectionOptions = {};
 
   // Function to highlight the tab in the nav as its section intersects
   const sectionHighlight = function (entries) {
@@ -41,6 +35,21 @@ const Navigation = ({ scrollTo }) => {
     // Select all tab sections (not the contact section) by targetting all sections with id's prefixed with section (since contact doesn't have an id and all the other sections do, but with different suffixes/BEM modifiers)
     const allTabSections = document.querySelectorAll('.section-container');
     // console.log(allTabSections);
+
+    const vh = window.innerHeight;
+    const vw = window.innerWidth;
+    content = document.querySelector('.content');
+    navWidth = document.querySelector('.navigation').offsetWidth;
+    rightWidth = vw - (navWidth + content.offsetWidth);
+    console.log(vw);
+    console.log(rightWidth);
+    sectionOptions = {
+      root: content,
+      // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
+      rootMargin: `-${(vh / 3) * 1.5}px ${rightWidth}px -${
+        vh / 3
+      }px -${navWidth}px`,
+    };
 
     // Observer for each of the tabbed sections
     const tabSectionObserver = new IntersectionObserver(
