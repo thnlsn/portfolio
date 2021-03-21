@@ -8,12 +8,13 @@ const Navigation = ({ scrollTo }) => {
   const [visibility, setVisibility] = useState([false, false, false, false]);
   const content = document.querySelector('.content');
   const vh = window.innerHeight;
+  const vw = window.innerWidth;
 
   // Options for all section enter effects, so for the 3 tab sections highlighting their tabs in the navbar as well as the sections themselves appearing when they get close enough
   const sectionOptions = {
     root: content,
     // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
-    rootMargin: `${vh < 1300 ? vh - vh / 4 : vh - vh / 2}px 0px -${
+    rootMargin: `${vh < 1300 && vw < vh ? vh / 4 : -(vh - vh / 2)}px 0px -${
       vh < 1300 ? vh / 4 : vh / 2
     }px 0px`,
   };
