@@ -100,6 +100,9 @@ body ::selection {
   }
 }
 
+.header {
+  /* will-change: contents; */
+}
 .header--invisible {
   opacity: 0;
 }
@@ -146,19 +149,25 @@ body ::selection {
 .header--visible .heading-subtitle {
   transition: opacity 0.5s 0.75s, transform 0.75s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
   opacity: 1;
+  transform: translateY(0);
 }
 .header--visible .header__resume {
   transition: opacity 0.6s 0.75s, transform 0.8s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s, color 0.15s, background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
   opacity: 1;
+  transform: translateY(0%);
 }
 .header--visible .header__socials {
   transition: opacity 0.7s 0.75s, transform 0.85s cubic-bezier(0, 1.95, 0.57, 1.61) 0.7s;
   opacity: 1;
+  transform: translateY(0%);
 }
 
 .section--invisible {
   opacity: 0;
   transform: translateY(4rem);
+  /*     .project {
+    will-change: transform box-shadow;
+  } */
 }
 .section--invisible .section__subject::before {
   transition: transform 1s, opacity 0.75s;
@@ -173,6 +182,9 @@ body ::selection {
 }
 .section--invisible .project:nth-child(even) {
   transform: translateX(2rem);
+}
+.section--invisible .section__skill {
+  will-change: transform;
 }
 .section--invisible .section__skill:nth-child(4n+1) {
   transform: translate(-1rem, 0);
@@ -193,8 +205,7 @@ body ::selection {
 }
 .section--visible .section__subject::before {
   transition: transform 1.5s, opacity 1.5s;
-  transform: translate(0%, -45%);
-  opacity: 1;
+  transform: translateY(-45%);
 }
 .section--visible .section__subject::after {
   transition: background-color 1s 0.75s;
@@ -218,8 +229,12 @@ body ::selection {
   font-family: "Bungee Inline", cursive;
   font-size: 7.2rem;
   color: #8ec9d2;
-  text-shadow: rgba(142, 201, 210, 0.99) 0px 0px 4px;
   line-height: 1;
+}
+@supports (text-shadow: orangered 0px 0px 4px) {
+  .heading-primary {
+    text-shadow: #8ec9d2 0px 0px 4px;
+  }
 }
 @media only screen and (max-width: 103.125em) {
   .heading-primary {
@@ -325,6 +340,8 @@ body ::selection {
   fill: #2e334a;
   height: 4rem;
   width: 4rem;
+  overflow-x: visible;
+  overflow-y: visible;
 }
 @media only screen and (max-width: 25em) {
   .skill__icon {
@@ -336,6 +353,12 @@ body ::selection {
   .skill__icon {
     height: 2.9rem;
     width: 2.9rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .project__heading {
+    font-size: 2.75rem;
   }
 }
 
@@ -392,8 +415,10 @@ body ::selection {
 .App {
   display: grid;
   grid-template-columns: 0.4fr 2fr minmax(0px, 0.4fr);
+  position: fixed;
   background-image: var(--background);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   height: 100vh;
 }
 @media only screen and (max-width: 103.125em) {
@@ -417,6 +442,12 @@ body ::selection {
     background-size: 1000px;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .App {
+    grid-template-columns: 1fr;
+    background-size: 850px;
+  }
+}
 
 /* .background {
   position: absolute;
@@ -436,7 +467,7 @@ body ::selection {
   } */
   background-color: rgba(46, 51, 74, 0.15);
   background-color: orangered;
-  padding: 9rem 11.5rem 9rem 11rem;
+  padding: 9rem 11.5rem 0rem 11rem;
   border-left: 2px solid #638b91;
   border-right: 2px solid #638b91;
   display: grid;
@@ -450,22 +481,22 @@ body ::selection {
 }
 @media only screen and (max-width: 103.125em) {
   .content {
-    padding: 9rem 6.5rem 9rem 7rem;
+    padding: 9rem 6.5rem 0rem 7rem;
   }
 }
 @media only screen and (max-width: 31.25em) {
   .content {
-    padding: 9rem 4.9rem 9rem 5.4rem;
+    padding: 8rem 2.5rem 0rem 3rem;
   }
 }
 @media only screen and (max-width: 25em) {
   .content {
-    padding: 9rem 4.5rem 9rem 5rem;
+    padding: 8rem 2.5rem 0rem 3rem;
   }
 }
 @media only screen and (max-width: 22.8125em) {
   .content {
-    padding: 8rem 2.5rem 8rem 3rem;
+    padding: 8rem 1.5rem 0rem 2rem;
   }
 }
 @supports selector(div::-webkit-scrollbar) {
@@ -494,6 +525,11 @@ body ::selection {
   .content {
     scrollbar-face-color: #8ec9d2;
     scrollbar-track-color: #2e334a;
+  }
+}
+@media only screen and (orientation: portrait) {
+  .content {
+    row-gap: 19.5rem;
   }
 }
 @supports (backdrop-filter: blur(2px)) {
@@ -525,7 +561,14 @@ body ::selection {
 }
 @media only screen and (max-width: 37.5em) {
   .header {
-    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    justify-items: center;
+    margin-bottom: 0rem;
+  }
+}
+@media only screen and (orientation: portrait) {
+  .header {
     grid-template-columns: 1fr;
     row-gap: 1rem;
     justify-items: center;
@@ -670,7 +713,7 @@ body ::selection {
   border-radius: 50%;
   overflow: visible;
   transition: background-color 0.45s, fill 0.65s;
-  border: 2px solid rgba(142, 201, 210, 0.95);
+  border: 2px solid #8ec9d2;
   background-color: rgba(20, 26, 47, 0.85);
 }
 @media only screen and (max-width: 50em) {
@@ -779,7 +822,6 @@ body ::selection {
 .header .heading-primary,
 .header .heading-subtitle {
   text-align: center;
-  transform: translateY(0);
 }
 .header .divider {
   height: 2px;
@@ -817,18 +859,24 @@ body ::selection {
     display: none;
   }
 }
+@media only screen and (orientation: portrait) {
+  .header .divider:after {
+    display: none;
+  }
+}
 .header__resume {
   outline: none;
   text-decoration: none;
   color: #2e334a;
   background-color: rgba(171, 215, 222, 0.85);
   margin-left: 3rem;
+  margin-top: 1rem;
   border: 2px solid currentColor;
   border-top-left-radius: 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 10px;
-  box-shadow: rgba(142, 201, 210, 0.99) 0px 0px 2px;
+  box-shadow: #8ec9d2 0px 0px 2px;
   justify-self: center;
   transform: translateY(1rem);
   padding: 1.5rem 2.5rem;
@@ -991,7 +1039,7 @@ body ::selection {
   border-top-left-radius: 8px;
   border-bottom-right-radius: 8px;
   border: 2px dotted rgba(26, 29, 43, 0.3);
-  box-shadow: rgba(142, 201, 210, 0.99) 0px 0px 1px;
+  box-shadow: #8ec9d2 0px 0px 1px;
   display: grid;
   gap: 1rem;
   grid-auto-rows: min-content;
@@ -1011,8 +1059,8 @@ body ::selection {
   } */
 }
 .project:hover {
-  border: 2px dotted rgba(106, 184, 195, 0.75);
-  box-shadow: #8ec9d2 0px 0px 16px;
+  border: 2px dotted rgba(98, 180, 193, 0.75);
+  box-shadow: #8ec9d2 0px 0px 10px;
 }
 @supports (filter: grayscale(0)) {
   .project:hover .project__heading:before,
@@ -1098,7 +1146,7 @@ body ::selection {
   gap: 0.8rem;
   background: url("../images/curcuit-board-two.svg"), #1f2848;
   background-size: 50rem;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
   border-radius: 5px;
   color: #e0e0e3;
   font-weight: 300;
@@ -1124,6 +1172,7 @@ body ::selection {
   box-shadow: inset 0 0 5px #747683;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
+  transition: background-color 0.4s;
 }
 .project__link span {
   display: inline-block;
@@ -1208,7 +1257,8 @@ body ::selection {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 10px;
   transition: color 0.15s, background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
-  box-shadow: rgba(142, 201, 210, 0.99) 0px 0px 2px;
+  background-color: #f1f1e6;
+  box-shadow: #8ec9d2 0px 0px 2px;
 }
 .contact__submit:hover {
   color: #f1f1e6;
