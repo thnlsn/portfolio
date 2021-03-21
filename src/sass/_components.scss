@@ -180,8 +180,8 @@
       margin-left: 0rem;
     }
 
+    will-change: color, background-color, border-color, box-shadow;
     &:hover {
-      // transition: color 0.15s, background-color 0.25s, border-color 0.25s;
       color: variables.$color-white;
       background-color: transparent;
       border-color: variables.$color-white;
@@ -358,6 +358,7 @@
   grid-auto-rows: min-content;
   grid-auto-rows: min-content min-content min-content min-content 1fr;
 
+  will-change: border-color, box-shadow;
   &:hover {
     border: 2px dotted
       darken(rgba($color: variables.$color-secondary, $alpha: 0.75), 12);
@@ -508,12 +509,12 @@
     span {
       display: inline-block;
       font-weight: 900;
-      transition: transform 0.4s;
+      transition: transform 0.3s;
       transform: translateX(-1px);
     }
 
     &:hover span {
-      transition: transform 0.4s;
+      transition: transform 0.3s;
       transform: translateX(4px);
     }
 
