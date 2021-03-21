@@ -71,22 +71,31 @@ const visibility = (visible) => (visible ? 'visible' : 'invisible');
 
 function App() {
   const content = document.querySelector('.content');
+  const vh = window.innerHeight;
 
   const [setAboutRef, aboutVisible] = useOnScreen({
     root: content,
-    rootMargin: '0px 0px -200px 0px',
+    rootMargin: `${vh < 1300 ? vh - vh / 3 : vh - vh / 2}px 0px -${
+      vh < 1300 ? vh / 4 : vh / 2
+    }px 0px`,
   });
   const [setSkillsRef, skillsVisible] = useOnScreen({
     root: content,
-    rootMargin: '0px 0px -200px 0px',
+    rootMargin: `${vh < 1300 ? vh - vh / 3 : vh - vh / 2}px 0px -${
+      vh < 1300 ? vh / 4 : vh / 2
+    }px 0px`,
   });
   const [setPortfolioRef, portfolioVisible] = useOnScreen({
     root: document.querySelector('.content'),
-    rootMargin: '0px 0px -200px 0px',
+    rootMargin: `${vh < 1300 ? vh - vh / 3 : vh - vh / 2}px 0px -${
+      vh < 1300 ? vh / 4 : vh / 2
+    }px 0px`,
   });
   const [setContactRef, contactVisible] = useOnScreen({
     root: document.querySelector('.content'),
-    rootMargin: '0px 0px -200px 0px',
+    rootMargin: `${vh < 1300 ? vh - vh / 3 : vh - vh / 2}px 0px -${
+      vh < 1300 ? vh / 4 : vh / 2
+    }px 0px`,
   });
 
   const scrollToSection = (section) => {
