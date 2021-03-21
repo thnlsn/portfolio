@@ -1253,6 +1253,7 @@ body ::selection {
   resize: none;
 }
 .contact__submit {
+  cursor: pointer;
   outline: none;
   border: 2px solid currentColor;
   grid-column: 1/-1;

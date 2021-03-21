@@ -155,9 +155,9 @@ function App() {
           contents={
             <Fragment>
               <p className='section__description'>
-                A web developer on and off the clock and a student beyond the
+                {/*                 A web developer on and off the clock and a student beyond the
                 classroom. I am a problem solver at heart, with a keen eye
-                towards responsiveness. Check out my{' '}
+                towards responsiveness. Check out my{' '} */}
                 <a
                   onClick={() => {
                     scrollToSection("'#portfolio'");
@@ -165,12 +165,12 @@ function App() {
                   href={'#portfolio'}
                   className='section--link'
                 >
-                  work
+                  {/* work */}
                 </a>{' '}
-                to check out what I'm talking about!
+                {/* to check out what I'm talking about! */}
               </p>
               <p className='section__description'>
-                I am currently avaiable for any kind of work.{' '}
+                {/* I am currently avaiable for any kind of work.{' '} */}
                 <a
                   onClick={() => {
                     scrollToSection("'#contact'");
@@ -178,9 +178,9 @@ function App() {
                   href={'#contact'}
                   className='section--link'
                 >
-                  Contact
+                  {/* Contact */}
                 </a>{' '}
-                me to get the ball rolling!
+                {/* me to get the ball rolling! */}
               </p>
             </Fragment>
           }
@@ -200,16 +200,16 @@ function App() {
           contents={
             <Fragment>
               <p className='section__description'>
-                Learning is a lifestyle for me, and as such I am always eager
+                {/* Learning is a lifestyle for me, and as such I am always eager
                 for new challenges to tackle. At this moment I am proficient in
-                the following technologies, but I am always looking to expand.
+                the following technologies, but I am always looking to expand. */}
               </p>
               <Skills skills={skills} />
               <p className='section__description'>
-                I have experience working on a team in an agile (scrum & sprint)
+                {/* I have experience working on a team in an agile (scrum & sprint)
                 environment using Atlassian software, but I also enjoy working
                 independently. Also, don't worry if a skill is missing &ndash; I
-                pick things up pretty quick.
+                pick things up pretty quick. */}
               </p>
             </Fragment>
           }
@@ -230,19 +230,19 @@ function App() {
           contents={
             <Fragment>
               <p className='section__description'>
-                Below is a mixture of some projects I've worked on.{' '}
+                {/* Below is a mixture of some projects I've worked on.{' '} */}
               </p>
               <p className='section__description'>
-                Included are links to view the live hosted sites as well as the
-                relevant GitHub repository, should you want to dig into my code.
+                {/* Included are links to view the live hosted sites as well as the
+                relevant GitHub repository, should you want to dig into my code. */}
               </p>
               <p className='section__description'>
-                Everything is fully responsive. Check them them out on your
-                phone or tablet!
+                {/* Everything is fully responsive. Check them them out on your
+                phone or tablet! */}
               </p>
 
               <div className={`section__portfolio`}>
-                <Project
+                {/* <Project
                   title='Mind Garden'
                   img={project1}
                   skills={[
@@ -260,8 +260,8 @@ function App() {
                     'https://github.com/thnlsn/mind-garden',
                     'https://thnlsn.github.io/mind-garden/',
                   ]}
-                />
-                <Project
+                /> */}
+                {/* <Project
                   title='Electoral Map'
                   img={project2}
                   skills={['React', 'JavaScript', 'Sass', 'CSS', 'SVG']}
@@ -273,8 +273,8 @@ function App() {
                     'https://github.com/thnlsn/electoral-map',
                     'https://thnlsn.github.io/electoral-map/',
                   ]}
-                />
-                <Project
+                /> */}
+                {/* <Project
                   title='World Clock'
                   img={project3}
                   skills={[
@@ -293,20 +293,20 @@ function App() {
                     'https://github.com/thnlsn/world-clock',
                     'https://thnlsn.github.io/world-clock/',
                   ]}
-                />
-                <Project
+                /> */}
+                {/* <Project
                   title='My Portfolio'
                   img={project6}
                   skills={['React', 'JavaScript', 'Sass', 'CSS']}
                   paragraphs={[
-                    'My portfolio site! The one you are currently browsing — designed and developed by me.',
+                    'My portfolio site! The one you are currently browsing.',
                     'Coded from scratch with my preferred front-end stack of React, Sass, and vanilla JavaScript. The contact form below is serverless, being handled by JavaScript and relayed to me via Netlify forms.',
                   ]}
                   links={[
                     'https://github.com/thnlsn/portfolio',
                     'https://thomas-nelson-wd.netlify.app/',
                   ]}
-                />
+                /> */}
               </div>
             </Fragment>
           }
@@ -327,24 +327,26 @@ function App() {
           contents={
             <Fragment>
               <p className='section__description'>
-                Do you need a website? Are you a recruiter or company with a
+                {/* Do you need a website? Are you a recruiter or company with a
                 vacancy I'd be a good fit for? Please get in touch either
-                through my email address at{' '}
+                through my email address at{' '} */}
                 <a
                   className='section--emphasis'
                   href='mailto:thnlsn.dev@gmail.com'
                 >
-                  thnlsn@gmail.com
+                  {/* thnlsn@gmail.com */}
                 </a>{' '}
-                or the form below. If needed, I can provide references.
+                {/* or the form below. If needed, I can provide references. */}
               </p>
 
               <Contact
-                placeholders={{
-                  name: 'Your name',
+                placeholders={
+                  {
+                    /*                   name: 'Your name',
                   email: 'Email address',
-                  message: 'What can I do for you?',
-                }}
+                  message: 'What can I do for you?', */
+                  }
+                }
                 btnText='Send!'
               />
             </Fragment>

@@ -40,15 +40,13 @@ const Navigation = ({ scrollTo }) => {
     const vw = window.innerWidth;
     content = document.querySelector('.content');
     navWidth = document.querySelector('.navigation').offsetWidth;
-    rightWidth = vw - (navWidth + content.offsetWidth);
+    rightWidth = vw - (navWidth + content.clientWidth);
     console.log(vw);
     console.log(rightWidth);
     sectionOptions = {
       root: content,
       // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
-      rootMargin: `-${(vh / 3) * 1.5}px ${rightWidth}px -${
-        vh / 3
-      }px -${navWidth}px`,
+      rootMargin: `-${vh / 3}px ${rightWidth}px -${vh / 3}px -${navWidth}px`,
     };
 
     // Observer for each of the tabbed sections
