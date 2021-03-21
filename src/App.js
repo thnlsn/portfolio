@@ -76,27 +76,23 @@ function App() {
 
   const [setAboutRef, aboutVisible] = useOnScreen({
     root: content,
-    rootMargin: `${vw < vh ? vh / 4 : -(vh - vh / 3)}px 0px -${
-      vh < 1300 ? vh / 4 : vh / 3
-    }px 0px`,
+    // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
+    rootMargin: `${vh / 4}px 0px -${vh / 4}px 0px`,
   });
   const [setSkillsRef, skillsVisible] = useOnScreen({
     root: content,
-    rootMargin: `${vw < vh ? vh / 4 : -(vh - vh / 3)}px 0px -${
-      vh < 1300 ? vh / 4 : vh / 3
-    }px 0px`,
+    // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
+    rootMargin: `${vh / 4}px 0px -${vh / 4}px 0px`,
   });
   const [setPortfolioRef, portfolioVisible] = useOnScreen({
-    root: document.querySelector('.content'),
-    rootMargin: `${vw < vh ? vh / 4 : -(vh - vh / 3)}px 0px -${
-      vh < 1300 ? vh / 4 : vh / 3
-    }px 0px`,
+    root: content,
+    // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
+    rootMargin: `${vh / 4}px 0px -${vh / 4}px 0px`,
   });
   const [setContactRef, contactVisible] = useOnScreen({
-    root: document.querySelector('.content'),
-    rootMargin: `${vw < vh ? vh / 4 : -(vh - vh / 3)}px 0px -${
-      vh < 1300 ? vh / 4 : vh / 3
-    }px 0px`,
+    root: content,
+    // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
+    rootMargin: `${vh / 4}px 0px -${vh / 4}px 0px`,
   });
 
   const scrollToSection = (section) => {

@@ -33,7 +33,6 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 @media only screen and (max-width: 75em) {
   html {
@@ -60,7 +59,6 @@ html {
 }
 
 body {
-  scroll-behavior: smooth;
   font-family: "Exo 2", sans-serif;
   color: var(--color-font);
   font-size: 2.4rem;
@@ -107,10 +105,6 @@ body ::selection {
 }
 .header--invisible {
   opacity: 0;
-  /*     .heading-subtitle {
-    opacity: 0 !important;
-    transform: translateY(-40%) !important;
-  } */
 }
 .header--invisible .header__image-container:before {
   width: 90% !important;
@@ -120,6 +114,10 @@ body ::selection {
 .header--invisible .heading-primary {
   opacity: 0 !important;
   transform: translateY(20%) !important;
+}
+.header--invisible .heading-subtitle {
+  opacity: 0 !important;
+  transform: translateY(-40%) !important;
 }
 .header--invisible .divider {
   width: 0 !important;
@@ -417,6 +415,7 @@ body ::selection {
 .App {
   display: grid;
   grid-template-columns: 0.4fr 2fr minmax(0px, 0.4fr);
+  position: fixed;
   background-image: var(--background);
   overflow-x: hidden;
   overflow-y: hidden;
@@ -447,11 +446,6 @@ body ::selection {
   .App {
     grid-template-columns: 1fr;
     background-size: 850px;
-  }
-}
-@media only screen and (orientation: portrait) {
-  .App {
-    grid-template-columns: 0.475fr 2fr 0.4fr;
   }
 }
 

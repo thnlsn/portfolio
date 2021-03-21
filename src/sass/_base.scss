@@ -4,7 +4,6 @@
 html {
   box-sizing: border-box; // Border-box is always good
   font-size: 62.5%; // 1rem = 10px, 10px / 16px = 62.5%
-  scroll-behavior: smooth;
 
   @media only screen and (max-width: breakpoints.$bp-larger) {
     font-size: 56.5%;
@@ -27,7 +26,6 @@ html {
 
 body {
   // Set the default font styles, colors, etc.
-  scroll-behavior: smooth;
 
   font-family: variables.$font-default;
   color: var(--color-font);

@@ -5,6 +5,8 @@
   display: grid;
   grid-template-columns: 0.4fr 2fr minmax(0px, 0.4fr); // Nav | Content | ...
 
+  position: fixed;
+
   @media only screen and (max-width: breakpoints.$bp-largest) {
     grid-template-columns: 0.3fr 2fr 0.285fr;
   }
@@ -21,10 +23,6 @@
   @media only screen and (max-width: breakpoints.$bp-small) {
     grid-template-columns: 1fr;
     background-size: 850px;
-  }
-
-  @media only screen and (orientation: portrait) {
-    grid-template-columns: 0.475fr 2fr 0.4fr;
   }
 
   // border-left: variables.$content-border;
