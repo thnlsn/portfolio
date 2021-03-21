@@ -590,7 +590,8 @@
     color: variables.$color-white;
     font-weight: 500;
 
-    transition: all 0.3s;
+    will-change: background-color, border-color;
+    transition: background-color 0.3s, border-color 0.3s;
 
     padding: 1rem 1rem;
     background-color: transparent;
@@ -603,7 +604,6 @@
     }
 
     &:hover {
-      border: 2px solid darken(variables.$color-primary, 10);
       border-color: darken(desaturate(variables.$color-white, 20), 20);
       background-color: lighten(
         rgba($color: variables.$color-primary, $alpha: 0.15),
@@ -646,6 +646,7 @@
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 10px;
 
+    will-change: color, background-color, border-color, box-shadow;
     transition: color 0.15s, background-color 0.25s, border-color 0.25s,
       box-shadow 0.4s;
     background-color: variables.$color-white;

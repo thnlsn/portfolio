@@ -230,6 +230,7 @@
     color: variables.$color-white;
     padding: 0.5rem 2rem;
 
+    will-change: background-color, color;
     transition: background-color 0.25s, color 0.25s;
     background-color: rgba(variables.$color-bg, 0.65);
 
@@ -238,6 +239,7 @@
       color: variables.$color-secondary;
     }
     span {
+      will-change: transform;
       transition: transform 0.25s;
       transform: translateX(0rem);
       display: inline-block;
@@ -312,6 +314,7 @@
 
       overflow: visible;
 
+      will-change: background-color, fill;
       transition: background-color 0.45s, fill 0.65s;
       border: 2px solid variables.$color-secondary;
       background-color: rgba(variables.$color-bg, 0.85);

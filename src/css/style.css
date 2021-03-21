@@ -650,6 +650,7 @@ body ::selection {
   text-decoration: none;
   color: #f1f1e6;
   padding: 0.5rem 2rem;
+  will-change: background-color, color;
   transition: background-color 0.25s, color 0.25s;
   background-color: rgba(20, 26, 47, 0.65);
 }
@@ -660,6 +661,7 @@ body ::selection {
   }
 }
 .navigation__link span {
+  will-change: transform;
   transition: transform 0.25s;
   transform: translateX(0rem);
   display: inline-block;
@@ -712,6 +714,7 @@ body ::selection {
   padding: 1rem;
   border-radius: 50%;
   overflow: visible;
+  will-change: background-color, fill;
   transition: background-color 0.45s, fill 0.65s;
   border: 2px solid #8ec9d2;
   background-color: rgba(20, 26, 47, 0.85);
@@ -1223,7 +1226,8 @@ body ::selection {
   font-family: "Exo", sans-serif;
   color: #f1f1e6;
   font-weight: 500;
-  transition: all 0.3s;
+  will-change: background-color, border-color;
+  transition: background-color 0.3s, border-color 0.3s;
   padding: 1rem 1rem;
   background-color: transparent;
   border: 2px solid #2e334a;
@@ -1234,7 +1238,6 @@ body ::selection {
   color: #6f7576;
 }
 .contact > *:not(.contact__submit):hover {
-  border: 2px solid #1a1d2b;
   border-color: #bebeb3;
   background-color: rgba(66, 73, 105, 0.15);
 }
@@ -1258,6 +1261,7 @@ body ::selection {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 10px;
+  will-change: color, background-color, border-color, box-shadow;
   transition: color 0.15s, background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
   background-color: #f1f1e6;
   box-shadow: #8ec9d2 0px 0px 2px;
