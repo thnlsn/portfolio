@@ -34,7 +34,7 @@
   // background-size: 100vw;
   background-image: var(--background);
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: scroll;
   height: 100vh;
 }
 
@@ -109,14 +109,14 @@
 
   @supports (backdrop-filter: blur(2px)) {
     background-color: rgba(variables.$color-primary, 0.75);
-    backdrop-filter: blur(3px);
+    /* backdrop-filter: blur(3px); */
   }
 
   @media only screen and (max-width: breakpoints.$bp-medium) {
     border: none;
     @supports (backdrop-filter: blur(2px)) {
       background-color: rgba(variables.$color-primary, 0.65);
-      backdrop-filter: blur(2px);
+      /* backdrop-filter: blur(2px); */
     }
   }
 
