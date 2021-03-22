@@ -707,7 +707,6 @@ body ::selection {
   margin-right: 3rem;
 }
 .navigation__social-link {
-  padding: 1.1rem;
   height: 5.5rem;
   width: 5.5rem;
   border-radius: 50%;
@@ -722,18 +721,20 @@ body ::selection {
   transition: background-color 0.35s, box-shadow 0.15s;
 }
 .navigation__social-link .skill__icon {
-  height: 4rem;
-  width: 4rem;
+  height: 3.25rem;
+  width: 3.25rem;
   fill: #f1f1e6;
   will-change: fill;
   transition: fill 0.45s;
 }
 @media only screen and (max-width: 50em) {
-  .navigation__social-link .skill__icon {
-    fill: #8ec9d2;
+  .navigation__social-link {
     border-radius: 50%;
     transition: background-color 0.25s;
     background-color: transparent;
+  }
+  .navigation__social-link .skill__icon {
+    fill: #8ec9d2;
   }
   .navigation__social-link .skill__icon:hover {
     fill: #d7ecef;
