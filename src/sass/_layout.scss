@@ -313,6 +313,9 @@
       display: relative;
     }
 
+    overflow-x: visible;
+    overflow-y: visible;
+
     .skill__icon {
       display: block;
 
@@ -334,7 +337,8 @@
       padding: 1rem;
       border-radius: 50%;
 
-      overflow: visible;
+      overflow-x: visible;
+      overflow-y: visible;
 
       will-change: background-color, fill;
       transition: background-color 0.45s, fill 0.65s;

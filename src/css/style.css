@@ -714,6 +714,10 @@ body ::selection {
 .navigation__socials > *:not(:last-child) {
   margin-right: 3rem;
 }
+.navigation__social-link {
+  overflow-x: visible;
+  overflow-y: visible;
+}
 @media only screen and (max-width: 50em) {
   .navigation__social-link {
     display: relative;
@@ -726,7 +730,8 @@ body ::selection {
   fill: #f1f1e6;
   padding: 1rem;
   border-radius: 50%;
-  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
   will-change: background-color, fill;
   transition: background-color 0.45s, fill 0.65s;
   border: 2px solid #8ec9d2;
