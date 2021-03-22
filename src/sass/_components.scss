@@ -609,3 +609,39 @@
   padding-bottom: 0.5rem;
 }
 */
+
+.submit-button {
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+
+  border: 2px solid currentColor;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 10px;
+
+  font-size: 1.035em !important;
+
+  box-shadow: 0 0 0 2px variables.$color-white; // Outline that closes in
+
+  padding: 1.5rem 2.5rem;
+  line-height: 1;
+
+  justify-self: center;
+
+  transition: color 0.15s, background-color 0.25s, border-color 0.25s,
+    box-shadow 0.4s;
+  will-change: color, background-color, border-color, box-shadow;
+
+  &:hover {
+    color: variables.$color-white;
+    box-shadow: none;
+    background-color: transparent;
+    border-color: variables.$color-white;
+  }
+
+  &:active {
+    background-color: rgba($color: variables.$color-secondary, $alpha: 0.7);
+  }
+}

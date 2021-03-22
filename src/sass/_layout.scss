@@ -216,6 +216,7 @@
 
   @media only screen and (max-width: breakpoints.$bp-medium) {
     flex-direction: row;
+
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 2rem;
@@ -309,11 +310,23 @@
   }
 
   &__social-link {
-    @media only screen and (max-width: breakpoints.$bp-medium) {
-      display: relative;
-    }
+    padding: 1.1rem;
+    height: 5.5rem;
+    width: 5.5rem;
+    border-radius: 50%;
+    border: 1px solid variables.$color-secondary;
+    box-shadow: 0 0 0 1px variables.$color-secondary;
+    background-color: rgba(variables.$color-bg, 0.85);
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .skill__icon {
+      height: 4rem;
+      width: 4rem;
+
       @media only screen and (max-width: breakpoints.$bp-medium) {
         fill: variables.$color-secondary;
 
@@ -325,21 +338,19 @@
           fill: lighten(variables.$color-secondary, 20);
         }
       }
-
-      height: 5.25rem;
-      width: 5.25rem;
       fill: variables.$color-white;
+      will-change: fill;
+      transition: fill 0.45s;
+    }
 
-      border-radius: 50%;
-      padding: 1rem;
+    will-change: background-color, box-shadow;
+    transition: background-color 0.35s, box-shadow 0.15s;
 
-      will-change: background-color, fill;
-      transition: background-color 0.45s, fill 0.65s;
-      box-shadow: 0 0 0 2px variables.$color-secondary;
-      background-color: rgba(variables.$color-bg, 0.85);
+    &:hover {
+      background-color: rgba(variables.$color-secondary, 0.85);
+      box-shadow: none;
 
-      &:hover {
-        background-color: rgba(variables.$color-secondary, 0.85);
+      .skill__icon {
         fill: variables.$color-bg;
       }
     }
