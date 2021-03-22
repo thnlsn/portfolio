@@ -338,6 +338,7 @@ body ::selection {
   fill: #2e334a;
   height: 4rem;
   width: 4rem;
+  display: block;
   overflow-x: visible;
   overflow-y: visible;
 }
@@ -714,10 +715,6 @@ body ::selection {
 .navigation__socials > *:not(:last-child) {
   margin-right: 3rem;
 }
-.navigation__social-link {
-  overflow-x: visible;
-  overflow-y: visible;
-}
 @media only screen and (max-width: 50em) {
   .navigation__social-link {
     display: relative;
@@ -730,8 +727,6 @@ body ::selection {
   fill: #f1f1e6;
   padding: 1rem;
   border-radius: 50%;
-  overflow-x: visible;
-  overflow-y: visible;
   will-change: background-color, fill;
   transition: background-color 0.45s, fill 0.65s;
   border: 2px solid #8ec9d2;
@@ -751,10 +746,6 @@ body ::selection {
 .navigation__social-link .skill__icon:hover {
   background-color: rgba(142, 201, 210, 0.85);
   fill: #141a2f;
-}
-.navigation__social-link .skill__icon path {
-  overflow-x: visible;
-  overflow-y: visible;
 }
 
 .header {
