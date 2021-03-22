@@ -36,4 +36,33 @@ const useOnScreen = function (options = { threshhold: 1 }, once = true) {
   return [setRef, visible];
 };
 
-export { useOnScreen };
+const getWindowDimensions = () => {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height,
+  };
+};
+
+const useWindowDimensions = () => {
+  // set initial dimensions
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      // set new dimensions
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    // Add event to trigger a new setting of dimensions when resized
+    window.addEventListener('resize', handleResize);
+    // Cleanup by removing the listener or else many events will be stacked
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+};
+
+export { useOnScreen, useWindowDimensions };

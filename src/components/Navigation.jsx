@@ -3,9 +3,12 @@ import React, { useState, useEffect } from 'react';
 import LinkedInIcon from './svg/LinkedInIcon';
 import GitHubIcon from './svg/GitHubIcon';
 
-console.log(document);
+import { useWindowDimensions } from '../hooks';
+
 const Navigation = ({ scrollTo }) => {
   const [visibility, setVisibility] = useState([false, false, false, false]);
+  const { width: vw, height: vh } = useWindowDimensions(); // vw will be the total width of the viewport
+
   let content;
   let navWidth;
   let rightWidth;
@@ -36,13 +39,9 @@ const Navigation = ({ scrollTo }) => {
     const allTabSections = document.querySelectorAll('.section-container');
     // console.log(allTabSections);
 
-    const vh = window.innerHeight;
-    const vw = window.innerWidth;
     content = document.querySelector('.content');
     navWidth = document.querySelector('.navigation').offsetWidth;
     rightWidth = vw - (navWidth + content.clientWidth);
-    console.log(vw);
-    console.log(rightWidth);
     sectionOptions = {
       root: content,
       // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
