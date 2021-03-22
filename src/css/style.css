@@ -587,6 +587,16 @@ body ::selection {
   }
 }
 
+.section-container:last-of-type {
+  padding-bottom: 10rem;
+  margin-bottom: 3.5rem;
+}
+@media only screen and (orientation: portrait) {
+  .section-container:last-of-type {
+    margin-bottom: 7.5rem;
+  }
+}
+
 .section {
   display: grid;
   grid-auto-rows: min-content;
