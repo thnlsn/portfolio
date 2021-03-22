@@ -9,8 +9,13 @@ html {
     font-size: 56.5%;
   }
   @media only screen and (max-width: breakpoints.$bp-large) {
-    font-size: 50%;
+    font-size: 52.5%;
   }
+
+  @media only screen and (min-width: breakpoints.$bp-phone-large) and (orientation: portrait) {
+    font-size: 60%;
+  }
+
   @media only screen and (max-width: breakpoints.$bp-small) {
     font-size: 49.5%;
   }

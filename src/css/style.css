@@ -41,7 +41,12 @@ html {
 }
 @media only screen and (max-width: 62.5em) {
   html {
-    font-size: 50%;
+    font-size: 52.5%;
+  }
+}
+@media only screen and (min-width: 31.25em) and (orientation: portrait) {
+  html {
+    font-size: 60%;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -238,11 +243,6 @@ body ::selection {
     font-size: 5.5rem;
   }
 }
-@media only screen and (max-width: 75em) {
-  .heading-primary {
-    font-size: 5.2rem;
-  }
-}
 @media only screen and (max-width: 31.25em) {
   .heading-primary {
     font-size: 4.45rem;
@@ -261,7 +261,7 @@ body ::selection {
 }
 @media only screen and (max-width: 103.125em) {
   .heading-subtitle {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
