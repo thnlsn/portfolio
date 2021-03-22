@@ -30,6 +30,33 @@
   text-decoration: underline;
 }
 
+.submit-button {
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  border: 2px solid currentColor;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 10px;
+  font-size: 1.035em !important;
+  box-shadow: 0 0 0 2px #f1f1e6;
+  padding: 1.5rem 2.5rem;
+  line-height: 1;
+  justify-self: center;
+  transition: color 0.15s, background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
+  will-change: color, background-color, border-color, box-shadow;
+}
+.submit-button:hover {
+  color: #f1f1e6;
+  box-shadow: none;
+  background-color: transparent;
+  border-color: #f1f1e6;
+}
+.submit-button:active {
+  background-color: rgba(142, 201, 210, 0.7);
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -323,11 +350,6 @@ body ::selection {
   font-family: "Bungee", cursive;
   font-size: 2rem;
 }
-@media only screen and (max-width: 25em) {
-  .text-emphasized {
-    font-size: 2rem;
-  }
-}
 .text-emphasized--inline {
   font-family: "Bungee Inline", cursive;
   font-size: 2.6rem;
@@ -337,8 +359,6 @@ body ::selection {
   fill: #2e334a;
   height: 4rem;
   width: 4rem;
-  overflow-x: visible;
-  overflow-y: visible;
 }
 @media only screen and (max-width: 25em) {
   .skill__icon {
@@ -719,14 +739,13 @@ body ::selection {
   }
 }
 .navigation__social-link .skill__icon {
-  display: block;
   height: 5.25rem;
   width: 5.25rem;
   fill: #f1f1e6;
   border-radius: 50%;
+  padding: 1rem;
   will-change: background-color, fill;
   transition: background-color 0.45s, fill 0.65s;
-  border: 1rem solid transparent;
   box-shadow: 0 0 0 2px #8ec9d2;
   background-color: rgba(20, 26, 47, 0.85);
 }
@@ -814,7 +833,7 @@ body ::selection {
     -webkit-text-stroke: 2px #2e334a;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em), (orientation: portrait) {
   .header .heading-primary {
     padding-left: 0rem;
   }
@@ -828,7 +847,7 @@ body ::selection {
   align-self: start;
   padding-left: 3rem;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em), (orientation: portrait) {
   .header .heading-subtitle {
     padding-left: 0rem;
   }
@@ -865,7 +884,7 @@ body ::selection {
   top: 50%;
   transform: translate(50%, -50%);
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em), (orientation: portrait) {
   .header .divider {
     border-radius: 45%;
   }
@@ -873,30 +892,11 @@ body ::selection {
     display: none;
   }
 }
-@media only screen and (orientation: portrait) {
-  .header .divider:after {
-    display: none;
-  }
-}
 .header__resume {
-  outline: none;
-  text-decoration: none;
-  color: #2e334a;
   background-color: rgba(171, 215, 222, 0.85);
   margin-left: 3rem;
   margin-top: 2.25rem;
-  border: 2px solid currentColor;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 10px;
-  box-shadow: 0 0 0 2px #f1f1e6;
-  justify-self: center;
   transform: translateY(1rem);
-  padding: 1.5rem 2.5rem;
-  line-height: 1;
-  font-size: 1.05em;
-  will-change: color, background-color, border-color, box-shadow;
 }
 @media only screen and (max-width: 22.8125em) {
   .header__resume {
@@ -904,19 +904,10 @@ body ::selection {
     padding: 1.5rem 1.75rem;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em), (orientation: portrait) {
   .header__resume {
     margin-left: 0rem;
   }
-}
-.header__resume:hover {
-  color: #f1f1e6;
-  box-shadow: none;
-  background-color: transparent;
-  border-color: #f1f1e6;
-}
-.header__resume:active {
-  background-color: rgba(142, 201, 210, 0.7);
 }
 .header__socials {
   display: none;
@@ -1261,30 +1252,8 @@ body ::selection {
   resize: none;
 }
 .contact__submit {
-  cursor: pointer;
-  outline: none;
-  border: 2px solid currentColor;
-  box-shadow: 0 0 0 2px #f1f1e6;
   grid-column: 1/-1;
-  justify-self: center;
-  padding: 1.5rem 2.5rem;
-  line-height: 1;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 10px;
-  will-change: color, background-color, border-color, box-shadow;
-  transition: color 0.15s, background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
   background-color: #f1f1e6;
-}
-.contact__submit:hover {
-  box-shadow: none;
-  color: #f1f1e6;
-  background-color: transparent;
-  border-color: #f1f1e6;
-}
-.contact__submit:active {
-  background-color: rgba(142, 201, 210, 0.5);
 }
 
 /*

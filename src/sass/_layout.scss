@@ -314,8 +314,6 @@
     }
 
     .skill__icon {
-      display: block;
-
       @media only screen and (max-width: breakpoints.$bp-medium) {
         fill: variables.$color-secondary;
 
@@ -333,10 +331,10 @@
       fill: variables.$color-white;
 
       border-radius: 50%;
+      padding: 1rem;
 
       will-change: background-color, fill;
       transition: background-color 0.45s, fill 0.65s;
-      border: 1rem solid transparent;
       box-shadow: 0 0 0 2px variables.$color-secondary;
       background-color: rgba(variables.$color-bg, 0.85);
 

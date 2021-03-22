@@ -28,7 +28,10 @@ const Contact = ({ placeholders, btnText: text }) => {
           placeholder={message}
           resize='none'
         ></textarea>
-        <button className='contact__submit text-emphasized' type='submit'>
+        <button
+          className='contact__submit text-emphasized submit-button'
+          type='submit'
+        >
           {text}
         </button>
       </form>

@@ -29,7 +29,7 @@ const Header = ({ img }) => {
       <a
         href='./files/Thomas_Nelson_Resume.pdf'
         target='_blank'
-        className='header__resume text-emphasized'
+        className='header__resume text-emphasized submit-button'
       >
         Download Resume
       </a>

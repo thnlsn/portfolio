@@ -72,7 +72,8 @@
     @supports (-webkit-text-stroke: 2px black) {
       -webkit-text-stroke: 2px variables.$color-primary; // width | color
     }
-    @media only screen and (max-width: breakpoints.$bp-small) {
+    @media only screen and (max-width: breakpoints.$bp-small),
+      (orientation: portrait) {
       padding-left: 0rem;
     }
     @media only screen and (max-width: breakpoints.$bp-phone-small) {
@@ -83,7 +84,8 @@
     align-self: start;
     padding-left: 3rem;
 
-    @media only screen and (max-width: breakpoints.$bp-small) {
+    @media only screen and (max-width: breakpoints.$bp-small),
+      (orientation: portrait) {
       padding-left: 0rem;
     }
   }
@@ -126,13 +128,9 @@
       transform: translate(50%, -50%);
     }
 
-    @media only screen and (max-width: breakpoints.$bp-small) {
+    @media only screen and (max-width: breakpoints.$bp-small),
+      (orientation: portrait) {
       border-radius: 45%;
-      &:after {
-        display: none;
-      }
-    }
-    @media only screen and (orientation: portrait) {
       &:after {
         display: none;
       }
@@ -142,9 +140,6 @@
   // position: relative;
 
   &__resume {
-    outline: none;
-    text-decoration: none;
-    color: variables.$color-primary;
     background-color: rgba(
       $color: lighten($color: variables.$color-secondary, $amount: 8),
       $alpha: 0.85
@@ -153,46 +148,17 @@
     margin-left: 3rem;
     margin-top: 2.25rem;
 
-    border: 2px solid currentColor;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 10px;
-
-    box-shadow: 0 0 0 2px variables.$color-white;
-
-    // box-shadow: variables.$color-secondary 0px 0px 2px;
-
-    justify-self: center;
-
     transform: translateY(
       1rem
     ); // Default positioning for once animation is over
-
-    padding: 1.5rem 2.5rem;
-    line-height: 1;
-
-    font-size: 1.05em;
 
     @media only screen and (max-width: breakpoints.$bp-smallest) {
       font-size: 0.9em;
       padding: 1.5rem 1.75rem;
     }
-    @media only screen and (max-width: breakpoints.$bp-small) {
+    @media only screen and (max-width: breakpoints.$bp-small),
+      (orientation: portrait) {
       margin-left: 0rem;
-    }
-
-    will-change: color, background-color, border-color, box-shadow;
-    &:hover {
-      color: variables.$color-white;
-      box-shadow: none;
-      background-color: transparent;
-      border-color: variables.$color-white;
-      // box-shadow: rgba(variables.$color-secondary, 1) 0px 0px 10px;
-    }
-
-    &:active {
-      background-color: rgba($color: variables.$color-secondary, $alpha: 0.7);
     }
   }
 
@@ -620,53 +586,14 @@
     }
   }
 
-  @media only screen and (max-width: breakpoints.$bp-phone-small) {
-    &__name {
-    }
-
-    &__email {
-    }
-  }
-
   &__message {
     grid-column: 1 / -1;
     resize: none;
   }
 
   &__submit {
-    cursor: pointer;
-    outline: none;
-    border: 2px solid currentColor;
-    box-shadow: 0 0 0 2px variables.$color-white;
-
     grid-column: 1 / -1;
-    justify-self: center;
-
-    padding: 1.5rem 2.5rem;
-    line-height: 1;
-
-    border-top-left-radius: 5px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 10px;
-
-    will-change: color, background-color, border-color, box-shadow;
-    transition: color 0.15s, background-color 0.25s, border-color 0.25s,
-      box-shadow 0.4s;
     background-color: variables.$color-white;
-    // box-shadow: variables.$color-secondary 0px 0px 2px;
-
-    &:hover {
-      box-shadow: none;
-      color: variables.$color-white;
-      background-color: transparent;
-      border-color: variables.$color-white;
-      // box-shadow: rgba(variables.$color-secondary, 1) 0px 0px 10px;
-    }
-
-    &:active {
-      background-color: rgba($color: variables.$color-secondary, $alpha: 0.5);
-    }
   }
 }
 

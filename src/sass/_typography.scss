@@ -93,10 +93,6 @@
   font-family: variables.$font-navigation;
   font-size: 2rem;
 
-  @media only screen and (max-width: breakpoints.$bp-phone-small) {
-    font-size: 2rem;
-  }
-
   // For links to other sections
   &--inline {
     font-family: variables.$font-primary;
@@ -108,9 +104,6 @@
   fill: variables.$color-primary;
   height: 4rem;
   width: 4rem;
-
-  overflow-x: visible;
-  overflow-y: visible;
 
   @media only screen and (max-width: breakpoints.$bp-phone-small) {
     height: 3.5rem;
