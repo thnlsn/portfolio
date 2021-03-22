@@ -41,7 +41,6 @@ body {
     color: variables.$color-primary;
   }
 
-  overflow-y: scroll;
   // If browser supports scrollbar styling
   @supports selector(div::-webkit-scrollbar) {
     // Change the scrollbar

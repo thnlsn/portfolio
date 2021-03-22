@@ -65,7 +65,6 @@ body {
   /*   &::-webkit-scrollbar {
     display: none;
   } */
-  overflow-y: scroll;
 }
 body ::selection {
   background-color: rgba(142, 201, 210, 0.9);
@@ -338,7 +337,6 @@ body ::selection {
   fill: #2e334a;
   height: 4rem;
   width: 4rem;
-  display: block;
   overflow-x: visible;
   overflow-y: visible;
 }
@@ -418,7 +416,7 @@ body ::selection {
   position: fixed;
   background-image: var(--background);
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   height: 100vh;
 }
 @media only screen and (max-width: 103.125em) {
