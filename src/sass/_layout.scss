@@ -135,7 +135,7 @@
   @media only screen and (max-width: breakpoints.$bp-small) {
     // display: grid;
     grid-template-columns: 1fr;
-    row-gap: 1rem;
+    row-gap: 10rem;
 
     justify-items: center;
     margin-bottom: 0rem;
