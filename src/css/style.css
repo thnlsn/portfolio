@@ -543,7 +543,7 @@ body ::selection {
 .header {
   display: grid;
   grid-template-columns: max-content 1fr;
-  grid-template-rows: 1fr min-content 0.5fr 0.5fr;
+  grid-template-rows: 1.25fr min-content 0.5fr 0.5fr;
   margin-bottom: 3rem;
 }
 @media only screen and (max-width: 37.5em) {
@@ -884,7 +884,7 @@ body ::selection {
   color: #2e334a;
   background-color: rgba(171, 215, 222, 0.85);
   margin-left: 3rem;
-  margin-top: 1.5rem;
+  margin-top: 2.25rem;
   border: 2px solid currentColor;
   border-top-left-radius: 5px;
   border-top-right-radius: 10px;
