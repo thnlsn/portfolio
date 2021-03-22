@@ -722,6 +722,10 @@ body ::selection {
 }
 .navigation__social-link .skill__icon {
   display: block;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
   height: 5.25rem;
   width: 5.25rem;
   fill: #f1f1e6;
