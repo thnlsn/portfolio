@@ -702,7 +702,7 @@ body ::selection {
 @media only screen and (max-width: 50em) {
   .navigation__socials {
     margin-left: auto;
-    margin-right: 2rem;
+    margin-right: 3.5rem;
   }
 }
 .navigation__socials > *:not(:last-child) {
@@ -743,7 +743,7 @@ body ::selection {
 }
 
 .header {
-  scroll-margin: 9rem;
+  scroll-margin-top: 9rem;
 }
 .header__image-container {
   align-self: center;

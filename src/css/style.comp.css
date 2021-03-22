@@ -33,6 +33,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 @media only screen and (max-width: 75em) {
   html {
@@ -229,12 +230,10 @@ body ::selection {
   font-family: "Bungee Inline", cursive;
   font-size: 7.2rem;
   color: #8ec9d2;
+  /*   @supports (text-shadow: orangered 0px 0px 4px) {
+    dow: variables.$color-secondary 0px 0px 4px;
+  } */
   line-height: 1;
-}
-@supports (text-shadow: orangered 0px 0px 4px) {
-  .heading-primary {
-    text-shadow: #8ec9d2 0px 0px 4px;
-  }
 }
 @media only screen and (max-width: 103.125em) {
   .heading-primary {
@@ -375,8 +374,8 @@ body ::selection {
 }
 
 .section--link, .section--emphasis {
-  font-weight: 600;
   cursor: pointer;
+  font-weight: 600;
   transition: text-decoration-color 0.25s;
 }
 .section--link {
@@ -400,6 +399,7 @@ body ::selection {
 .project__descriptions {
   font-family: "Exo", sans-serif;
   font-size: 2.2rem;
+  font-weight: 300;
 }
 @media only screen and (max-width: 62.5em) {
   .project__descriptions {
@@ -562,7 +562,7 @@ body ::selection {
 @media only screen and (max-width: 37.5em) {
   .header {
     grid-template-columns: 1fr;
-    row-gap: 1rem;
+    row-gap: 10rem;
     justify-items: center;
     margin-bottom: 0rem;
   }
@@ -608,6 +608,12 @@ body ::selection {
 .footer > *:not(:first-child) {
   margin-top: 0.25rem;
 }
+.footer__divider {
+  color: #8ec9d2;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 
 .navigation {
   display: flex;
@@ -650,6 +656,7 @@ body ::selection {
   text-decoration: none;
   color: #f1f1e6;
   padding: 0.5rem 2rem;
+  will-change: background-color, color;
   transition: background-color 0.25s, color 0.25s;
   background-color: rgba(20, 26, 47, 0.65);
 }
@@ -660,6 +667,7 @@ body ::selection {
   }
 }
 .navigation__link span {
+  will-change: transform;
   transition: transform 0.25s;
   transform: translateX(0rem);
   display: inline-block;
@@ -675,6 +683,7 @@ body ::selection {
   }
 }
 .navigation__link--true {
+  will-change: background-color, color;
   background-color: rgba(142, 201, 210, 0.95);
   color: #141a2f;
 }
@@ -693,7 +702,7 @@ body ::selection {
 @media only screen and (max-width: 50em) {
   .navigation__socials {
     margin-left: auto;
-    margin-right: 2rem;
+    margin-right: 3.5rem;
   }
 }
 .navigation__socials > *:not(:last-child) {
@@ -712,6 +721,7 @@ body ::selection {
   padding: 1rem;
   border-radius: 50%;
   overflow: visible;
+  will-change: background-color, fill;
   transition: background-color 0.45s, fill 0.65s;
   border: 2px solid #8ec9d2;
   background-color: rgba(20, 26, 47, 0.85);
@@ -733,7 +743,7 @@ body ::selection {
 }
 
 .header {
-  scroll-margin: 9rem;
+  scroll-margin-top: 9rem;
 }
 .header__image-container {
   align-self: center;
@@ -754,7 +764,7 @@ body ::selection {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (orientation: portrait) {
   .header__image-container {
     margin-bottom: 5rem;
   }
@@ -870,18 +880,18 @@ body ::selection {
   color: #2e334a;
   background-color: rgba(171, 215, 222, 0.85);
   margin-left: 3rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border: 2px solid currentColor;
   border-top-left-radius: 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 10px;
-  box-shadow: #8ec9d2 0px 0px 2px;
   justify-self: center;
   transform: translateY(1rem);
   padding: 1.5rem 2.5rem;
   line-height: 1;
   font-size: 1.05em;
+  will-change: color, background-color, border-color, box-shadow;
 }
 @media only screen and (max-width: 22.8125em) {
   .header__resume {
@@ -898,7 +908,6 @@ body ::selection {
   color: #f1f1e6;
   background-color: transparent;
   border-color: #f1f1e6;
-  box-shadow: #8ec9d2 0px 0px 10px;
 }
 .header__resume:active {
   background-color: rgba(142, 201, 210, 0.7);
@@ -1044,6 +1053,7 @@ body ::selection {
   gap: 1rem;
   grid-auto-rows: min-content;
   grid-auto-rows: min-content min-content min-content min-content 1fr;
+  will-change: border-color, box-shadow;
   /*   &__link {
     position: relative;
   } */
@@ -1149,7 +1159,6 @@ body ::selection {
   padding: 1.5rem 2rem;
   border-radius: 5px;
   color: #e0e0e3;
-  font-weight: 300;
   border: 3px solid #aaabb3;
   border-radius: 20px;
   box-shadow: inset 0 0 5px rgba(142, 201, 210, 0.99);
@@ -1177,11 +1186,11 @@ body ::selection {
 .project__link span {
   display: inline-block;
   font-weight: 900;
-  transition: transform 0.4s;
+  transition: transform 0.3s;
   transform: translateX(-1px);
 }
 .project__link:hover span {
-  transition: transform 0.4s;
+  transition: transform 0.3s;
   transform: translateX(4px);
 }
 .project__link:last-child {
@@ -1221,7 +1230,8 @@ body ::selection {
   font-family: "Exo", sans-serif;
   color: #f1f1e6;
   font-weight: 500;
-  transition: all 0.3s;
+  will-change: background-color, border-color;
+  transition: background-color 0.3s, border-color 0.3s;
   padding: 1rem 1rem;
   background-color: transparent;
   border: 2px solid #2e334a;
@@ -1232,7 +1242,6 @@ body ::selection {
   color: #6f7576;
 }
 .contact > *:not(.contact__submit):hover {
-  border: 2px solid #1a1d2b;
   border-color: #bebeb3;
   background-color: rgba(66, 73, 105, 0.15);
 }
@@ -1246,6 +1255,7 @@ body ::selection {
   resize: none;
 }
 .contact__submit {
+  cursor: pointer;
   outline: none;
   border: 2px solid currentColor;
   grid-column: 1/-1;
@@ -1256,15 +1266,14 @@ body ::selection {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 10px;
+  will-change: color, background-color, border-color, box-shadow;
   transition: color 0.15s, background-color 0.25s, border-color 0.25s, box-shadow 0.4s;
   background-color: #f1f1e6;
-  box-shadow: #8ec9d2 0px 0px 2px;
 }
 .contact__submit:hover {
   color: #f1f1e6;
   background-color: transparent;
   border-color: #f1f1e6;
-  box-shadow: #8ec9d2 0px 0px 10px;
 }
 .contact__submit:active {
   background-color: rgba(142, 201, 210, 0.5);
