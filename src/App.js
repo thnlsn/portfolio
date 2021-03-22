@@ -8,10 +8,10 @@ import { useOnScreen } from './hooks';
 // Assets
 import profile from './images/profile.jpg';
 
-import project1 from './images/mind-garden.png';
-import project2 from './images/electoral-map.png';
-import project3 from './images/world-clock.png';
-import project6 from './images/portfolio.png';
+import project1 from './images/mind-garden.jpg';
+import project2 from './images/electoral-map.jpg';
+import project3 from './images/world-clock.jpg';
+import project6 from './images/portfolio.jpg';
 
 // Skills Icons
 import ReactIcon from './components/svg/ReactIcon';

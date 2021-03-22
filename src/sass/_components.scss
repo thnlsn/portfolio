@@ -159,6 +159,8 @@
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 10px;
 
+    box-shadow: 0 0 0 2px variables.$color-white;
+
     // box-shadow: variables.$color-secondary 0px 0px 2px;
 
     justify-self: center;
@@ -183,6 +185,7 @@
     will-change: color, background-color, border-color, box-shadow;
     &:hover {
       color: variables.$color-white;
+      box-shadow: none;
       background-color: transparent;
       border-color: variables.$color-white;
       // box-shadow: rgba(variables.$color-secondary, 1) 0px 0px 10px;
@@ -634,6 +637,7 @@
     cursor: pointer;
     outline: none;
     border: 2px solid currentColor;
+    box-shadow: 0 0 0 2px variables.$color-white;
 
     grid-column: 1 / -1;
     justify-self: center;
@@ -653,6 +657,7 @@
     // box-shadow: variables.$color-secondary 0px 0px 2px;
 
     &:hover {
+      box-shadow: none;
       color: variables.$color-white;
       background-color: transparent;
       border-color: variables.$color-white;

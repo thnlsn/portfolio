@@ -312,7 +312,6 @@
     @media only screen and (max-width: breakpoints.$bp-medium) {
       display: relative;
     }
-    z-index: 10;
 
     .skill__icon {
       display: block;
@@ -329,21 +328,16 @@
         }
       }
 
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      z-index: -1;
-
       height: 5.25rem;
       width: 5.25rem;
       fill: variables.$color-white;
-      padding: 1rem;
+
       border-radius: 50%;
 
       will-change: background-color, fill;
       transition: background-color 0.45s, fill 0.65s;
-      border: 2px solid variables.$color-secondary;
+      border: 1rem solid transparent;
+      box-shadow: 0 0 0 2px variables.$color-secondary;
       background-color: rgba(variables.$color-bg, 0.85);
 
       &:hover {
