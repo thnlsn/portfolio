@@ -464,8 +464,6 @@ body ::selection {
   /*   &::-webkit-scrollbar {
     display: none;
   } */
-  background-color: rgba(46, 51, 74, 0.15);
-  background-color: orangered;
   padding: 9rem 11.5rem 0rem 11rem;
   border-left: 2px solid #638b91;
   border-right: 2px solid #638b91;
@@ -481,6 +479,8 @@ body ::selection {
   /*   box-shadow: rgba(variables.$background-accent, 0.4) 5px 0px,
     rgba(variables.$background-accent, 0.3) 10px 0px,
     rgba(variables.$background-accent, 0.2) 15px 0px; */
+  background-color: rgba(46, 51, 74, 0.9);
+  /* backdrop-filter: blur(3px); */
 }
 @media only screen and (max-width: 103.125em) {
   .content {
@@ -530,21 +530,11 @@ body ::selection {
     scrollbar-track-color: #2e334a;
   }
 }
-@supports (backdrop-filter: blur(2px)) {
-  .content {
-    background-color: rgba(46, 51, 74, 0.75);
-    /* backdrop-filter: blur(3px); */
-  }
-}
 @media only screen and (max-width: 50em) {
   .content {
     border: none;
-  }
-  @supports (backdrop-filter: blur(2px)) {
-    .content {
-      background-color: rgba(46, 51, 74, 0.65);
-      /* backdrop-filter: blur(2px); */
-    }
+    background-color: rgba(46, 51, 74, 0.85);
+    /* backdrop-filter: blur(2px); */
   }
 }
 .content > *:last-child {
