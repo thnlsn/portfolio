@@ -474,7 +474,11 @@ body ::selection {
   grid-template-columns: 1fr;
   grid-template-rows: min-content;
   grid-auto-rows: min-content;
-  row-gap: 13.5rem;
+  /*   row-gap: 13.5rem; // Space between each content section
+
+  @media only screen and (orientation: portrait) {
+    row-gap: 19.5rem; // Space between each content section
+  } */
   /*   box-shadow: rgba(variables.$background-accent, 0.4) 5px 0px,
     rgba(variables.$background-accent, 0.3) 10px 0px,
     rgba(variables.$background-accent, 0.2) 15px 0px; */
@@ -527,11 +531,6 @@ body ::selection {
     scrollbar-track-color: #2e334a;
   }
 }
-@media only screen and (orientation: portrait) {
-  .content {
-    row-gap: 19.5rem;
-  }
-}
 @supports (backdrop-filter: blur(2px)) {
   .content {
     background-color: rgba(46, 51, 74, 0.75);
@@ -577,8 +576,15 @@ body ::selection {
 }
 
 .section-container {
-  scroll-margin-top: 10rem;
-  scroll-padding-top: 10rem;
+  /* scroll-margin-top: 10rem;
+  scroll-padding-top: 10rem; */
+  padding-top: 10rem;
+  margin-top: 3.5rem;
+}
+@media only screen and (orientation: portrait) {
+  .section-container {
+    margin-top: 7.5rem;
+  }
 }
 
 .section {
