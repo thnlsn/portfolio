@@ -45,9 +45,9 @@ const Navigation = ({ scrollTo }) => {
     sectionOptions = {
       root: content,
       // rootMargin: `${vh / 3}px 0px -${vh / 3}px 0px`,
-      rootMargin: `-${vh / 3}px ${vw > 600 && vw < 800 ? 20 : rightWidth}px -${
-        vh / 3
-      }px -${vw > 600 && vw < 800 ? 20 : navWidth}px`,
+      rootMargin: `-${vh / 2.75}px ${
+        vw > 600 && vw < 800 ? 20 : rightWidth
+      }px -${vh / 2.75}px -${vw > 600 && vw < 800 ? 20 : navWidth}px`,
     };
 
     // Observer for each of the tabbed sections

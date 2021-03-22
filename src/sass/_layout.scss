@@ -8,7 +8,7 @@
   position: fixed;
 
   @media only screen and (max-width: breakpoints.$bp-largest) {
-    grid-template-columns: 0.3fr 2fr 0.285fr;
+    grid-template-columns: 0.4fr 2fr 0.285fr;
   }
   @media only screen and (max-width: breakpoints.$bp-larger) {
     grid-template-columns: min-content 1fr;

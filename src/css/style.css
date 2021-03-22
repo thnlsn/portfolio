@@ -46,7 +46,7 @@ html {
 }
 @media only screen and (min-width: 31.25em) and (orientation: portrait) {
   html {
-    font-size: 60%;
+    font-size: 62%;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -314,7 +314,7 @@ body ::selection {
 }
 @media only screen and (max-width: 75em) {
   .heading-navigation {
-    font-size: 2rem;
+    font-size: 2.35rem;
   }
 }
 
@@ -414,7 +414,7 @@ body ::selection {
 }
 @media only screen and (max-width: 103.125em) {
   .App {
-    grid-template-columns: 0.3fr 2fr 0.285fr;
+    grid-template-columns: 0.4fr 2fr 0.285fr;
   }
 }
 @media only screen and (max-width: 75em) {
