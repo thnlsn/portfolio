@@ -752,6 +752,10 @@ body ::selection {
   background-color: rgba(142, 201, 210, 0.85);
   fill: #141a2f;
 }
+.navigation__social-link .skill__icon path {
+  overflow-x: visible;
+  overflow-y: visible;
+}
 
 .header {
   scroll-margin-top: 9rem;
