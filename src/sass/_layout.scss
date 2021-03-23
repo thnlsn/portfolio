@@ -247,6 +247,10 @@
   margin-top: 20vh;
   margin-bottom: auto;
 
+  @media only screen and (max-height: breakpoints.$bp-phone-large) {
+    margin-top: auto;
+  }
+
   &__link {
     text-decoration: none;
     color: variables.$color-white;

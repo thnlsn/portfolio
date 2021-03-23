@@ -650,6 +650,11 @@ body ::selection {
     border-bottom: none;
   }
 }
+@media only screen and (max-height: 31.25em) {
+  .navigation {
+    margin-top: auto;
+  }
+}
 .navigation__link {
   text-decoration: none;
   color: #f1f1e6;
