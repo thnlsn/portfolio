@@ -328,9 +328,19 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: breakpoints.$bp-medium) {
+      height: 5rem;
+      width: 5rem;
+    }
+
     .skill__icon {
       height: 3.25rem;
       width: 3.25rem;
+
+      @media only screen and (max-width: breakpoints.$bp-medium) {
+        height: 2.75rem;
+        width: 2.75rem;
+      }
 
       fill: variables.$color-white;
       will-change: fill;

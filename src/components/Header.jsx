@@ -8,7 +8,7 @@ import { useOnScreen } from '../hooks';
 const Header = ({ img }) => {
   // Initially these values will not do anything, but because of the useEffect watching ref* in useOnScreen, setRef will change ref* and cause useEffect to run again
   const [setRef, visible] = useOnScreen({
-    threshold: 1,
+    threshold: 0.5,
   });
 
   const visibility = () => (visible ? 'visible' : 'invisible');

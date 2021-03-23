@@ -33,6 +33,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  /*   @media only screen and (min-width: breakpoints.$bp-phone-large) and (orientation: portrait) {
+    font-size: 62%;
+  } */
 }
 @media only screen and (max-width: 75em) {
   html {
@@ -42,11 +45,6 @@ html {
 @media only screen and (max-width: 62.5em) {
   html {
     font-size: 52.5%;
-  }
-}
-@media only screen and (min-width: 31.25em) and (orientation: portrait) {
-  html {
-    font-size: 62%;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -315,6 +313,11 @@ body ::selection {
 @media only screen and (max-width: 75em) {
   .heading-navigation {
     font-size: 2.35rem;
+  }
+}
+@media only screen and (max-width: 50em) {
+  .heading-navigation {
+    font-size: 1.9rem;
   }
 }
 
@@ -730,12 +733,24 @@ body ::selection {
   will-change: background-color, box-shadow;
   transition: background-color 0.35s, box-shadow 0.15s;
 }
+@media only screen and (max-width: 50em) {
+  .navigation__social-link {
+    height: 5rem;
+    width: 5rem;
+  }
+}
 .navigation__social-link .skill__icon {
   height: 3.25rem;
   width: 3.25rem;
   fill: #f1f1e6;
   will-change: fill;
   transition: fill 0.45s;
+}
+@media only screen and (max-width: 50em) {
+  .navigation__social-link .skill__icon {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
 }
 @media only screen and (max-width: 50em) {
   .navigation__social-link {

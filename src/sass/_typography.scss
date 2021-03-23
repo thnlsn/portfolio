@@ -82,6 +82,9 @@
   @media only screen and (max-width: breakpoints.$bp-larger) {
     font-size: 2.35rem;
   }
+  @media only screen and (max-width: breakpoints.$bp-medium) {
+    font-size: 1.9rem;
+  }
 }
 
 // Used for skills and links to other sections
