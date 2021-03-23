@@ -494,6 +494,11 @@ body ::selection {
     padding: 8rem 1.5rem 0rem 2rem;
   }
 }
+@media only screen and (max-height: 31.25em) and (max-width: 62.5em) {
+  .content {
+    padding: 5rem 6.5rem 0rem 7rem;
+  }
+}
 @supports selector(div::-webkit-scrollbar) {
   .content {
     border-right: none;

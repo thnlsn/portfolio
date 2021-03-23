@@ -62,7 +62,6 @@
   // background-color: rgba(variables.$color-primary, 0.1);
 
   padding: 9rem 11.5rem 0rem 11rem; // Spacing around content
-
   @media only screen and (max-width: breakpoints.$bp-largest) {
     padding: 9rem 6.5rem 0rem 7rem;
   }
@@ -74,6 +73,9 @@
   }
   @media only screen and (max-width: breakpoints.$bp-smallest) {
     padding: 8rem 1.5rem 0rem 2rem;
+  }
+  @media only screen and (max-height: breakpoints.$bp-phone-large) and (max-width: breakpoints.$bp-large) {
+    padding: 5rem 6.5rem 0rem 7rem;
   }
 
   border-left: variables.$content-border;
