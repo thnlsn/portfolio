@@ -1198,20 +1198,20 @@ body ::selection {
   transition: transform 0.3s;
   transform: translateX(4px);
 }
-.project__link:last-child {
+.project__link--live {
   background-color: rgba(87, 175, 188, 0.2);
   border-bottom-right-radius: 10px;
   border-top-left-radius: 5px;
 }
-.project__link:last-child:hover {
+.project__link--live:hover {
   background-color: rgba(87, 175, 188, 0.4);
 }
-.project__link:first-child {
+.project__link--repo {
   background-color: rgba(143, 144, 155, 0.3);
   border-bottom-right-radius: 5px;
   border-top-left-radius: 10px;
 }
-.project__link:first-child:hover {
+.project__link--repo:hover {
   background-color: rgba(143, 144, 155, 0.6);
 }
 

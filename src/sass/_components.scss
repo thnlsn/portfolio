@@ -500,7 +500,7 @@
 
     transition: background-color 0.4s;
 
-    &:last-child {
+    &--live {
       background-color: darken(
         rgba($color: variables.$color-secondary, $alpha: 0.2),
         15
@@ -517,7 +517,7 @@
       }
     }
 
-    &:first-child {
+    &--repo {
       background-color: darken(
         rgba($color: variables.$color-font, $alpha: 0.3),
         15

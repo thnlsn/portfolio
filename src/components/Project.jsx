@@ -29,17 +29,22 @@ const Project = ({ title, img, skills, paragraphs, links }) => {
         ))}
       </div>
       <div className='project__links'>
-        {links.map((link, i) => (
-          <a
-            href={link}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='project__link text-emphasized--inline'
-            key={i}
-          >
-            {i === 0 ? 'Repo' : 'Live Link'} <span>&#8658;</span>
-          </a>
-        ))}
+        {links.map(
+          (link, i) =>
+            link && (
+              <a
+                href={link}
+                target='_blank'
+                rel='noopener noreferrer'
+                className={`project__link project__link--${
+                  i === 0 ? 'repo' : 'live'
+                } text-emphasized--inline`}
+                key={i}
+              >
+                {i === 0 ? 'Repo' : 'Live Link'} <span>&#8658;</span>
+              </a>
+            )
+        )}
       </div>
     </div>
   );

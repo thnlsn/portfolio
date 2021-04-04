@@ -290,10 +290,7 @@ function App() {
                     'A real-time updating analog clock of your timezone. You can click other timezones generated and watch the clock update.',
                     'The clock itself was made with pure CSS (with help from Sass) and the live updating is done with JavaScript and Emotion.js to calculate and update the rotation of the hands, with Moment.js supplying the timezone data.',
                   ]}
-                  links={[
-                    'https://github.com/thnlsn/world-clock',
-                    'https://thnlsn.github.io/world-clock/',
-                  ]}
+                  links={[null, 'https://thnlsn.github.io/world-clock/']}
                 />
                 <Project
                   title='My Portfolio'
