@@ -8,9 +8,11 @@ import { useOnScreen } from './hooks';
 // Assets
 import profile from './images/profile.jpg';
 
-import project1 from './images/mind-garden.jpg';
-import project2 from './images/electoral-map.jpg';
-import project3 from './images/world-clock.jpg';
+import project1 from './images/xona.jpg';
+import project2 from './images/mind-garden.jpg';
+import project3 from './images/electoral-map.jpg';
+import project4 from './images/world-clock.jpg';
+import project5 from './images/star-jump.jpg';
 import project6 from './images/portfolio.jpg';
 
 // Skills Icons
@@ -231,7 +233,7 @@ function App() {
             <Fragment>
               <p className='section__description'>
                 Below is a mixture of some projects I've worked on &ndash;
-                personal, paid, and/or for practice{' '}
+                personal, paid, and/or for practice.
               </p>
               <p className='section__description'>
                 Included are links to view the live hosted sites as well as the
@@ -244,8 +246,29 @@ function App() {
 
               <div className={`section__portfolio`}>
                 <Project
-                  title='Mind Garden'
+                  title='Xona Space Systems'
                   img={project1}
+                  skills={[
+                    'React',
+                    'JavaScript',
+                    'Sass',
+                    'CSS',
+                    'Google Sheets API',
+                    'Google Maps API',
+                  ]}
+                  paragraphs={[
+                    'A redesign and rebuild of the Wix-based Xona Space Systems website.',
+                    'Static data stored in a singular JS file and funnelled into fully scalable components to provide easy/flexible maintenence.',
+                    'Async data is handled by the Google Sheets API as a pseudo-database, a solution that allows for their in-house workflow to stay intact while also updating the website accordingly.',
+                  ]}
+                  links={[
+                    'https://github.com/thnlsn/xona-space',
+                    'https://thnlsn.github.io/xona-space/',
+                  ]}
+                />
+                <Project
+                  title='Mind Garden'
+                  img={project2}
                   skills={[
                     'React',
                     'JavaScript',
@@ -264,7 +287,7 @@ function App() {
                 />
                 <Project
                   title='Electoral Map'
-                  img={project2}
+                  img={project3}
                   skills={['React', 'JavaScript', 'Sass', 'CSS', 'SVG']}
                   paragraphs={[
                     'An interactive map of the United States electoral college. Paint each state by color to calculate a mock presidential election. You can also visualize the map by point density.',
@@ -277,7 +300,7 @@ function App() {
                 />
                 <Project
                   title='World Clock'
-                  img={project3}
+                  img={project4}
                   skills={[
                     'React',
                     'JavaScript',
@@ -293,12 +316,35 @@ function App() {
                   links={[null, 'https://thnlsn.github.io/world-clock/']}
                 />
                 <Project
+                  title='Star Jump'
+                  img={project5}
+                  skills={[
+                    'React',
+                    'JavaScript',
+                    'Bootstrap',
+                    'Node',
+                    'Express',
+                    'MongoDB',
+                    'JWT',
+                    'Context API',
+                  ]}
+                  paragraphs={[
+                    'A kids learning application developed by a team of four. I served as sole backend engineer but early completion of my tasks allowed me to go fullstack.',
+                    'My backend duties included creating the server, database, API, handling user sessions, authentication and password encryption.',
+                    'On the frontend I created the signup and login pages as well as the logic/format of the animal game.',
+                  ]}
+                  links={[
+                    'https://github.com/mjjohnston55/star-jump',
+                    'https://powerful-tundra-87228.herokuapp.com/',
+                  ]}
+                />
+                <Project
                   title='My Portfolio'
                   img={project6}
                   skills={['React', 'JavaScript', 'Sass', 'CSS']}
                   paragraphs={[
                     'My portfolio site! The one you are currently browsing.',
-                    'Coded from scratch with my preferred front-end stack of React, Sass, and vanilla JavaScript. The contact form below is serverless – handled by JavaScript and relayed to me via Netlify forms.',
+                    'Coded from scratch with my preferred front-end stack of React, Sass, and vanilla JavaScript. I used this project as an opporunity to learn and implement the Intersection Observer API to handle scroll activated animations. The contact form below is serverless – handled by JavaScript and relayed to me via Netlify forms.',
                   ]}
                   links={[
                     'https://github.com/thnlsn/portfolio',
@@ -334,7 +380,7 @@ function App() {
                 >
                   thnlsn@gmail.com
                 </a>{' '}
-                or the form below. If needed, I can provide references.
+                or the form below. I can provide references if necessary.
               </p>
 
               <Contact
