@@ -157,9 +157,8 @@ function App() {
           contents={
             <Fragment>
               <p className='section__description'>
-                A web developer on and off the clock and a student beyond the
-                classroom. I am a problem solver at heart, with a keen eye
-                towards responsiveness. Check out my{' '}
+                A web developer on and off the clock, a problem solver at heart,
+                with a keen eye towards responsiveness. Check out my{' '}
                 <a
                   onClick={() => {
                     scrollToSection("'#portfolio'");
@@ -169,10 +168,10 @@ function App() {
                 >
                   work
                 </a>{' '}
-                to check out what I'm talking about!
+                to see what I'm talking about!
               </p>
               <p className='section__description'>
-                I am currently avaiable for any kind of work.{' '}
+                I am currently available for any kind of work.{' '}
                 <a
                   onClick={() => {
                     scrollToSection("'#contact'");
@@ -202,9 +201,9 @@ function App() {
           contents={
             <Fragment>
               <p className='section__description'>
-                Learning is a lifestyle for me, and as such I am always eager
-                for new challenges to tackle. At this moment I am proficient in
-                the following technologies, but I am always looking to expand.
+                Learning is a lifestyle for me &ndash; I am always eager for new
+                challenges. I am proficient in the following technologies, but
+                also I am always looking to expand.
               </p>
               <Skills skills={skills} />
               <p className='section__description'>
@@ -236,12 +235,12 @@ function App() {
                 personal, paid, and/or for practice.
               </p>
               <p className='section__description'>
-                Included are links to view the live hosted sites as well as the
+                Included are links to view the live sites as well as the
                 relevant GitHub repository, should you want to dig into my code.
               </p>
               <p className='section__description'>
-                Everything is fully responsive. Check them them out on your
-                phone or tablet!
+                Everything is fully responsive. Check them out on your phone or
+                tablet!
               </p>
 
               <div className={`section__portfolio`}>
@@ -378,7 +377,7 @@ function App() {
                   className='section--emphasis'
                   href='mailto:thnlsn.dev@gmail.com'
                 >
-                  thnlsn@gmail.com
+                  thnlsn.dev@gmail.com
                 </a>{' '}
                 or the form below. I can provide references if necessary.
               </p>
