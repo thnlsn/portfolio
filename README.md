@@ -8,7 +8,7 @@
 
 ## About The Project
 
-This is my professional portfolio site, you can view it to download my resume, get in contact with me, as well as view all my favorite projects. I built it using my favorite front-end stack of React, Sass, and vanilla JavaScript. For deployment I opted for Netlify to leverage their Netlify forms to relay contact form submissions to me. It was made responsive with a mixture of CSS Grid and Flexbox as well as CSS functions such as minmax() and repeat(), and scroll activated animations are utilizing the Intersection Observer built in Web API.
+This is my professional portfolio site &ndash; view it to download my resume, get in contact with me, as well as view all my favorite projects. I built it using my preferred front-end stack of React, Sass, and vanilla JavaScript. For deployment I opted for Netlify to leverage their Netlify forms to relay contact form submissions to me. It was made responsive with a mixture of CSS Grid and Flexbox as well as CSS functions such as minmax() and repeat(), and scroll activated animations are utilizing the Intersection Observer built in Web API.
 
 ## Live Link: [thnlsn.me](https://www.thnlsn.me/)
 
