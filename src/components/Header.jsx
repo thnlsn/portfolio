@@ -25,7 +25,7 @@ const Header = ({ img }) => {
       </div>
       <div className='heading-primary'>Thomas Nelson</div>
       <div className='divider'></div>
-      <div className='heading-subtitle'>web developer & problem solver</div>
+      <div className='heading-subtitle'>web & mobile app developer</div>
       <a
         href='./files/Thomas_Nelson_Resume.pdf'
         target='_blank'
